@@ -599,7 +599,7 @@ ul { margin: 0; padding: 0; list-style: none; }
   display: inline-flex; align-items: center; gap: 0.45rem;
   padding: 0.6rem 1.05rem; border-radius: 999px;
   font-size: 0.87rem; font-weight: 600; color: #fff; white-space: nowrap;
-  min-width: 0;
+  overflow: hidden;   /* a label can never spill onto the button beside it */
   transition: background var(--dur) var(--ease), color var(--dur) var(--ease);
 }
 .callbar a svg { color: var(--gold); flex: none; transition: color var(--dur) var(--ease); }
@@ -961,10 +961,25 @@ ul { margin: 0; padding: 0; list-style: none; }
 
 /* Narrow phones: iPhone 13 is 390px wide and the three buttons left barely any
    slack, so a wider fallback font or a larger text setting pushed Enquire out. */
+/* Narrow phones. Shrinking the type was not enough — on a real iPhone the labels
+   still outgrew the pill, so Call and WhatsApp become icon-only here and just
+   Enquire keeps its wording. Width then depends on the icons and one short word,
+   not on font metrics, so it cannot outgrow the bar. The labels stay in the DOM
+   for screen readers. */
 @media (max-width: 430px) {
   .callbar { gap: 0.1rem; padding: 0.28rem; }
-  .callbar a { padding: 0.5rem 0.62rem; font-size: 0.74rem; gap: 0.3rem; }
-  .callbar a svg { width: 15px; height: 15px; }
+  .callbar a { padding: 0.55rem 0.7rem; font-size: 0.78rem; gap: 0.32rem; }
+  .callbar a svg { width: 17px; height: 17px; }
+
+  .callbar a > span {
+    position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+    overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+  }
+  .callbar .callbar-cta { padding: 0.55rem 1rem; }
+  .callbar .callbar-cta > span {
+    position: static; width: auto; height: auto; margin: 0;
+    overflow: visible; clip: auto;
+  }
 }
 
 /* Build credit in the footer bottom bar. */
