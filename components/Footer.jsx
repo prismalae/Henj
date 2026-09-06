@@ -48,9 +48,14 @@ export default function Footer() {
           <div>
             <h3>Explore</h3>
             <ul className="footer-links">
-              {/* Flatten the nav so pages that live only inside a dropdown are still reachable. */}
+              {/* Flattened so pages that live only inside a dropdown are still reachable —
+                  minus the Products group, which has its own column below. Including it
+                  listed every product page twice and made this column 11 items long. */}
               {[...new Map(
-                nav.flatMap((n) => (n.children ? n.children : [n])).map((n) => [n.href, n])
+                nav
+                  .filter((n) => n.href !== '/products')
+                  .flatMap((n) => (n.children ? n.children : [n]))
+                  .map((n) => [n.href, n])
               ).values()].map((n) => (
                 <li key={n.href}><Link href={n.href}>{n.label}</Link></li>
               ))}
