@@ -3,7 +3,6 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import CallBar from '@/components/CallBar';
 import FruitCursor from '@/components/FruitCursor';
-import ScrollReveal from '@/components/ScrollReveal';
 import { site } from '@/content/site';
 import './globals.css';
 
@@ -70,7 +69,6 @@ export default function RootLayout({ children }) {
         <Footer />
         <CallBar />
         <FruitCursor />
-        <ScrollReveal />
       </body>
     </html>
   );

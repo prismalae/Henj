@@ -1027,18 +1027,33 @@ ul { margin: 0; padding: 0; list-style: none; }
    Motion
    ============================================================ */
 
-/* Section reveal. The `.reveal` class is added by ScrollReveal at runtime, so a
-   failed or blocked script leaves everything visible instead of hidden. */
-.reveal {
-  opacity: 0;
-  transform: translateY(20px);
-  will-change: opacity, transform;
+/* Section reveal, driven entirely by CSS scroll-driven animation.
+   No JavaScript hides anything, so there is no state in which content can be
+   left stuck at opacity 0 — the previous observer-based version could do that
+   if its script failed. Browsers without `animation-timeline` (Safari today)
+   simply skip the @supports block and render the sections normally. */
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    /* the first section is above the fold on load and would flash */
+    main > section:not(:first-child) {
+      animation: reveal-up linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 38%;
+    }
+  }
 }
-.reveal.is-in {
-  opacity: 1;
-  transform: none;
-  transition: opacity var(--dur-slow) var(--ease-out), transform var(--dur-slow) var(--ease-out);
-  will-change: auto;
+@keyframes reveal-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: none; }
+}
+/* Printing does not advance a scroll-driven timeline, so without this every
+   section below the first would print blank. */
+@media print {
+  main > section {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
 }
 
 /* Disclosure content eases in. A <details> cannot animate its own height without
@@ -1057,6 +1072,5 @@ ul { margin: 0; padding: 0; list-style: none; }
 .btn:active { transform: translateY(0) scale(0.985); transition-duration: var(--dur-fast); }
 
 @media (prefers-reduced-motion: reduce) {
-  .reveal, .reveal.is-in { opacity: 1 !important; transform: none !important; transition: none !important; }
   .spec[open] dl, .faq details[open] p { animation: none !important; }
 }
