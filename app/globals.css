@@ -459,6 +459,96 @@ ul { margin: 0; padding: 0; list-style: none; }
 .cta-text p { color: rgba(255,255,255,0.82); font-size: 0.92rem; margin: 0; }
 .cta-actions { position: relative; z-index: 1; display: flex; gap: 0.75rem; flex-wrap: wrap; }
 
+/* ---------- overland GCC band ----------
+   The one block on the site that is meant to interrupt. Same green slab and gold
+   rim as .cta so it belongs, but wider and with the route drawn out, because
+   "we truck to Qatar, Bahrain and Kuwait" is what a Gulf buyer scans for. */
+.roadband {
+  position: relative; overflow: hidden; color: #fff;
+  border-radius: var(--r-lg);
+  padding: clamp(1.6rem, 3.5vw, 2.75rem) clamp(1.4rem, 4vw, 3rem);
+  background:
+    radial-gradient(120% 140% at 12% -20%, rgba(46, 125, 70, 0.3) 0%, transparent 60%),
+    linear-gradient(150deg, var(--green-800) 0%, var(--green-900) 70%);
+  box-shadow: inset 0 0 0 1px rgba(201, 162, 39, 0.35), 0 18px 40px rgba(14, 59, 33, 0.18);
+}
+.roadband-head { display: flex; gap: clamp(1rem, 2.5vw, 1.75rem); align-items: flex-start; }
+.roadband-icon {
+  width: 84px; height: 84px; flex: none; border-radius: 50%;
+  border: 2px solid var(--gold); color: var(--gold);
+  display: grid; place-items: center;
+}
+.roadband h2 {
+  color: var(--gold); font-size: clamp(1.5rem, 3.2vw, 2.3rem);
+  line-height: 1.15; margin-bottom: 0.5rem;
+}
+.roadband-lede { color: rgba(255,255,255,0.82); font-size: 0.95rem; margin: 0; max-width: 62ch; }
+
+/* Dubai —— truck —— [Qatar][Bahrain][Kuwait] */
+.roadband-route {
+  display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap;
+  margin: clamp(1.5rem, 3vw, 2rem) 0 clamp(1.25rem, 2.5vw, 1.75rem);
+}
+.road-stop {
+  display: inline-flex; align-items: center; padding: 0.5rem 1.1rem; border-radius: 999px;
+  font-size: 0.86rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase;
+  border: 1px solid rgba(201, 162, 39, 0.55); color: var(--gold-light); white-space: nowrap;
+}
+.road-stop--origin {
+  background: linear-gradient(180deg, var(--gold-light), var(--gold));
+  border-color: transparent; color: #3a2c05;
+}
+.road-dash {
+  flex: 1 1 60px; min-width: 60px; height: 24px; position: relative;
+  display: grid; place-items: center; color: var(--gold);
+}
+.road-dash::before {
+  content: ''; position: absolute; left: 0; right: 0; top: 50%;
+  border-top: 2px dashed rgba(201, 162, 39, 0.5);
+}
+/* The truck rides the line, so it gets its own ground and a rim — at plain
+   stroke on a dashed rule it read as a smudge rather than a vehicle. The disc is
+   a wrapper, not padding on the SVG: the icon carries width/height attributes,
+   so padding would shrink the artwork instead of growing the box. */
+.road-dash { height: 44px; }
+.road-truck {
+  position: relative; width: 44px; height: 44px; border-radius: 50%;
+  display: grid; place-items: center; color: var(--gold-light);
+  background: var(--green-900); box-shadow: inset 0 0 0 1px rgba(201, 162, 39, 0.5);
+}
+.road-stops { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+.road-to { display: none; }
+
+.roadband-foot {
+  display: flex; gap: clamp(1.25rem, 3vw, 2.5rem); flex-wrap: wrap;
+  align-items: center; justify-content: space-between;
+  border-top: 1px solid rgba(201, 162, 39, 0.24); padding-top: clamp(1.25rem, 2.5vw, 1.75rem);
+}
+.roadband-facts {
+  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.6rem 1.5rem;
+  flex: 1 1 420px;
+}
+.roadband-facts li {
+  display: flex; align-items: center; gap: 0.55rem;
+  font-size: 0.86rem; color: rgba(255,255,255,0.85);
+}
+.roadband-facts svg { color: var(--gold); flex: none; }
+.roadband-actions { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+
+@media (max-width: 760px) {
+  .roadband-head { flex-direction: column; }
+  .roadband-icon { width: 64px; height: 64px; }
+  /* The dashed run has nowhere to go once the stops wrap onto their own lines. */
+  .road-dash { display: none; }
+  .road-to {
+    display: inline; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.18em;
+    text-transform: uppercase; color: rgba(255, 255, 255, 0.6);
+  }
+  .roadband-facts { grid-template-columns: 1fr; }
+  .roadband-actions { width: 100%; }
+  .roadband-actions .btn { flex: 1 1 auto; justify-content: center; }
+}
+
 /* ---------- contact ---------- */
 .contact-strip {
   display: grid; grid-template-columns: repeat(6, 1fr);

@@ -12,6 +12,7 @@ export default function sitemap() {
     { path: '/products', priority: 0.9 },
     ...categories.map((c) => ({ path: c.href, priority: 0.9 })),
     { path: '/services', priority: 0.8 },
+    { path: '/catering-supply', priority: 0.8 },
     { path: '/packing-shipping', priority: 0.7 },
     { path: '/quality', priority: 0.7 },
     { path: '/faq', priority: 0.6 },

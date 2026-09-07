@@ -4,6 +4,7 @@ import SectionHeading from '@/components/SectionHeading';
 import FeatureRow from '@/components/FeatureRow';
 import CtaBand from '@/components/CtaBand';
 import StatStrip from '@/components/StatStrip';
+import RoadFreightBand from '@/components/RoadFreightBand';
 import Icon from '@/components/Icon';
 import { site } from '@/content/site';
 import Faq from '@/components/Faq';
@@ -136,7 +137,7 @@ export default function HomePage() {
             {[
               { icon: 'building', title: 'Wholesalers & Traders', body: 'Market-floor volumes at consistent grades, priced to leave you room.' },
               { icon: 'box', title: 'Supermarkets & Retail', body: 'Retail-ready packing, dependable replenishment and shelf life you can plan around.' },
-              { icon: 'people', title: 'Hotels, Catering & HORECA', body: 'Daily fresh delivery and steady dry goods for kitchens that cannot run short.' },
+              { icon: 'people', title: 'Hotels, Catering & HORECA', body: 'Daily fresh delivery, plus full containers of rice, dal and sugar for hospitality catering companies in Abu Dhabi and beyond.' },
               { icon: 'search', title: 'Food Processors', body: 'Bulk raw material bought to a written specification, lot after lot.' },
               { icon: 'ship', title: 'Re-exporters', body: 'Consolidated mixed loads for onward shipment into Saudi Arabia, Qatar, Bahrain and Kuwait.' },
               { icon: 'shield', title: 'Institutional Buyers', body: 'Camps, canteens and contract caterers needing steady volume at a held price.' },
@@ -189,6 +190,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Road to the Gulf — the third mode, and the one buyers outside the UAE scan for */}
+      <RoadFreightBand />
 
       {/* What goes wrong */}
       <section className="section section--cream">

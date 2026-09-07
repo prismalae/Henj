@@ -2,6 +2,7 @@ import Hero from '@/components/Hero';
 import SectionHeading from '@/components/SectionHeading';
 import SpecTable from '@/components/SpecTable';
 import CtaBand from '@/components/CtaBand';
+import RoadFreightBand from '@/components/RoadFreightBand';
 import Icon from '@/components/Icon';
 import { packingTable, containerGuide, modeGuide } from '@/content/products';
 
@@ -55,6 +56,8 @@ export default function PackingShippingPage() {
           </div>
         </div>
       </section>
+
+      <RoadFreightBand />
 
       <section className="section section--green">
         <div className="wrap">

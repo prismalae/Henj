@@ -125,6 +125,33 @@ certificate, packing list and commercial invoice.
   catalogue contains no olives or olive oil, so it reads as Mediterranean *sourcing* imagery rather
   than a product claim — but a buyer could reasonably infer you trade it. Swap it if that is wrong;
   the other four map directly onto ranges you do supply.
+- **Sister concerns.** Aidan Arab General Trading L.L.C. (Ajman), Nihal Traders (Hosur–Bangalore,
+  India) and Nihal Investments (Muscat, Oman) are listed on About, Contact and in the footer from
+  the details you sent — including the one-line role I wrote for each ("general trading", "sourcing
+  & procurement", "trading & distribution"). Confirm the trading names, the legal suffixes and
+  those roles. Two numbers were normalised for `tel:` links: `068810055` as the Ajman landline
+  **+971 6 881 0055**, and `0527629767` as the mobile **+971 52 762 9767**. They are in
+  `sisterConcerns` in `content/site.js`.
+- **Catering foodstuff supply — a new page and a new product claim.** `/catering-supply`
+  (`app/catering-supply/page.jsx`) sells full container loads of dry staples to hospitality catering
+  companies in Abu Dhabi and across the UAE, with a summary panel on Services and an echo on the
+  homepage HORECA card. Three things in it are mine, not yours, and should be checked:
+  - **Sugar is not in the catalogue.** The page lists it as a headline staple at "refined white,
+    ICUMSA 45" in 25/50 kg bags, because you named it. Confirm the grade, or say what you actually
+    ship. Cooking oil and flour appear once, as "available on request" — delete that line if you do
+    not supply them.
+  - **The commercial terms are trade-standard, written by me.** Prices held for the contract term,
+    scheduled release against consumption, samples from the lot before a dry-goods contract, mixed
+    consolidation into one container. Plausible, and none of it confirmed with you.
+  - **Loadability figures** (25–27 MT per 20 ft for bagged goods, 20–24 MT for spices) reuse the
+    approximations already on the Packing & Shipping page — see section 4 above.
+- **Overland delivery to Qatar, Bahrain and Kuwait.** Now its own highlighted band
+  (`components/RoadFreightBand.jsx`) on the homepage, Services, Packing & Shipping and the catering
+  page. It states three things as fact: the trucks are **ours, not a broker's**; transit is
+  **1–3 days overland** (matching the road figure already in `modeGuide`); and **border paperwork is
+  prepared before departure**. It also says the route runs **through Saudi Arabia**, which is
+  geographically true but implies you hold the transit permissions to do it. Confirm all four, or
+  tell me which to soften.
 - **Social profile URLs** — `site.socials` points every icon at `#`.
 - **Domain** — defaults to `https://henj-uae.com`, inferred from the email in the comps. Override with
   `NEXT_PUBLIC_SITE_URL=https://yourdomain.com npm run build`.

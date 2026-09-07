@@ -131,6 +131,7 @@ export const nav = [
     href: '/services',
     children: [
       { label: 'All Services', href: '/services' },
+      { label: 'Catering Supply', href: '/catering-supply' },
       { label: 'Packing & Shipping', href: '/packing-shipping' },
     ],
   },

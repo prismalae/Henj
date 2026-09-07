@@ -1,21 +1,24 @@
+import Link from 'next/link';
 import Hero from '@/components/Hero';
 import SectionHeading from '@/components/SectionHeading';
 import CtaBand from '@/components/CtaBand';
+import RoadFreightBand from '@/components/RoadFreightBand';
 import Icon from '@/components/Icon';
 import { site } from '@/content/site';
 
 export const metadata = {
   title: 'Services',
   description:
-    'Import and export, air and sea shipments, road and UAE distribution, GCC supply, product sourcing, packaging, logistics and shipment documentation from HENJ Trading L.L.C.',
+    'Import and export, air and sea shipments, road and UAE distribution, catering and contract supply, GCC supply, product sourcing, packaging, logistics and shipment documentation from HENJ Trading L.L.C.',
 };
 
 const SERVICES = [
   { icon: 'globe', title: 'Import & Export', body: 'Two-way trade in fresh produce, dry goods and eggs, with the sourcing, buying and compliance handled by us.' },
   { icon: 'plane', title: 'Air Shipments', body: 'Fast air freight for perishables — the difference between produce that sells and produce that gets marked down.' },
   { icon: 'ship', title: 'Sea Shipments', body: 'Container loads of rice, pulses, grains and spices, consolidated for economical bulk supply.' },
-  { icon: 'truck', title: 'Road Distribution', body: 'Our own vehicles moving stock from Al Aweer to customers across the Emirates.' },
+  { icon: 'truck', title: 'Road Distribution', body: 'Our own vehicles moving stock from Al Aweer across the Emirates, and overland into Qatar, Bahrain and Kuwait.' },
   { icon: 'pin', title: 'UAE Distribution', body: 'Wholesale, retail and institutional supply throughout Dubai, Abu Dhabi, Sharjah and the northern Emirates.' },
+  { icon: 'building', title: 'Catering & Contract Supply', body: 'Full container loads of rice, dal, sugar and other dry staples for hospitality catering companies in Abu Dhabi and across the Emirates, delivered on a standing schedule.' },
   { icon: 'people', title: 'GCC Supply', body: `Onward supply to ${site.markets.filter((m) => m !== 'United Arab Emirates').join(', ')}.` },
   { icon: 'search', title: 'Product Sourcing', body: 'Tell us the grade, origin, spec and price point — we find it and hold the supplier to it.' },
   { icon: 'box', title: 'Packaging', body: 'Export cartons, retail packs, private-label and custom packing to your specification.' },
@@ -52,6 +55,46 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
+
+      <section className="section section--cream-deep">
+        <div className="wrap">
+          <div className="panel split">
+            <div>
+              <p className="eyebrow">Catering &amp; contract supply</p>
+              <h2 style={{ fontSize: 'clamp(1.5rem, 2.6vw, 2rem)' }}>Container Loads for Catering Kitchens.</h2>
+              <p>
+                Hospitality catering companies in Abu Dhabi and across the Emirates take dry staples
+                from us by the full container — rice, dal, sugar and spices — rather than pallet by
+                pallet. It is the cheapest way to buy volume that is going to be consumed anyway, and
+                it takes the weekly reordering off the kitchen.
+              </p>
+              <p>
+                We hold the grade and the price for the term agreed, schedule deliveries against your
+                consumption rather than our convenience, and consolidate mixed staples into one load
+                where a full container of a single line would sit too long.
+              </p>
+              <Link className="btn btn--ghost" href="/catering-supply" style={{ marginTop: '0.5rem' }}>
+                Catering supply in detail <Icon name="arrow" size={18} />
+              </Link>
+            </div>
+            <div style={{ display: 'grid', gap: '0.7rem' }}>
+              {[
+                'Full container loads of rice, dal, sugar and dry staples',
+                'Standing delivery schedules for camps, canteens and hotel kitchens',
+                'Grade and price held for the contract term',
+                'Mixed consolidation when one line will not fill a container',
+              ].map((t) => (
+                <div key={t} style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
+                  <Icon name="shield" size={18} style={{ color: 'var(--gold-deep)', flex: 'none' }} />
+                  <span style={{ fontSize: '0.88rem', fontWeight: 500, color: 'var(--green-900)' }}>{t}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <RoadFreightBand />
 
       <section className="section section--green">
         <div className="wrap">
