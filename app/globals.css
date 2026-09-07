@@ -296,11 +296,14 @@ ul { margin: 0; padding: 0; list-style: none; }
 .hero { position: relative; background: var(--green-900); color: #fff; isolation: isolate; }
 .hero-bg { position: absolute; inset: 0; z-index: 0; }
 .hero-bg img { width: 100%; height: 100%; object-fit: cover; object-position: center right; }
-/* The photograph now shows through unscrimmed. The element itself stays so the
-   image-free heroes below can still paint their own light-fall through it. */
 .hero-bg::after {
   content: ''; position: absolute; inset: 0;
-  background: none;
+  /* Two layers: the angled scrim that shapes the composition, plus a vertical
+     one over the text column. The home hero has sunbeams behind the headline
+     and the angled scrim alone left it at 1.8:1. */
+  background:
+    linear-gradient(90deg, rgba(14,59,33,0.55) 0%, rgba(14,59,33,0.45) 34%, rgba(14,59,33,0) 62%),
+    linear-gradient(100deg, var(--green-900) 6%, rgba(14,59,33,0.9) 32%, rgba(14,59,33,0.35) 60%, rgba(14,59,33,0.1) 100%);
 }
 .hero-inner {
   position: relative; z-index: 1;
@@ -732,7 +735,9 @@ ul { margin: 0; padding: 0; list-style: none; }
   .vm { grid-template-columns: 1fr; }
   .vm-rule { height: 1px; }
   .hero-inner { max-width: none; }
-
+  .hero-bg::after {
+    background: linear-gradient(180deg, rgba(14,59,33,0.94) 0%, rgba(14,59,33,0.8) 55%, rgba(14,59,33,0.55) 100%);
+  }
   /* No overlap on small screens — the card stacks inside the footer instead. */
   .newsletter { margin-top: clamp(1.5rem, 4vw, 2.5rem); margin-bottom: clamp(1rem, 3vw, 1.5rem); }
   .cta::before, .cta::after { width: 110px; }
