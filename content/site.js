@@ -49,6 +49,35 @@ export const site = {
   ],
 };
 
+/**
+ * Group companies. Supplied by the owner (Sept 2026); addresses and numbers are
+ * as given and should be confirmed with each office before launch — see
+ * docs/ASSUMPTIONS.md.
+ */
+export const sisterConcerns = [
+  {
+    name: 'Aidan Arab General Trading L.L.C.',
+    role: 'General trading — United Arab Emirates',
+    lines: ['Hafiz Ibrahim Street', 'Al Nuaimiya 1, Ajman', 'United Arab Emirates'],
+    phones: [
+      { display: '06 881 0055', tel: '+97168810055' },
+      { display: '+971 52 762 9767', tel: '+971527629767' },
+    ],
+  },
+  {
+    name: 'Nihal Traders',
+    role: 'Sourcing & procurement — India',
+    lines: ['Hosur – Bangalore', 'India'],
+    phones: [{ display: '+91 80563 71276', tel: '+918056371276' }],
+  },
+  {
+    name: 'Nihal Investments',
+    role: 'Trading & distribution — Oman',
+    lines: ['Madinat Qaboos', 'Ghala Industrial Estate', 'Muscat, Sultanate of Oman'],
+    phones: [{ display: '+968 7958 2463', tel: '+96879582463' }],
+  },
+];
+
 export const primaryPhone = site.phones[0];
 
 export const nav = [

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Icon from './Icon';
 import Logo from './Logo';
-import { site, nav, mailtoHref } from '@/content/site';
+import { site, nav, sisterConcerns, mailtoHref } from '@/content/site';
 
 export default function Footer() {
   return (
@@ -104,6 +104,15 @@ export default function Footer() {
               </li>
             </ul>
           </div>
+        </div>
+
+        {/* The group is worth naming here as well as on About — buyers who know one
+            of these companies should be able to connect it to HENJ from any page. */}
+        <div className="footer-group">
+          <span>Group companies</span>
+          <p>
+            {sisterConcerns.map((c) => c.name).join(' · ')}
+          </p>
         </div>
 
         <div className="footer-bottom">

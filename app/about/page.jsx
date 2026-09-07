@@ -3,6 +3,7 @@ import SectionHeading from '@/components/SectionHeading';
 import FeatureRow from '@/components/FeatureRow';
 import CtaBand from '@/components/CtaBand';
 import StatStrip from '@/components/StatStrip';
+import GroupCompanies from '@/components/GroupCompanies';
 import Icon from '@/components/Icon';
 import { site } from '@/content/site';
 
@@ -135,6 +136,8 @@ export default function AboutPage() {
           <FeatureRow items={STRENGTHS} />
         </div>
       </section>
+
+      <GroupCompanies />
 
       <CtaBand
         title="Come and See for Yourself"

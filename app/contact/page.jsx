@@ -1,6 +1,7 @@
 import SectionHeading from '@/components/SectionHeading';
 import FeatureRow from '@/components/FeatureRow';
 import EnquiryForm from '@/components/EnquiryForm';
+import GroupCompanies from '@/components/GroupCompanies';
 import Icon from '@/components/Icon';
 import { site } from '@/content/site';
 
@@ -110,6 +111,8 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
+
+      <GroupCompanies tone="cream" />
 
       <section className="section section--cream-deep">
         <div className="wrap">
