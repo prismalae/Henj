@@ -72,7 +72,7 @@ export default function ContactPage() {
       </section>
 
       {/* A little room above the heading — flush against the band above read as cramped. */}
-      <section className="section section--cream" style={{ paddingTop: 'clamp(2rem, 4vw, 3rem)' }}>
+      <section className="section section--paper" style={{ paddingTop: 'clamp(2rem, 4vw, 3rem)' }}>
         <div className="wrap split">
           <div>
             <h2 style={{ fontSize: 'clamp(1.5rem, 2.6vw, 2rem)', color: 'var(--green-900)' }}>Send Us a Message</h2>
@@ -112,9 +112,9 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <GroupCompanies tone="cream" />
+      <GroupCompanies tone="paper" />
 
-      <section className="section section--cream-deep">
+      <section className="section section--paper-deep">
         <div className="wrap">
           <FeatureRow items={ASSURANCES} />
         </div>

@@ -32,7 +32,7 @@ export default function PulsesPage() {
         badges={category.badges}
       />
 
-      <section className="section section--cream">
+      <section className="section section--paper">
         <div className="wrap">
           <SectionHeading
             title="Our Premium Range"
@@ -44,7 +44,7 @@ export default function PulsesPage() {
         </div>
       </section>
 
-      <section className="section section--cream-deep">
+      <section className="section section--paper-deep">
         <div className="wrap">
           <SectionHeading title="Why Partner with HENJ?" />
           <FeatureRow items={WHY} />

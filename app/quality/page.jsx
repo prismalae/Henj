@@ -28,7 +28,7 @@ export default function QualityPage() {
         center
       />
 
-      <section className="section section--cream">
+      <section className="section section--paper">
         <div className="wrap">
           <SectionHeading
             eyebrow="How we work"
@@ -61,7 +61,7 @@ export default function QualityPage() {
                 <div className="feature-icon" style={{ margin: '0 0 1rem', background: 'rgba(201,162,39,0.14)', color: 'var(--gold)' }}>
                   <Icon name={d.icon} size={26} />
                 </div>
-                <h3 style={{ color: '#fff', fontFamily: 'var(--font-body)', fontSize: '1rem', fontWeight: 600 }}>{d.title}</h3>
+                <h3 style={{ color: '#fff', fontSize: '1rem', fontWeight: 600 }}>{d.title}</h3>
                 <p style={{ color: 'rgba(255,255,255,0.78)', fontSize: '0.86rem' }}>{d.body}</p>
               </div>
             ))}
@@ -69,7 +69,7 @@ export default function QualityPage() {
         </div>
       </section>
 
-      <section className="section section--cream-deep">
+      <section className="section section--paper-deep">
         <div className="wrap split">
           <div>
             <p className="eyebrow">Being on the market floor</p>

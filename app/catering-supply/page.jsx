@@ -70,7 +70,7 @@ export default function CateringSupplyPage() {
         center
       />
 
-      <section className="section section--cream">
+      <section className="section section--paper">
         <div className="wrap split split--wide-left">
           <div>
             <p className="eyebrow">Why the container</p>
@@ -120,7 +120,7 @@ export default function CateringSupplyPage() {
         </div>
       </section>
 
-      <section className="section section--cream-deep">
+      <section className="section section--paper-deep">
         <div className="wrap">
           <SectionHeading
             eyebrow="What goes in it"
@@ -149,7 +149,7 @@ export default function CateringSupplyPage() {
                 <div className="feature-icon" style={{ margin: '0 0 1rem', background: 'rgba(201,162,39,0.14)', color: 'var(--gold)' }}>
                   <Icon name={b.icon} size={28} />
                 </div>
-                <h3 style={{ color: 'var(--gold)', fontFamily: 'var(--font-body)', fontSize: '1.05rem', fontWeight: 600 }}>{b.title}</h3>
+                <h3 style={{ color: 'var(--gold)', fontSize: '1.05rem', fontWeight: 600 }}>{b.title}</h3>
                 <p style={{ color: 'rgba(255,255,255,0.78)', fontSize: '0.86rem' }}>{b.body}</p>
               </div>
             ))}
@@ -157,9 +157,9 @@ export default function CateringSupplyPage() {
         </div>
       </section>
 
-      <RoadFreightBand tone="cream" />
+      <RoadFreightBand tone="paper" />
 
-      <section className="section section--cream">
+      <section className="section section--paper">
         <div className="wrap">
           <SectionHeading
             eyebrow="How a contract runs"
@@ -170,7 +170,7 @@ export default function CateringSupplyPage() {
             {STEPS.map((s) => (
               <div key={s.n}>
                 <div style={{ fontFamily: 'var(--font-display)', fontSize: '2.4rem', color: 'var(--gold-deep)', lineHeight: 1, marginBottom: '0.6rem' }}>{s.n}</div>
-                <h3 style={{ color: 'var(--green-900)', fontFamily: 'var(--font-body)', fontSize: '1rem', fontWeight: 600 }}>{s.title}</h3>
+                <h3 style={{ color: 'var(--green-900)', fontSize: '1rem', fontWeight: 600 }}>{s.title}</h3>
                 <p style={{ color: 'var(--ink-soft)', fontSize: '0.86rem' }}>{s.body}</p>
               </div>
             ))}
@@ -178,7 +178,7 @@ export default function CateringSupplyPage() {
         </div>
       </section>
 
-      <section className="section section--cream-deep">
+      <section className="section section--paper-deep">
         <div className="wrap">
           <div className="panel split">
             <div>

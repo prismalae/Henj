@@ -31,7 +31,7 @@ export default function AboutPage() {
         center
       />
 
-      <section className="section section--cream">
+      <section className="section section--paper">
         <div className="wrap split split--wide-left">
           <div>
             <p className="eyebrow">Our story</p>
@@ -59,7 +59,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="section section--cream-deep">
+      <section className="section section--paper-deep">
         <div className="wrap">
           <SectionHeading title="What We Do" align="left" />
           <div className="grid grid--3">
@@ -78,7 +78,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="section section--cream">
+      <section className="section section--paper">
         <div className="wrap">
           <div className="panel split">
             <div>
@@ -128,9 +128,9 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <StatStrip tone="cream-deep" />
+      <StatStrip tone="paper-deep" />
 
-      <section className="section section--cream">
+      <section className="section section--paper">
         <div className="wrap">
           <SectionHeading title="Our Strengths" lede={`Supplying ${site.markets.join(', ')}.`} />
           <FeatureRow items={STRENGTHS} />

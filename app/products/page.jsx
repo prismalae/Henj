@@ -22,7 +22,7 @@ export default function ProductsPage() {
         center
       />
 
-      <section className="section section--cream">
+      <section className="section section--paper">
         <div className="wrap">
           <SectionHeading
             eyebrow="Explore the range"

@@ -40,7 +40,7 @@ export default function EggsPage() {
         badges={category.badges}
       />
 
-      <section className="section section--cream">
+      <section className="section section--paper">
         <div className="wrap">
           <SectionHeading title="Our Egg Range" />
           <MetaStrip items={category.meta} />
@@ -48,7 +48,7 @@ export default function EggsPage() {
         </div>
       </section>
 
-      <section className="section section--cream" style={{ paddingTop: 0 }}>
+      <section className="section section--paper" style={{ paddingTop: 0 }}>
         <div className="wrap">
           <div className="cta" style={{ alignItems: 'stretch' }}>
             <div className="cta-text">
@@ -71,7 +71,7 @@ export default function EggsPage() {
         </div>
       </section>
 
-      <section className="section section--cream-deep">
+      <section className="section section--paper-deep">
         <div className="wrap split">
           <div>
             <p className="eyebrow">Import Sourcing</p>
@@ -106,7 +106,7 @@ export default function EggsPage() {
         </div>
       </section>
 
-      <section className="section section--cream">
+      <section className="section section--paper">
         <div className="wrap">
           <SectionHeading title="Why Partner with HENJ?" />
           <FeatureRow items={WHY} />

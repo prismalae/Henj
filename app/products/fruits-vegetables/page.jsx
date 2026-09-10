@@ -33,7 +33,7 @@ export default function FruitsVegetablesPage() {
         badges={category.badges}
       />
 
-      <section className="section section--cream">
+      <section className="section section--paper">
         <div className="wrap">
           <SectionHeading
             title="Our Fresh Range"
@@ -77,7 +77,7 @@ export default function FruitsVegetablesPage() {
         </div>
       </section>
 
-      <section className="section section--cream">
+      <section className="section section--paper">
         <div className="wrap">
           <SectionHeading title="Why Partner with HENJ?" />
           <FeatureRow items={WHY} />

@@ -2,20 +2,31 @@
    HENJ Trading L.L.C. — design tokens & base
    ============================================================ */
 :root {
-  --green-900: #0e3b21;
-  --green-800: #134a2a;
-  --green-700: #1a5c34;
-  --green-600: #2e7d46;
+  /* The brand palette's four swatches, deep to pale. Swatch 4 is the page
+     ground, so the site sits on light green rather than cream. --olive is
+     swatch 2 as drawn and stays decorative at 2.8:1; --green-600 is that hue
+     darkened until it clears 4.5:1 on BOTH light grounds. The -rgb pairs keep
+     the translucent greens tied to the solid ones. */
+  --green-900: #142a10;
+  --green-900-rgb: 20, 42, 16;
+  --green-800: #1e3b18;
+  --green-800-rgb: 30, 59, 24;
+  --green-700: #2c5423;
+  --green-600: #4c6a26;
+  --olive: #6f9a46;
+  --olive-rgb: 111, 154, 70;
+  --sage: #9fbf7b;
   --gold: #c9a227;
   --gold-light: #e4c86a;
   --gold-deep: #a8841c;
   --red: #d81f26;
 
-  --cream: #faf5ea;
-  --cream-deep: #f3ebd9;
+  --paper: #eaf1d9;
+  --paper-rgb: 234, 241, 217;
+  --paper-deep: #dee4c6;
   --ink: #1f2a22;
   --ink-soft: #4d5a51;
-  --line: rgba(14, 59, 33, 0.12);
+  --line: rgba(var(--green-900-rgb), 0.12);
 
   --wrap: 1200px;
   --header-h: 104px;
@@ -33,8 +44,13 @@
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-spring: cubic-bezier(0.34, 1.4, 0.64, 1);
 
-  --font-display: var(--font-playfair), Georgia, 'Times New Roman', serif;
-  --font-body: var(--font-poppins), -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  /* Three roles, three faces. --font-display carries titles, hero text and the
+     typeset company name — plain Montserrat, the face of the logo artwork, so
+     headings and the mark read as one system. --font-heading carries section
+     sub-headings and interface chrome, --font-body every paragraph. */
+  --font-display: var(--font-montserrat), 'Segoe UI', sans-serif;
+  --font-heading: var(--font-poppins), -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-body: var(--font-lato), -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -43,7 +59,7 @@ html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
 
 body {
   margin: 0;
-  background: var(--cream);
+  background: var(--paper);
   color: var(--ink);
   font-family: var(--font-body);
   font-size: 16px;
@@ -52,12 +68,12 @@ body {
 }
 
 h1, h2, h3, h4 {
-  font-family: var(--font-display);
-  font-weight: 700;
   line-height: 1.15;
   margin: 0 0 0.5em;
   letter-spacing: -0.01em;
 }
+h1 { font-family: var(--font-display); font-weight: 700; }
+h2, h3, h4 { font-family: var(--font-heading); font-weight: 600; }
 h1 { font-size: clamp(2.5rem, 6vw, 4.25rem); }
 h2 { font-size: clamp(1.9rem, 3.6vw, 2.75rem); }
 h3 { font-size: clamp(1.15rem, 1.8vw, 1.4rem); }
@@ -72,8 +88,8 @@ ul { margin: 0; padding: 0; list-style: none; }
 
 .wrap { width: 100%; max-width: var(--wrap); margin-inline: auto; padding-inline: var(--pad); }
 .section { padding-block: clamp(3.5rem, 7vw, 6rem); }
-.section--cream { background: var(--cream); }
-.section--cream-deep { background: var(--cream-deep); }
+.section--paper { background: var(--paper); }
+.section--paper-deep { background: var(--paper-deep); }
 .section--green { background: var(--green-900); color: #fff; }
 .sr-only {
   position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
@@ -82,7 +98,7 @@ ul { margin: 0; padding: 0; list-style: none; }
 
 /* ---------- eyebrow + section headings ---------- */
 .eyebrow {
-  font-family: var(--font-body);
+  font-family: var(--font-heading);
   font-size: 0.82rem; font-weight: 600;
   letter-spacing: 0.18em; text-transform: uppercase;
   color: var(--green-600); margin: 0 0 0.75rem;
@@ -108,7 +124,7 @@ ul { margin: 0; padding: 0; list-style: none; }
 /* ---------- buttons ---------- */
 .btn {
   display: inline-flex; align-items: center; gap: 0.6rem;
-  font-family: var(--font-body); font-weight: 600; font-size: 0.95rem;
+  font-family: var(--font-heading); font-weight: 600; font-size: 0.95rem;
   padding: 0.85rem 1.7rem; border-radius: 999px; border: 1px solid transparent;
   cursor: pointer; transition: transform var(--dur) var(--ease), background var(--dur) var(--ease), color var(--dur) var(--ease);
 }
@@ -160,13 +176,18 @@ ul { margin: 0; padding: 0; list-style: none; }
 .btn--white-ghost:hover { background: #fff; color: var(--green-900); }
 
 /* ---------- torn edge ---------- */
-.torn { display: block; width: 100%; height: clamp(28px, 4vw, 58px); position: relative; z-index: 2; }
+.torn {
+  display: block; width: 100%; position: relative; z-index: 2;
+  /* Tracks the 84-unit viewBox at full width so the torn grain and specks keep
+     their proportions instead of stretching. */
+  height: clamp(40px, 5.83vw, 84px);
+}
 .torn svg { width: 100%; height: 100%; display: block; }
 
 /* ---------- header ---------- */
 .header {
   position: fixed; top: 0; left: 0; right: 0; z-index: 60;
-  background: rgba(250, 245, 234, 0.94);
+  background: rgba(var(--paper-rgb), 0.94);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--line);
 }
@@ -178,7 +199,7 @@ ul { margin: 0; padding: 0; list-style: none; }
 .header--onDark .btn--green { background: linear-gradient(180deg, var(--gold-light), var(--gold)); color: #3a2c05; }
 .header--onDark .btn--green:hover { background: linear-gradient(180deg, var(--gold), var(--gold-deep)); }
 .header--onDark.is-stuck {
-  background: rgba(14, 59, 33, 0.96); backdrop-filter: blur(10px);
+  background: rgba(var(--green-900-rgb), 0.96); backdrop-filter: blur(10px);
   border-bottom-color: rgba(201,162,39,0.28);
 }
 .header-inner { display: flex; align-items: center; gap: 1.5rem; min-height: var(--header-h); }
@@ -191,7 +212,7 @@ ul { margin: 0; padding: 0; list-style: none; }
 .nav { margin-left: auto; display: flex; align-items: center; gap: clamp(1rem, 2.2vw, 2rem); }
 .nav-link {
   position: relative; font-size: 0.95rem; font-weight: 500; color: var(--ink);
-  padding: 0.4rem 0; background: none; border: 0; font-family: inherit; cursor: pointer;
+  padding: 0.4rem 0; background: none; border: 0; font-family: var(--font-heading); cursor: pointer;
   display: inline-flex; align-items: center; gap: 0.35rem;
 }
 .nav-link::after {
@@ -209,7 +230,7 @@ ul { margin: 0; padding: 0; list-style: none; }
 .dropdown {
   position: absolute; top: calc(100% + 14px); left: 50%; transform: translateX(-50%);
   min-width: 268px; background: #fff; border: 1px solid var(--line);
-  border-radius: var(--r-md); box-shadow: 0 18px 44px rgba(14,59,33,0.16);
+  border-radius: var(--r-md); box-shadow: 0 18px 44px rgba(var(--green-900-rgb), 0.16);
   padding: 0.5rem; display: grid; gap: 2px;
 }
 .dropdown::before {
@@ -219,7 +240,7 @@ ul { margin: 0; padding: 0; list-style: none; }
   display: block; padding: 0.7rem 0.9rem; border-radius: 9px;
   font-size: 0.9rem; color: var(--ink); transition: background var(--dur-fast) var(--ease), color var(--dur-fast) var(--ease);
 }
-.dropdown a:hover, .dropdown a:focus-visible { background: var(--cream); color: var(--green-900); }
+.dropdown a:hover, .dropdown a:focus-visible { background: var(--paper); color: var(--green-900); }
 
 .burger {
   display: none; margin-left: auto; background: none; border: 0; padding: 0.5rem;
@@ -248,7 +269,7 @@ ul { margin: 0; padding: 0; list-style: none; }
 .drawer nav { margin-top: 1.25rem; display: grid; gap: 0.15rem; }
 .drawer nav a, .drawer nav button {
   display: block; width: 100%; text-align: left; padding: 0.85rem 0;
-  font-family: var(--font-display); font-size: 1.3rem; color: #fff;
+  font-family: var(--font-display); font-weight: 600; font-size: 1.3rem; color: #fff;
   background: none; border: 0; border-bottom: 1px solid rgba(255, 255, 255, 0.09); cursor: pointer;
   transition: color var(--dur) var(--ease);
 }
@@ -272,7 +293,7 @@ ul { margin: 0; padding: 0; list-style: none; }
   display: grid;
 }
 .drawer .sub a {
-  font-family: var(--font-body); font-size: 0.98rem; font-weight: 500;
+  font-family: var(--font-heading); font-size: 0.98rem; font-weight: 500;
   color: rgba(255, 255, 255, 0.8); padding: 0.6rem 0; border-bottom: 0;
 }
 .drawer .sub a[data-active='true'] { color: var(--gold-light); }
@@ -293,7 +314,17 @@ ul { margin: 0; padding: 0; list-style: none; }
 .drawer-contact a:hover { color: var(--gold-light); }
 
 /* ---------- hero ---------- */
-.hero { position: relative; background: var(--green-900); color: #fff; isolation: isolate; }
+.hero {
+  position: relative; background: var(--green-900); color: #fff; isolation: isolate;
+  display: flex; flex-direction: column;
+  /* The hero introduces the page rather than filling it: half the viewport is
+     the target. It grows past that only where the headline genuinely needs the
+     room, because clipping a hero headline is worse than a tall hero. */
+  min-height: 50vh;
+}
+/* The fixed header floats over the hero, so the content band clears it and then
+   centres in whatever is left. */
+.hero > .wrap { flex: 1 0 auto; display: flex; align-items: center; padding-top: calc(var(--header-h) - 0.75rem); }
 .hero-bg { position: absolute; inset: 0; z-index: 0; }
 .hero-bg img { width: 100%; height: 100%; object-fit: cover; object-position: center right; }
 .hero-bg::after {
@@ -302,19 +333,19 @@ ul { margin: 0; padding: 0; list-style: none; }
      one over the text column. The home hero has sunbeams behind the headline
      and the angled scrim alone left it at 1.8:1. */
   background:
-    linear-gradient(90deg, rgba(14,59,33,0.55) 0%, rgba(14,59,33,0.45) 34%, rgba(14,59,33,0) 62%),
-    linear-gradient(100deg, var(--green-900) 6%, rgba(14,59,33,0.9) 32%, rgba(14,59,33,0.35) 60%, rgba(14,59,33,0.1) 100%);
+    linear-gradient(90deg, rgba(var(--green-900-rgb), 0.55) 0%, rgba(var(--green-900-rgb), 0.45) 34%, rgba(var(--green-900-rgb), 0) 62%),
+    linear-gradient(100deg, var(--green-900) 6%, rgba(var(--green-900-rgb), 0.9) 32%, rgba(var(--green-900-rgb), 0.35) 60%, rgba(var(--green-900-rgb), 0.1) 100%);
 }
 .hero-inner {
   position: relative; z-index: 1;
-  padding-block: clamp(4.5rem, 11vw, 8.5rem) clamp(4rem, 8vw, 6.5rem);
-  max-width: 640px;
+  padding-block: clamp(0.75rem, 1.8vw, 1.5rem);
+  width: 100%; max-width: 640px;
 }
 .hero--center .hero-inner { max-width: 780px; margin-inline: auto; text-align: center; }
-.hero h1 { color: #fff; margin-bottom: 0.35em; text-shadow: 0 2px 18px rgba(8, 34, 19, 0.45); }
+.hero h1 { font-size: clamp(2rem, 4.2vw, 3.35rem); color: #fff; margin-bottom: 0.3em; text-shadow: 0 2px 18px rgba(8, 34, 19, 0.45); }
 .hero-strapline, .hero-lede { text-shadow: 0 1px 10px rgba(8, 34, 19, 0.5); }
 .hero-strapline {
-  font-family: var(--font-body); font-weight: 600; font-size: clamp(1rem, 1.7vw, 1.25rem);
+  font-family: var(--font-heading); font-weight: 600; font-size: clamp(1rem, 1.7vw, 1.25rem);
   color: var(--gold-light); margin: 0 0 1.25rem;
 }
 .hero-lede { color: rgba(255,255,255,0.9); max-width: 46ch; font-size: 1rem; }
@@ -352,7 +383,7 @@ ul { margin: 0; padding: 0; list-style: none; }
      aligned across a whole row regardless of how long each description runs. */
   display: flex; flex-direction: column;
 }
-.card:hover { transform: translateY(-4px); box-shadow: 0 16px 34px rgba(14,59,33,0.12); }
+.card:hover { transform: translateY(-4px); box-shadow: 0 16px 34px rgba(var(--green-900-rgb), 0.12); }
 .card-body {
   padding: 1rem 1.1rem 1.25rem; text-align: center;
   flex: 1; display: flex; flex-direction: column;
@@ -362,9 +393,9 @@ ul { margin: 0; padding: 0; list-style: none; }
 
 /* empty image slot — awaiting photography */
 .slot {
-  aspect-ratio: 4 / 3; background: var(--cream-deep);
+  aspect-ratio: 4 / 3; background: var(--paper-deep);
   border-bottom: 1px solid var(--line);
-  display: grid; place-items: center; color: rgba(14,59,33,0.18);
+  display: grid; place-items: center; color: rgba(var(--green-900-rgb), 0.18);
   position: relative; overflow: hidden;
 }
 .slot--square { aspect-ratio: 1 / 1; }
@@ -381,9 +412,9 @@ ul { margin: 0; padding: 0; list-style: none; }
 }
 .feature-icon {
   width: 62px; height: 62px; margin: 0 auto 0.9rem; border-radius: 50%;
-  background: rgba(46,125,70,0.1); display: grid; place-items: center; color: var(--green-700);
+  background: rgba(var(--olive-rgb), 0.2); display: grid; place-items: center; color: var(--green-600);
 }
-.feature h3 { font-family: var(--font-body); font-size: 0.98rem; font-weight: 600; color: var(--green-900); margin-bottom: 0.3rem; }
+.feature h3 { font-size: 0.98rem; font-weight: 600; color: var(--green-900); margin-bottom: 0.3rem; }
 .feature p { font-size: 0.83rem; line-height: 1.55; color: var(--ink-soft); }
 .section--green .feature p { color: rgba(255,255,255,0.78); }
 .section--green .feature h3 { color: #fff; }
@@ -395,7 +426,7 @@ ul { margin: 0; padding: 0; list-style: none; }
 .split--wide-left { grid-template-columns: 1.05fr 1fr; }
 
 .panel {
-  background: var(--cream-deep); border-radius: var(--r-lg);
+  background: var(--paper-deep); border-radius: var(--r-lg);
   padding: clamp(1.5rem, 3vw, 2.5rem); border: 1px solid var(--line);
 }
 
@@ -404,7 +435,7 @@ ul { margin: 0; padding: 0; list-style: none; }
   width: clamp(110px, 13vw, 150px); aspect-ratio: 1; border-radius: 50%;
   background: var(--green-900); border: 3px solid var(--gold);
   display: grid; place-content: center; text-align: center; color: var(--gold); gap: 2px;
-  box-shadow: 0 14px 32px rgba(14,59,33,0.22);
+  box-shadow: 0 14px 32px rgba(var(--green-900-rgb), 0.22);
 }
 .seal b { font-family: var(--font-display); font-size: clamp(1.7rem, 2.6vw, 2.3rem); line-height: 1; }
 .seal span { font-size: 0.56rem; letter-spacing: 0.16em; text-transform: uppercase; line-height: 1.5; color: rgba(255,255,255,0.85); }
@@ -417,7 +448,7 @@ ul { margin: 0; padding: 0; list-style: none; }
   width: 62px; height: 62px; flex: none; border-radius: 50%; background: var(--gold);
   display: grid; place-items: center; color: var(--green-900);
 }
-.vm-item h3 { color: var(--gold); font-family: var(--font-body); font-size: 1.1rem; font-weight: 600; margin-bottom: 0.35rem; }
+.vm-item h3 { color: var(--gold); font-size: 1.1rem; font-weight: 600; margin-bottom: 0.35rem; }
 .vm-item p { color: rgba(255,255,255,0.82); font-size: 0.9rem; }
 
 /* ---------- CTA band ---------- */
@@ -427,9 +458,10 @@ ul { margin: 0; padding: 0; list-style: none; }
   display: flex; align-items: center; gap: clamp(1.25rem, 3vw, 2.5rem); flex-wrap: wrap;
   /* Lit from above rather than a flat fill. The glow is capped at 0.22: at 0.5 the
      band's lightest point pushed the gold heading to 2.81:1, under the 3:1 that
-     large text needs. At 0.22 the worst case is 3.47:1. */
+     large text needs. Olive is a lighter green than the emerald that used to
+     glow here, so the cap comes down to 0.18 to hold the same 3.5:1. */
   background:
-    radial-gradient(130% 150% at 50% -25%, rgba(46, 125, 70, 0.22) 0%, transparent 62%),
+    radial-gradient(130% 150% at 50% -25%, rgba(var(--olive-rgb), 0.18) 0%, transparent 62%),
     linear-gradient(165deg, var(--green-800) 0%, var(--green-900) 68%);
 }
 /* Ornamental spice art at each end.
@@ -468,9 +500,9 @@ ul { margin: 0; padding: 0; list-style: none; }
   border-radius: var(--r-lg);
   padding: clamp(1.6rem, 3.5vw, 2.75rem) clamp(1.4rem, 4vw, 3rem);
   background:
-    radial-gradient(120% 140% at 12% -20%, rgba(46, 125, 70, 0.3) 0%, transparent 60%),
+    radial-gradient(120% 140% at 12% -20%, rgba(var(--olive-rgb), 0.24) 0%, transparent 60%),
     linear-gradient(150deg, var(--green-800) 0%, var(--green-900) 70%);
-  box-shadow: inset 0 0 0 1px rgba(201, 162, 39, 0.35), 0 18px 40px rgba(14, 59, 33, 0.18);
+  box-shadow: inset 0 0 0 1px rgba(201, 162, 39, 0.35), 0 18px 40px rgba(var(--green-900-rgb), 0.18);
 }
 .roadband-head { display: flex; gap: clamp(1rem, 2.5vw, 1.75rem); align-items: flex-start; }
 .roadband-icon {
@@ -552,7 +584,7 @@ ul { margin: 0; padding: 0; list-style: none; }
 /* ---------- contact ---------- */
 .contact-strip {
   display: grid; grid-template-columns: repeat(6, 1fr);
-  background: var(--cream-deep); border: 1px solid var(--line);
+  background: var(--paper-deep); border: 1px solid var(--line);
   border-radius: var(--r-lg); overflow: hidden;
 }
 .contact-cell { padding: 1.75rem 1rem; text-align: center; position: relative; }
@@ -581,7 +613,7 @@ ul { margin: 0; padding: 0; list-style: none; }
 
 .map-frame {
   border-radius: var(--r-md); overflow: hidden; border: 1px solid var(--line);
-  background: var(--cream-deep); aspect-ratio: 4 / 3;
+  background: var(--paper-deep); aspect-ratio: 4 / 3;
 }
 .map-frame iframe { width: 100%; height: 100%; border: 0; display: block; }
 
@@ -637,14 +669,17 @@ ul { margin: 0; padding: 0; list-style: none; }
   gap: clamp(1.75rem, 4vw, 3rem); padding-block: clamp(2rem, 4vw, 3rem);
 }
 .footer h3 {
-  font-family: var(--font-body); font-size: 0.8rem; font-weight: 600;
+  font-size: 0.8rem; font-weight: 600;
   letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.1rem;
 }
 .footer-links { display: grid; gap: 0.6rem; }
 .footer-links a { font-size: 0.9rem; color: rgba(255,255,255,0.82); }
 .footer-links a:hover { color: var(--gold-light); }
 .footer-brand .logo { width: 150px; margin-bottom: 0.75rem; }
-.footer-brand .name { font-family: var(--font-display); font-size: 1.25rem; color: var(--gold); }
+.footer-brand .name {
+  font-family: var(--font-display); font-weight: 700; letter-spacing: 0.04em;
+  font-size: 1.25rem; color: var(--gold);
+}
 .footer-brand .sub { font-size: 0.66rem; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.6); margin-bottom: 0.9rem; }
 .footer-brand p { font-size: 0.85rem; color: rgba(255,255,255,0.75); max-width: 30ch; }
 .socials { display: flex; gap: 0.6rem; margin-top: 1.1rem; }
@@ -687,7 +722,7 @@ ul { margin: 0; padding: 0; list-style: none; }
   /* A hard guarantee: whatever the font metrics or viewport, no button can
      render outside the pill. The labels shrink first (see the 430px block). */
   overflow: hidden;
-  background: rgba(14, 59, 33, 0.94);
+  background: rgba(var(--green-900-rgb), 0.94);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(201, 162, 39, 0.45);
   border-radius: 999px;
@@ -736,7 +771,7 @@ ul { margin: 0; padding: 0; list-style: none; }
   .vm-rule { height: 1px; }
   .hero-inner { max-width: none; }
   .hero-bg::after {
-    background: linear-gradient(180deg, rgba(14,59,33,0.94) 0%, rgba(14,59,33,0.8) 55%, rgba(14,59,33,0.55) 100%);
+    background: linear-gradient(180deg, rgba(var(--green-900-rgb), 0.94) 0%, rgba(var(--green-900-rgb), 0.8) 55%, rgba(var(--green-900-rgb), 0.55) 100%);
   }
   /* No overlap on small screens — the card stacks inside the footer instead. */
   .newsletter { margin-top: clamp(1.5rem, 4vw, 2.5rem); margin-bottom: clamp(1rem, 3vw, 1.5rem); }
@@ -825,7 +860,7 @@ ul { margin: 0; padding: 0; list-style: none; }
   border-bottom: 0; white-space: nowrap;
 }
 .spec-table tbody tr:last-child td { border-bottom: 0; }
-.spec-table tbody tr:nth-child(even) { background: var(--cream); }
+.spec-table tbody tr:nth-child(even) { background: var(--paper); }
 .spec-table td:first-child { font-weight: 600; color: var(--green-900); }
 
 /* ---------- FAQ accordion ---------- */
@@ -839,7 +874,7 @@ ul { margin: 0; padding: 0; list-style: none; }
   list-style: none; cursor: pointer;
   display: flex; align-items: center; justify-content: space-between; gap: 1rem;
   padding: 1.05rem 1.25rem;
-  font-family: var(--font-body); font-size: 0.98rem; font-weight: 600; color: var(--green-900);
+  font-family: var(--font-heading); font-size: 0.98rem; font-weight: 600; color: var(--green-900);
 }
 .faq summary::-webkit-details-marker { display: none; }
 .faq summary svg { color: var(--gold-deep); flex: none; transition: transform var(--dur) var(--ease); }
@@ -921,14 +956,14 @@ ul { margin: 0; padding: 0; list-style: none; }
 .card--glow::before {
   content: '';
   position: absolute; inset: 0; z-index: -1; border-radius: inherit;
-  background: linear-gradient(140deg, rgba(201,162,39,0.16), transparent 45%, rgba(46,125,70,0.12));
+  background: linear-gradient(140deg, rgba(201,162,39,0.16), transparent 45%, rgba(var(--olive-rgb), 0.12));
   background-size: 200% 200%;
   animation: glow-wash 12s ease-in-out infinite alternate;
   opacity: 0.75;
 }
 .card--glow:hover {
   animation-duration: 3.5s;
-  box-shadow: 0 18px 38px rgba(14, 59, 33, 0.16);
+  box-shadow: 0 18px 38px rgba(var(--green-900-rgb), 0.16);
 }
 .card--glow:hover::before { opacity: 1; }
 
@@ -965,7 +1000,24 @@ ul { margin: 0; padding: 0; list-style: none; }
    reach its stops. Five stops shimmer on staggered delays, which
    walks a highlight along the mark rather than pulsing it as one.
    ============================================================ */
-.logo { display: block; width: 100%; height: auto; overflow: visible; }
+.logo {
+  display: block; width: 100%; height: auto; overflow: visible;
+  /* Two stacked drop-shadows rather than one: a tight contact shadow that lifts
+     the strokes off the ground, and a wide soft one carrying the falloff.
+     Stacking ramps the opacity off gradually instead of ending on an edge,
+     which is what a single shadow does to a mark this fine. The shape is taken
+     from the alpha, so the shimmering gradient underneath does not move it. */
+  filter:
+    drop-shadow(0 1px 1.5px rgba(0, 0, 0, 0.22))
+    drop-shadow(0 5px 14px rgba(0, 0, 0, 0.28));
+}
+/* On the light header the ground sits close to the mark's own value, so the
+   shadow drops to a whisper — at full strength it reads as grime, not depth. */
+.header:not(.header--onDark) .logo {
+  filter:
+    drop-shadow(0 1px 1px rgba(var(--green-900-rgb), 0.15))
+    drop-shadow(0 3px 8px rgba(var(--green-900-rgb), 0.18));
+}
 .logo-dot { fill: var(--red); }
 
 .logo-stop {
@@ -1021,7 +1073,7 @@ ul { margin: 0; padding: 0; list-style: none; }
   position: absolute; top: calc(100% + 14px); left: 50%; transform: translateX(-50%);
   width: min(660px, calc(100vw - 2 * var(--pad)));
   background: #fff; border: 1px solid var(--line); border-radius: var(--r-md);
-  box-shadow: 0 22px 54px rgba(14, 59, 33, 0.18);
+  box-shadow: 0 22px 54px rgba(var(--green-900-rgb), 0.18);
   padding: 0.75rem; z-index: 5;
 }
 /* Bridges the gap so moving the pointer down does not close the panel. */
@@ -1033,10 +1085,10 @@ ul { margin: 0; padding: 0; list-style: none; }
   padding: 0.85rem 0.9rem; border-radius: 10px;
   transition: background var(--dur-fast) var(--ease);
 }
-.mega-item:hover, .mega-item:focus-visible { background: var(--cream); }
+.mega-item:hover, .mega-item:focus-visible { background: var(--paper); }
 .mega-icon {
   width: 42px; height: 42px; flex: none; border-radius: 50%;
-  background: rgba(46, 125, 70, 0.1); color: var(--green-700);
+  background: rgba(var(--olive-rgb), 0.2); color: var(--green-600);
   display: grid; place-items: center;
 }
 .mega-item:hover .mega-icon { background: var(--gold); color: var(--green-900); }
@@ -1141,18 +1193,18 @@ ul { margin: 0; padding: 0; list-style: none; }
 .hero--plain-cool .hero-bg {
   background:
     radial-gradient(120% 90% at 18% 0%, rgba(201, 162, 39, 0.22) 0%, transparent 55%),
-    radial-gradient(90% 70% at 88% 100%, rgba(46, 125, 70, 0.55) 0%, transparent 60%),
+    radial-gradient(90% 70% at 88% 100%, rgba(var(--olive-rgb), 0.28) 0%, transparent 60%),
     linear-gradient(160deg, var(--green-800) 0%, var(--green-900) 60%);
 }
 /* A distinct ground so the two image-free heroes never read as the same page. */
 .hero--plain-warm .hero-bg {
   background:
     radial-gradient(100% 80% at 82% 8%, rgba(228, 200, 106, 0.26) 0%, transparent 58%),
-    radial-gradient(85% 75% at 10% 95%, rgba(19, 74, 42, 0.85) 0%, transparent 62%),
+    radial-gradient(85% 75% at 10% 95%, rgba(var(--green-800-rgb), 0.85) 0%, transparent 62%),
     linear-gradient(200deg, var(--green-900) 0%, var(--green-800) 70%);
 }
 .hero--plain .hero-bg::after {
-  background: linear-gradient(100deg, rgba(14, 59, 33, 0.55) 0%, rgba(14, 59, 33, 0.2) 60%, transparent 100%);
+  background: linear-gradient(100deg, rgba(var(--green-900-rgb), 0.55) 0%, rgba(var(--green-900-rgb), 0.2) 60%, transparent 100%);
 }
 
 /* ============================================================

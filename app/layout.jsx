@@ -1,4 +1,4 @@
-import { Playfair_Display, Poppins } from 'next/font/google';
+import { Montserrat, Poppins, Lato } from 'next/font/google';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import CallBar from '@/components/CallBar';
@@ -6,11 +6,17 @@ import FruitCursor from '@/components/FruitCursor';
 import { site } from '@/content/site';
 import './globals.css';
 
-const playfair = Playfair_Display({
-  subsets: ['latin'], weight: ['600', '700'], variable: '--font-playfair', display: 'swap',
-});
+/* Three faces: Montserrat carries titles, hero text and the company name — the
+   face the logo artwork is set in — Poppins SemiBold the section sub-headings
+   and interface, Lato every paragraph. */
 const poppins = Poppins({
   subsets: ['latin'], weight: ['300', '400', '500', '600'], variable: '--font-poppins', display: 'swap',
+});
+const lato = Lato({
+  subsets: ['latin'], weight: ['400', '700'], variable: '--font-lato', display: 'swap',
+});
+const montserrat = Montserrat({
+  subsets: ['latin'], weight: ['400', '600', '700'], variable: '--font-montserrat', display: 'swap',
 });
 
 export const metadata = {
@@ -35,7 +41,7 @@ export const metadata = {
   twitter: { card: 'summary_large_image', images: ['/img/hero-home.jpg'] },
 };
 
-export const viewport = { themeColor: '#0e3b21' };
+export const viewport = { themeColor: '#142a10' };
 
 const jsonLd = {
   '@context': 'https://schema.org',
@@ -57,7 +63,7 @@ const jsonLd = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${playfair.variable} ${poppins.variable}`}>
+    <html lang="en" className={`${montserrat.variable} ${poppins.variable} ${lato.variable}`}>
       <body>
         <script
           type="application/ld+json"

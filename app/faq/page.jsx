@@ -35,7 +35,7 @@ export default function FaqPage() {
         center
       />
 
-      <section className="section section--cream">
+      <section className="section section--paper">
         <div className="wrap">
           <SectionHeading eyebrow="Before you enquire" title="Common Questions" />
           <Faq items={faqs} />

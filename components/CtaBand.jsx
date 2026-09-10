@@ -9,7 +9,7 @@ export default function CtaBand({
   message = 'Hello HENJ Trading, I would like to enquire about your products.',
 }) {
   return (
-    <section className="section section--cream">
+    <section className="section section--paper">
       <div className="wrap">
         <div className="cta">
           <div className="cta-icon"><Icon name="handshake" size={40} strokeWidth={1.3} /></div>

@@ -5,7 +5,7 @@ import { site } from '@/content/site';
  * JavaScript and does nothing for a reduced-motion user.
  * Figures come from content/site.js and are listed in docs/ASSUMPTIONS.md.
  */
-export default function StatStrip({ tone = 'cream' }) {
+export default function StatStrip({ tone = 'paper' }) {
   return (
     <section className={`section section--${tone}`} style={{ paddingBlock: 'clamp(2.5rem, 5vw, 3.5rem)' }}>
       <div className="wrap">

@@ -37,7 +37,7 @@ export default function ServicesPage() {
         center
       />
 
-      <section className="section section--cream">
+      <section className="section section--paper">
         <div className="wrap">
           <SectionHeading
             eyebrow="What we handle"
@@ -56,7 +56,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <section className="section section--cream-deep">
+      <section className="section section--paper-deep">
         <div className="wrap">
           <div className="panel split">
             <div>
@@ -113,7 +113,7 @@ export default function ServicesPage() {
             ].map((s) => (
               <div key={s.n}>
                 <div style={{ fontFamily: 'var(--font-display)', fontSize: '2.4rem', color: 'var(--gold)', lineHeight: 1, marginBottom: '0.6rem' }}>{s.n}</div>
-                <h3 style={{ color: '#fff', fontFamily: 'var(--font-body)', fontSize: '1rem', fontWeight: 600 }}>{s.title}</h3>
+                <h3 style={{ color: '#fff', fontSize: '1rem', fontWeight: 600 }}>{s.title}</h3>
                 <p style={{ color: 'rgba(255,255,255,0.78)', fontSize: '0.86rem' }}>{s.body}</p>
               </div>
             ))}

@@ -7,7 +7,7 @@ import { site, sisterConcerns } from '@/content/site';
  * of them has a website of its own yet, so the address and phone are the whole
  * point of the listing.
  */
-export default function GroupCompanies({ tone = 'cream-deep', heading = true }) {
+export default function GroupCompanies({ tone = 'paper-deep', heading = true }) {
   return (
     <section className={`section section--${tone}`}>
       <div className="wrap">

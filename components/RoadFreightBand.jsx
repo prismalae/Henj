@@ -9,7 +9,7 @@ const STOPS = ['Qatar', 'Bahrain', 'Kuwait'];
  * Doha, Manama and Kuwait City are looking for and it was previously buried in
  * a services card. Deliberately the loudest block on any page it appears on.
  */
-export default function RoadFreightBand({ tone = 'cream' }) {
+export default function RoadFreightBand({ tone = 'paper' }) {
   return (
     <section className={`section section--${tone}`} style={{ paddingBlock: 'clamp(2rem, 4vw, 3rem)' }}>
       <div className="wrap">

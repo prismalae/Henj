@@ -8,6 +8,7 @@ import RoadFreightBand from '@/components/RoadFreightBand';
 import Icon from '@/components/Icon';
 import { site } from '@/content/site';
 import Faq from '@/components/Faq';
+import GroupCompanies from '@/components/GroupCompanies';
 import { categories, faqs } from '@/content/products';
 
 export const metadata = {
@@ -35,7 +36,7 @@ export default function HomePage() {
       />
 
       {/* Intro + experience seal */}
-      <section className="section section--cream">
+      <section className="section section--paper">
         <div className="wrap split split--wide-left">
           <div>
             <p className="eyebrow">Welcome to HENJ Trading</p>
@@ -67,7 +68,7 @@ export default function HomePage() {
       <StatStrip tone="green" />
 
       {/* Trust panel */}
-      <section className="section section--cream" style={{ paddingTop: 0 }}>
+      <section className="section section--paper" style={{ paddingTop: 0 }}>
         <div className="wrap">
           <div className="panel split">
             <div className="grid grid--2">
@@ -99,7 +100,7 @@ export default function HomePage() {
       </section>
 
       {/* Product categories */}
-      <section className="section section--cream-deep">
+      <section className="section section--paper-deep">
         <div className="wrap">
           <SectionHeading
             eyebrow="Our Products"
@@ -126,7 +127,7 @@ export default function HomePage() {
       </section>
 
       {/* Who we supply */}
-      <section className="section section--cream">
+      <section className="section section--paper">
         <div className="wrap">
           <SectionHeading
             eyebrow="Who we supply"
@@ -148,6 +149,50 @@ export default function HomePage() {
                 <p style={{ color: 'var(--ink-soft)', fontSize: '0.87rem' }}>{a.body}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Catering supply — the one offer with its own commercial shape, so it
+          gets a slab here rather than staying a line in the buyer grid above. */}
+      <section className="section section--paper-deep">
+        <div className="wrap split split--wide-left">
+          <div>
+            <p className="eyebrow">Catering supply</p>
+            <h2>Full Container Loads for Hospitality Kitchens.</h2>
+            <p>
+              Catering companies in Abu Dhabi and across the Emirates take rice, dal, sugar and
+              spices from us by the container rather than the pallet — the grade fixed, the price
+              held for the contract term, and deliveries released against consumption instead of
+              dumped on the store at once.
+            </p>
+            <p>
+              Where one line will not fill a container, we consolidate several staples into a
+              single load, so a kitchen gets container economics without a year of one commodity
+              sitting in the dry store.
+            </p>
+            <Link href="/catering-supply" className="btn btn--green" style={{ marginTop: '0.5rem' }}>
+              See how catering supply works <Icon name="arrow" size={18} />
+            </Link>
+          </div>
+          <div className="panel">
+            <p className="eyebrow">What fills a container</p>
+            <div style={{ display: 'grid', gap: '0.7rem', marginTop: '0.25rem' }}>
+              {[
+                'Rice — by grade and origin',
+                'Dal, pulses and chickpeas',
+                'Sugar, oil and cooking staples',
+                'Spices, whole and ground',
+              ].map((t) => (
+                <div key={t} style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
+                  <Icon name="box" size={18} style={{ color: 'var(--gold-deep)', flex: 'none' }} />
+                  <span style={{ fontSize: '0.88rem', fontWeight: 500, color: 'var(--green-900)' }}>{t}</span>
+                </div>
+              ))}
+            </div>
+            <p style={{ fontSize: '0.86rem', color: 'var(--ink-soft)', marginTop: '1.25rem', marginBottom: 0 }}>
+              Priced for the term, delivered by our own vehicles, scheduled around your menu cycle.
+            </p>
           </div>
         </div>
       </section>
@@ -182,7 +227,7 @@ export default function HomePage() {
               <div key={s.title} style={{ display: 'flex', gap: '1.25rem' }}>
                 <div className="vm-icon"><Icon name={s.icon} size={28} /></div>
                 <div>
-                  <h3 style={{ color: 'var(--gold)', fontFamily: 'var(--font-body)', fontSize: '1.1rem', fontWeight: 600 }}>{s.title}</h3>
+                  <h3 style={{ color: 'var(--gold)', fontSize: '1.1rem', fontWeight: 600 }}>{s.title}</h3>
                   <p style={{ color: 'rgba(255,255,255,0.82)', fontSize: '0.9rem' }}>{s.body}</p>
                 </div>
               </div>
@@ -195,7 +240,7 @@ export default function HomePage() {
       <RoadFreightBand />
 
       {/* What goes wrong */}
-      <section className="section section--cream">
+      <section className="section section--paper">
         <div className="wrap split split--wide-left">
           <div>
             <p className="eyebrow">The honest part</p>
@@ -242,7 +287,7 @@ export default function HomePage() {
       </section>
 
       {/* Short services intro */}
-      <section className="section section--cream-deep">
+      <section className="section section--paper-deep">
         <div className="wrap">
           <SectionHeading
             eyebrow="What We Do"
@@ -263,7 +308,7 @@ export default function HomePage() {
                   <Icon name={s.icon} size={24} />
                 </div>
                 <div>
-                  <h3 style={{ color: 'var(--green-900)', fontFamily: 'var(--font-body)', fontSize: '1rem', fontWeight: 600, marginBottom: '0.25rem' }}>{s.title}</h3>
+                  <h3 style={{ color: 'var(--green-900)', fontSize: '1rem', fontWeight: 600, marginBottom: '0.25rem' }}>{s.title}</h3>
                   <p style={{ color: 'var(--ink-soft)', fontSize: '0.86rem', margin: 0 }}>{s.body}</p>
                 </div>
               </div>
@@ -295,7 +340,7 @@ export default function HomePage() {
             ].map((s2) => (
               <div key={s2.n}>
                 <div style={{ fontFamily: 'var(--font-display)', fontSize: '2.4rem', color: 'var(--gold)', lineHeight: 1, marginBottom: '0.6rem' }}>{s2.n}</div>
-                <h3 style={{ color: '#fff', fontFamily: 'var(--font-body)', fontSize: '1rem', fontWeight: 600 }}>{s2.title}</h3>
+                <h3 style={{ color: '#fff', fontSize: '1rem', fontWeight: 600 }}>{s2.title}</h3>
                 <p style={{ color: 'rgba(255,255,255,0.78)', fontSize: '0.86rem' }}>{s2.body}</p>
               </div>
             ))}
@@ -304,7 +349,7 @@ export default function HomePage() {
       </section>
 
       {/* Why choose */}
-      <section className="section section--cream">
+      <section className="section section--paper">
         <div className="wrap">
           <SectionHeading title="Why Choose HENJ?" />
           <FeatureRow items={WHY} />
@@ -312,7 +357,7 @@ export default function HomePage() {
       </section>
 
       {/* FAQ */}
-      <section className="section section--cream-deep">
+      <section className="section section--paper-deep">
         <div className="wrap">
           <SectionHeading
             eyebrow="Before you enquire"
@@ -327,6 +372,8 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      <GroupCompanies tone="paper" />
 
       <CtaBand
         title="Let's Build a Stronger Food Supply Chain Together"

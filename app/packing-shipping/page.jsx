@@ -23,7 +23,7 @@ export default function PackingShippingPage() {
         center
       />
 
-      <section className="section section--cream">
+      <section className="section section--paper">
         <div className="wrap">
           <SectionHeading
             eyebrow="Reference"
@@ -38,7 +38,7 @@ export default function PackingShippingPage() {
         </div>
       </section>
 
-      <section className="section section--cream-deep">
+      <section className="section section--paper-deep">
         <div className="wrap">
           <SectionHeading
             eyebrow="Loadability"
@@ -73,7 +73,7 @@ export default function PackingShippingPage() {
                 <div className="feature-icon" style={{ margin: '0 0 1rem', background: 'rgba(201,162,39,0.14)', color: 'var(--gold)' }}>
                   <Icon name={m.mode.startsWith('Air') ? 'plane' : m.mode.startsWith('Sea') ? 'ship' : 'truck'} size={28} />
                 </div>
-                <h3 style={{ color: 'var(--gold)', fontFamily: 'var(--font-body)', fontSize: '1.1rem', fontWeight: 600 }}>{m.mode}</h3>
+                <h3 style={{ color: 'var(--gold)', fontSize: '1.1rem', fontWeight: 600 }}>{m.mode}</h3>
                 <dl style={{ margin: '0 0 0.9rem', display: 'grid', gap: '0.5rem' }}>
                   <div>
                     <dt style={{ fontSize: '0.68rem', letterSpacing: '0.08em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.6)' }}>Best for</dt>

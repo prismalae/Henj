@@ -10,7 +10,7 @@ const BADGE_ICONS = {
   'Cold Chain': 'shield', 'Daily Supply': 'time',
 };
 
-export default function Hero({ image = null, tone = 'cool', title, strapline, lede, badges = [], center = false, tornColor = 'var(--cream)' }) {
+export default function Hero({ image = null, tone = 'cool', title, strapline, lede, badges = [], center = false, tornColor = 'var(--paper)' }) {
   return (
     <section className={`hero${center ? ' hero--center' : ''}${image ? '' : ` hero--plain hero--plain-${tone}`}`}>
       <div className="hero-bg">
