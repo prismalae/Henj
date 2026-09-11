@@ -840,9 +840,27 @@ ul { margin: 0; padding: 0; list-style: none; }
   /* No overlap on small screens — the card stacks inside the footer instead. */
   .newsletter { margin-top: clamp(1.5rem, 4vw, 2.5rem); margin-bottom: clamp(1rem, 3vw, 1.5rem); }
   .cta::before, .cta::after { width: 110px; }
-
   .callbar a { padding: 0.55rem 0.8rem; font-size: 0.8rem; gap: 0.35rem; }
+}
 
+/* ---------- phone hero ----------
+   Desktop veils the photograph with 0.42-0.62 and it still reads as a picture.
+   The phone scrim had crept to 0.88 to buy contrast and turned it into a green
+   rectangle instead. Sampling the composited background under every piece of
+   hero copy, 0.68 is the lightest flat scrim they all still clear, the binding
+   case being the lede and the route note at about 5.4:1 against 4.5:1. So this
+   sits a hair above that through the copy, then lets go almost entirely below
+   it, where nothing has to stay readable. */
+@media (max-width: 700px) {
+  .hero-bg::after {
+    background: linear-gradient(
+      180deg,
+      rgba(var(--green-900-rgb), 0.73) 0%,
+      rgba(var(--green-900-rgb), 0.71) 80%,
+      rgba(var(--green-900-rgb), 0.34) 90%,
+      rgba(var(--green-900-rgb), 0.14) 100%
+    );
+  }
 }
 
 @media (max-width: 560px) {
