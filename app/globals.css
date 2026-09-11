@@ -334,9 +334,14 @@ ul { margin: 0; padding: 0; list-style: none; }
   content: ''; position: absolute; inset: 0;
   /* Two layers: the angled scrim that shapes the composition, plus a vertical
      one over the text column. The home hero has sunbeams behind the headline
-     and the angled scrim alone left it at 1.8:1. */
+     and the angled scrim alone left it at 1.8:1. The vertical layer was raised
+     again when the catering and shipping photographs arrived: both are lit far
+     brighter behind the copy than the ones before them, and at the old weight
+     the catering headline measured 2.99:1 against the 3:1 large text needs.
+     Swept against the composited background, +0.12 is what buys every hero a
+     comfortable margin rather than a passing grade. */
   background:
-    linear-gradient(90deg, rgba(var(--green-900-rgb), 0.62) 0%, rgba(var(--green-900-rgb), 0.56) 38%, rgba(var(--green-900-rgb), 0.42) 62%, rgba(var(--green-900-rgb), 0.14) 78%, rgba(var(--green-900-rgb), 0) 88%),
+    linear-gradient(90deg, rgba(var(--green-900-rgb), 0.74) 0%, rgba(var(--green-900-rgb), 0.68) 38%, rgba(var(--green-900-rgb), 0.54) 62%, rgba(var(--green-900-rgb), 0.20) 78%, rgba(var(--green-900-rgb), 0) 88%),
     linear-gradient(100deg, var(--green-900) 6%, rgba(var(--green-900-rgb), 0.9) 32%, rgba(var(--green-900-rgb), 0.35) 60%, rgba(var(--green-900-rgb), 0.1) 100%);
 }
 .hero-inner {

@@ -63,11 +63,10 @@ export default function CateringSupplyPage() {
   return (
     <>
       <Hero
-        tone="warm"
+        image="/img/hero-catering.jpg"
         title="Catering Foodstuff Supply"
         strapline="Full container loads for hospitality kitchens."
         lede="Hospitality catering companies in Abu Dhabi and across the Emirates take rice, dal, sugar and spices from us by the container rather than the pallet. Here is how that works, and what goes in it."
-        center
       />
 
       <section className="section section--paper">

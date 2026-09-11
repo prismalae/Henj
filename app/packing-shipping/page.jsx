@@ -20,7 +20,6 @@ export default function PackingShippingPage() {
         title="Packing & Shipping"
         strapline="What fits in a container, and how it travels."
         lede="A working reference for buyers sizing an order — packing formats, pallet configuration, container loadability and the honest trade-off between air and sea."
-        center
       />
 
       <section className="section section--paper">
