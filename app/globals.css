@@ -813,10 +813,30 @@ ul { margin: 0; padding: 0; list-style: none; }
   .split, .split--wide-left { grid-template-columns: 1fr; }
   .vm { grid-template-columns: 1fr; }
   .vm-rule { height: 1px; }
-  .hero-inner { max-width: none; }
-  .hero-bg::after {
-    background: linear-gradient(180deg, rgba(var(--green-900-rgb), 0.94) 0%, rgba(var(--green-900-rgb), 0.8) 55%, rgba(var(--green-900-rgb), 0.55) 100%);
+  /* The narrow hero takes the desktop composition: content ranged left, not
+     centred, because centred multi-line copy is harder to scan on a phone and
+     the ragged left edge reads as an accident at this width. Centre-variant
+     heroes come along with it. */
+  .hero-inner, .hero--center .hero-inner {
+    max-width: none; margin-inline: 0; text-align: left;
   }
+  .hero--center .hero-lede, .hero--center .hero-route { margin-inline: 0; }
+  .badge { text-align: left; }
+  .badge svg { margin-inline: 0 auto; }
+  /* The desktop scrim is a horizontal wipe, which at this width puts the whole
+     photograph inside its darkest stop and hides it. This one is vertical and
+     sits behind the copy only, so the photograph is still legible below the
+     text instead of being a green rectangle. */
+  .hero-bg::after {
+    background: linear-gradient(
+      180deg,
+      rgba(var(--green-900-rgb), 0.9) 0%,
+      rgba(var(--green-900-rgb), 0.87) 66%,
+      rgba(var(--green-900-rgb), 0.62) 84%,
+      rgba(var(--green-900-rgb), 0.18) 100%
+    );
+  }
+  .hero-bg img { object-position: center; }
   /* No overlap on small screens — the card stacks inside the footer instead. */
   .newsletter { margin-top: clamp(1.5rem, 4vw, 2.5rem); margin-bottom: clamp(1rem, 3vw, 1.5rem); }
   .cta::before, .cta::after { width: 110px; }
