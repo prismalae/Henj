@@ -1,5 +1,6 @@
 import Icon from './Icon';
 import TornEdge from './TornEdge';
+import GccRoute from './GccRoute';
 
 const BADGE_ICONS = {
   'Carefully Sourced': 'sourced', 'Premium Quality': 'quality',
@@ -10,7 +11,7 @@ const BADGE_ICONS = {
   'Cold Chain': 'shield', 'Daily Supply': 'time',
 };
 
-export default function Hero({ image = null, tone = 'cool', title, strapline, lede, badges = [], center = false, tornColor = 'var(--paper)' }) {
+export default function Hero({ image = null, tone = 'cool', title, strapline, lede, badges = [], route = false, center = false, tornColor = 'var(--paper)' }) {
   return (
     <section className={`hero${center ? ' hero--center' : ''}${image ? '' : ` hero--plain hero--plain-${tone}`}`}>
       <div className="hero-bg">
@@ -23,6 +24,7 @@ export default function Hero({ image = null, tone = 'cool', title, strapline, le
           <h1>{title}</h1>
           {strapline && <p className="hero-strapline">{strapline}</p>}
           {lede && <p className="hero-lede">{lede}</p>}
+          {route && <GccRoute />}
           {badges.length > 0 && (
             <ul className="badges">
               {badges.map((b) => (

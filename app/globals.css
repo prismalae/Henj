@@ -349,6 +349,40 @@ ul { margin: 0; padding: 0; list-style: none; }
   color: var(--gold-light); margin: 0 0 1.25rem;
 }
 .hero-lede { color: rgba(255,255,255,0.9); max-width: 46ch; font-size: 1rem; }
+
+/* ---------- hero GCC route strip ---------- */
+.hero-route { margin: clamp(1rem, 2.2vw, 1.5rem) 0 0; max-width: 46ch; }
+.hero-route-line { display: flex; align-items: center; }
+/* The truck sits on its own disc so it reads as a vehicle on the road rather
+   than a smudge on a dashed rule — the same treatment as the road band. */
+.hero-route-truck {
+  flex: none; width: 38px; height: 38px; border-radius: 50%;
+  display: grid; place-items: center; color: var(--gold-light);
+  background: rgba(var(--green-900-rgb), 0.75);
+  box-shadow: inset 0 0 0 1px rgba(201, 162, 39, 0.5);
+}
+/* Each leg is dash-then-flag, so the road keeps running between every stop and
+   the strip stays even however many destinations are passed in. */
+.hero-route-leg { display: flex; align-items: center; flex: 1 1 auto; min-width: 0; }
+.hero-route-dash {
+  flex: 1 1 18px; min-width: 14px; height: 2px;
+  border-top: 2px dashed rgba(201, 162, 39, 0.55);
+}
+.hero-route-flag {
+  flex: none; width: 30px; height: 30px; border-radius: 50%; overflow: hidden;
+  box-shadow: 0 0 0 1px rgba(201, 162, 39, 0.65), 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+.hero-route-flag svg { width: 100%; height: 100%; display: block; }
+.hero-route-note {
+  margin: 0.7rem 0 0; font-size: 0.84rem; line-height: 1.5;
+  color: rgba(255, 255, 255, 0.82);
+}
+.hero--center .hero-route { margin-inline: auto; }
+
+@media (max-width: 560px) {
+  .hero-route-truck { width: 32px; height: 32px; }
+  .hero-route-flag { width: 25px; height: 25px; }
+}
 .hero--center .hero-lede { margin-inline: auto; }
 
 .badges {

@@ -32,6 +32,7 @@ export default function HomePage() {
         title="Fresh From the World. Delivered Across the Gulf."
         strapline="Import & Export – Distribution"
         lede="HENJ Trading L.L.C. supplies fruits, vegetables, pulses, rice, grains, spices and eggs to wholesalers, retailers and kitchens across the UAE and beyond."
+        route
         badges={['Carefully Sourced', 'Premium Quality', 'Air Freighted', 'Timely Delivered']}
       />
 
