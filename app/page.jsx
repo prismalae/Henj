@@ -127,7 +127,9 @@ export default function HomePage() {
         </div>
       </section>
 
-      <GroupCompanies tone="paper" />
+      {/* No heading here: the home page introduces the group in the section above,
+          and the component's own "Sister Concerns" block restated it. */}
+      <GroupCompanies tone="paper" heading={false} />
 
       {/* Who we supply */}
       <section className="section section--paper-deep">

@@ -93,7 +93,9 @@ export default function OurGroupPage() {
         </div>
       </section>
 
-      <GroupCompanies tone="paper-deep" />
+      {/* No heading: the section above already introduces the group, and the
+          component's own "Sister Concerns" block restated it. */}
+      <GroupCompanies tone="paper-deep" heading={false} />
 
       {/* The supermarket. Photographs earn their place here because "we also run
           a supermarket" is a claim a buyer can otherwise only take on trust. */}
