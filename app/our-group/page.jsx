@@ -3,7 +3,6 @@ import SectionHeading from '@/components/SectionHeading';
 import PhotoGallery from '@/components/PhotoGallery';
 import GroupCompanies from '@/components/GroupCompanies';
 import CtaBand from '@/components/CtaBand';
-import MetaStrip from '@/components/MetaStrip';
 import Icon from '@/components/Icon';
 import { site } from '@/content/site';
 
@@ -63,14 +62,6 @@ export default function OurGroupPage() {
               them the group has people in three markets, which is why we can answer for what
               happens in each.
             </p>
-            <MetaStrip
-              items={[
-                'Three associated companies',
-                'Present at origin in India',
-                'A supermarket and trading in the UAE',
-                'Trading and distribution in Oman',
-              ]}
-            />
           </div>
           <div className="panel">
             <p className="eyebrow">The group at a glance</p>
