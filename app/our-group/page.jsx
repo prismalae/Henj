@@ -3,7 +3,6 @@ import SectionHeading from '@/components/SectionHeading';
 import PhotoGallery from '@/components/PhotoGallery';
 import GroupCompanies from '@/components/GroupCompanies';
 import CtaBand from '@/components/CtaBand';
-import Icon from '@/components/Icon';
 
 export const metadata = {
   title: 'Our Group',
@@ -44,46 +43,6 @@ export default function OurGroupPage() {
         strapline="Our Group"
         lede="Our group connects three complementary operations across India, Oman and the UAE, bringing together international trade, fresh farming and modern retail."
       />
-
-      <section className="section section--paper">
-        <div className="wrap split split--wide-left">
-          <div>
-            <p className="eyebrow">Why it matters to a buyer</p>
-            <h2>Buying at Origin, Delivering in Three Markets.</h2>
-            <p>
-              Most of what separates a supplier from an agent is where they stand in the chain.{' '}
-              <strong className="co">HENJ</strong> trades on its own account and works alongside three associated companies, so a
-              conversation that starts in Dubai does not have to be handed to a stranger at the other
-              end of it.
-            </p>
-            <p>
-              <strong className="co">Nihal Traders</strong> is at origin in Hosur&ndash;Bangalore.{' '}
-              <strong className="co">Aidan Arab General Trading</strong> is in Ajman, where it runs
-              the supermarket pictured below. <strong className="co">Nihal Investments</strong> is in
-              Muscat. Between them the group has people in three markets, which is why we can answer
-              for what happens in each.
-            </p>
-          </div>
-          <div className="panel">
-            <p className="eyebrow">The group at a glance</p>
-            <div style={{ display: 'grid', gap: '0.9rem', marginTop: '0.25rem' }}>
-              {[
-                { icon: 'globe', label: 'Four companies', body: 'HENJ Trading and three associated concerns.' },
-                { icon: 'pin', label: 'Three countries', body: 'United Arab Emirates, India and the Sultanate of Oman.' },
-                { icon: 'shield', label: 'One relationship', body: 'A single point of contact across all of it.' },
-              ].map((r) => (
-                <div key={r.label} style={{ display: 'flex', gap: '0.75rem', alignItems: 'flex-start' }}>
-                  <Icon name={r.icon} size={20} style={{ color: 'var(--gold-deep)', flex: 'none', marginTop: '2px' }} />
-                  <span>
-                    <strong style={{ display: 'block', color: 'var(--green-900)', fontSize: '0.95rem' }}>{r.label}</strong>
-                    <span style={{ fontSize: '0.87rem', color: 'var(--ink-soft)' }}>{r.body}</span>
-                  </span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* No heading: the section above already introduces the group, and the
           component's own "Sister Concerns" block restated it. */}
