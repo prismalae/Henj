@@ -322,6 +322,7 @@ export const pulsesSpices = [
   },
   {
     name: 'Cardamom',
+    image: '/img/products/cardamom.png',
     description: 'Naturally aromatic green cardamom (elaichi).',
     specs: {
       Origin: 'India (Kerala, Idukki), Guatemala',
@@ -365,7 +366,7 @@ export const pulsesSpices = [
   {
     name: 'Black Pepper',
     description: 'Bold, pungent and high-piperine black peppercorns.',
-    image: '/img/products/black-pepper.jpg',
+    image: '/img/products/black-pepper.png',
     specs: {
       Origin: 'India (Malabar), Vietnam, Indonesia',
       Grades: 'MG1, ASTA, 500 / 550 / 570 g/l bulk density',
@@ -423,7 +424,7 @@ export const eggs = [
   {
     name: 'White Eggs',
     description: 'Clean, fresh, and high-quality white eggs rich in nutrition.',
-    image: '/img/products/white-eggs.jpg',
+    image: '/img/products/white-eggs.png',
     specs: {
       Origin: 'India, Turkey',
       Grades: 'Small, medium, large, extra-large by weight',
@@ -434,7 +435,7 @@ export const eggs = [
   {
     name: 'Brown Eggs',
     description: 'Naturally rich brown eggs with great taste and quality.',
-    image: '/img/products/brown-eggs.jpg',
+    image: '/img/products/brown-eggs.png',
     specs: {
       Origin: 'India, Turkey',
       Grades: 'Small, medium, large, extra-large by weight',
@@ -569,7 +570,7 @@ export const driedFruitsNuts = [
   {
     name: 'Cashew Nuts',
     description: 'Whole white kernels graded by count, plus splits and pieces.',
-    image: '/img/products/cashews.jpg',
+    image: '/img/products/cashews.png',
     specs: {
       Origin: 'India, Vietnam, Ivory Coast',
       Grades: 'W180, W210, W240, W320, W450; splits, butts and pieces',
@@ -580,7 +581,7 @@ export const driedFruitsNuts = [
   {
     name: 'Almonds',
     description: 'Sweet, uniform almond kernels in shelled and inshell form.',
-    image: '/img/products/almonds.jpg',
+    image: '/img/products/almonds.png',
     specs: {
       Origin: 'USA (California), Australia, Iran',
       Grades: 'Nonpareil, Independence, Carmel; 23/25, 27/30 count',
@@ -591,7 +592,7 @@ export const driedFruitsNuts = [
   {
     name: 'Pistachios',
     description: 'Naturally opened pistachios, roasted and salted or raw.',
-    image: '/img/products/pistachios.jpg',
+    image: '/img/products/pistachios.png',
     specs: {
       Origin: 'Iran, USA, Turkey',
       Grades: '21/25, 26/30 count; jumbo and standard',
@@ -602,7 +603,7 @@ export const driedFruitsNuts = [
   {
     name: 'Walnuts',
     description: 'Light-coloured walnut kernels, halves and quarters.',
-    image: '/img/products/walnuts.jpg',
+    image: '/img/products/walnuts.png',
     specs: {
       Origin: 'Chile, USA, India, Ukraine',
       Grades: 'Light halves, light amber, quarters and pieces',
@@ -613,7 +614,7 @@ export const driedFruitsNuts = [
   {
     name: 'Raisins',
     description: 'Golden and black raisins, seedless and cleaned.',
-    image: '/img/products/raisins.jpg',
+    image: '/img/products/raisins.png',
     specs: {
       Origin: 'India, Iran, Turkey, Afghanistan',
       Grades: 'Golden, black, sultana; seedless',
@@ -624,7 +625,7 @@ export const driedFruitsNuts = [
   {
     name: 'Dates',
     description: 'Soft and semi-dry dates in retail and bulk packing.',
-    image: '/img/products/dates.jpg',
+    image: '/img/products/dates.png',
     specs: {
       Origin: 'UAE, Saudi Arabia, Iran, Tunisia',
       Varieties: 'Medjool, Khalas, Fard, Zahidi, Deglet Nour',
