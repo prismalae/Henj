@@ -122,6 +122,18 @@ ul { margin: 0; padding: 0; list-style: none; }
 .sec-head p { max-width: 62ch; margin-inline: auto; color: var(--ink-soft); }
 .sec-head--left p { margin-inline: 0; }
 
+/* The qualifier under a section title. Same treatment as an eyebrow, pulled up
+   under the heading it belongs to rather than floating above the next thing. */
+.sec-sub {
+  font-family: var(--font-heading);
+  /* Larger than an eyebrow: this sits under a company name set at hero scale,
+     and at eyebrow size it read as a footnote to it. Tracking eases off as the
+     size grows, or the line gets too wide to sit under the name. */
+  font-size: clamp(0.92rem, 1.35vw, 1.08rem); font-weight: 600;
+  letter-spacing: 0.13em; text-transform: uppercase;
+  color: var(--green-600); margin: -0.25rem 0 0;
+}
+
 /* gold ornamental rule under a heading */
 .ornament { display: flex; align-items: center; justify-content: center; gap: 10px; margin: 0.9rem 0 1.1rem; }
 .sec-head--left .ornament { justify-content: flex-start; }

@@ -100,8 +100,8 @@ export default function OurGroupPage() {
       <section className="section section--paper section--named">
         <div className="wrap">
           <SectionHeading
-            eyebrow="The supermarket"
             title="Aidan Arab General Trading"
+            sub="The supermarket in Ajman"
           />
           <PhotoGallery items={STORE} />
         </div>
@@ -113,9 +113,9 @@ export default function OurGroupPage() {
       <section className="section section--paper-deep section--named">
         <div className="wrap">
           <SectionHeading
-            eyebrow="Grown in Oman"
             title="Nihal Investments"
-            lede="Leafy vegetables, herbs and watermelon — raised from seed on site and grown under shade net."
+            sub="Grown in Oman"
+            lede="Through our farming operations in Oman, we grow fresh mint, coriander, watermelon, and a variety of leafy green vegetables. The produce is carefully harvested and transported regularly to Dubai&rsquo;s Al Aweer Fruits and Vegetables Market, ensuring a consistent supply of farm-fresh quality."
           />
           <PhotoGallery items={FARM} />
         </div>
