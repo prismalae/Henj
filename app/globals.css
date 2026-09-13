@@ -1318,7 +1318,10 @@ ul { margin: 0; padding: 0; list-style: none; }
 }
 
 /* Product cutouts sit on white and are shown whole, not cropped. */
-.slot--photo { background: var(--card); }
+/* White, not --card. These are cut-out product photographs shot on white, and
+   the slot pads them by 7%, so anything but white leaves a visible square seam
+   where the photo's own background meets the slot's. */
+.slot--photo { background: #fff; }
 .slot--photo img { object-fit: contain; padding: 7%; }
 
 /* ============================================================
