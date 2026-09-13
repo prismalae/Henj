@@ -42,7 +42,7 @@ export default function OurGroupPage() {
         scrim="heavy"
         title={<>One Group<br /><span className="h1-sm">Three Markets.</span></>}
         strapline="Our Group"
-        lede="Connecting Trade, Farming and Retail Across India, Oman and the UAE — one at origin, one running a supermarket in Ajman, one in Muscat."
+        lede="Our group connects three complementary operations across India, Oman and the UAE, bringing together international trade, fresh farming and modern retail."
       />
 
       <section className="section section--paper">
