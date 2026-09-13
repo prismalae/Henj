@@ -24,7 +24,7 @@ export default function QualityPage() {
         image="/img/hero-quality.jpg"
         title="Quality & Certifications"
         strapline="We stand behind what we ship."
-        lede="HENJ trades on its own account. That means the grade you approved is our responsibility, not a supplier's — from inspection at origin to the moment it reaches your door."
+        lede={<><strong className="co co--onDark">HENJ</strong> trades on its own account. That means the grade you approved is our responsibility, not a supplier&rsquo;s — from inspection at origin to the moment it reaches your door.</>}
         center
       />
 

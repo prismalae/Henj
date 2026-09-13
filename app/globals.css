@@ -122,6 +122,13 @@ ul { margin: 0; padding: 0; list-style: none; }
 .sec-head p { max-width: 62ch; margin-inline: auto; color: var(--ink-soft); }
 .sec-head--left p { margin-inline: 0; }
 
+/* A company name inside running text. Bold alone disappeared against Lato's
+   regular weight at this size, so it also takes the darker ink the headings
+   use. On a dark ground it keeps the surrounding colour — the dark ink would
+   vanish there, and recolouring it gold would read as a link. */
+.co { font-weight: 700; color: var(--green-900); }
+.co--onDark { color: inherit; }
+
 /* The qualifier under a section title. Same treatment as an eyebrow, pulled up
    under the heading it belongs to rather than floating above the next thing. */
 .sec-sub {

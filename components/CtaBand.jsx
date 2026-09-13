@@ -4,7 +4,7 @@ import { whatsappHref } from '@/content/site';
 
 export default function CtaBand({
   title = "Let's Grow Together",
-  body = 'Looking for a reliable partner for your business? Partner with HENJ Trading L.L.C. for quality you can trust and service you can rely on.',
+  body = <>Looking for a reliable partner for your business? Partner with <strong className="co co--onDark">HENJ Trading L.L.C.</strong> for quality you can trust and service you can rely on.</>,
   action = 'Enquire Now',
   message = 'Hello HENJ Trading, I would like to enquire about your products.',
 }) {

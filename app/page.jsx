@@ -31,7 +31,7 @@ export default function HomePage() {
         image="/img/hero-home.jpg"
         title="Fresh From the World. Delivered Across the Gulf."
         strapline="Import & Export – Distribution"
-        lede="HENJ Trading L.L.C. supplies fruits, vegetables, pulses, rice, grains, spices and eggs to wholesalers, retailers and kitchens across the UAE and beyond."
+        lede={<><strong className="co co--onDark">HENJ Trading L.L.C.</strong> supplies fruits, vegetables, pulses, rice, grains, spices and eggs to wholesalers, retailers and kitchens across the UAE and beyond.</>}
         route
         badges={['Carefully Sourced', 'Premium Quality', 'Air Freighted', 'Timely Delivered']}
       />
@@ -43,7 +43,7 @@ export default function HomePage() {
             <p className="eyebrow">Welcome to HENJ Trading</p>
             <h2>Premium Food Import &amp; Distribution for Seamless Regional Supply.</h2>
             <p>
-              HENJ Trading L.L.C. is a trusted importer and distributor of high-quality fruits &amp;
+              <strong className="co">HENJ Trading L.L.C.</strong> is a trusted importer and distributor of high-quality fruits &amp;
               vegetables, pulses, rice, grains, spices and eggs across the UAE and the wider region.
             </p>
             <p>
@@ -270,7 +270,7 @@ export default function HomePage() {
             <p className="eyebrow">How we prevent it</p>
             <h3 style={{ fontSize: '1.35rem', color: 'var(--green-900)' }}>We buy where we can see the goods.</h3>
             <p style={{ fontSize: '0.92rem' }}>
-              HENJ works from the floor of Al Aweer Fruits &amp; Vegetables Market. We inspect what
+              <strong className="co">HENJ</strong> works from the floor of Al Aweer Fruits &amp; Vegetables Market. We inspect what
               lands, reject what misses the grade, and move the rest the same day — so the problem is
               caught before it becomes your problem.
             </p>
@@ -380,7 +380,7 @@ export default function HomePage() {
 
       <CtaBand
         title="Let's Build a Stronger Food Supply Chain Together"
-        body="Partner with HENJ Trading L.L.C. for quality you can trust and service you can rely on."
+        body={<>Partner with <strong className="co co--onDark">HENJ Trading L.L.C.</strong> for quality you can trust and service you can rely on.</>}
         action="Partner With Us"
       />
     </>

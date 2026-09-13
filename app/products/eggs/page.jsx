@@ -114,7 +114,7 @@ export default function EggsPage() {
       </section>
 
       <CtaBand
-        body="Looking for a dependable egg supply partner? Partner with HENJ Trading L.L.C. for quality you can trust and service you can rely on."
+        body={<>Looking for a dependable egg supply partner? Partner with <strong className="co co--onDark">HENJ Trading L.L.C.</strong> for quality you can trust and service you can rely on.</>}
         message="Hello HENJ Trading, I would like to enquire about your egg supply."
       />
     </>

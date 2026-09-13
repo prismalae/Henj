@@ -28,7 +28,6 @@ const STORE = [
   { src: 'aidan-snack-baskets', alt: 'Open baskets of crisps and biscuits on the supermarket floor', wide: true },
   { src: 'aidan-noodles', alt: 'Instant noodles stocked by the case and the pack' },
   { src: 'aidan-spreads', alt: 'Oats, spreads and preserves above canned pulses' },
-  { src: 'aidan-dry-store', alt: 'The back store: bulk grain jars, cased dry goods and disposables', wide: true },
   { src: 'aidan-crisps', alt: 'Crisps and fresh bread on the end stand' },
   { src: 'aidan-freezer', alt: 'Chest freezer holding frozen vegetables and poultry' },
   { src: 'aidan-water', alt: 'Cases of bottled water stacked in the shopfront window', wide: true },
@@ -51,16 +50,17 @@ export default function OurGroupPage() {
             <p className="eyebrow">Why it matters to a buyer</p>
             <h2>Buying at Origin, Delivering in Three Markets.</h2>
             <p>
-              Most of what separates a supplier from an agent is where they stand in the chain. HENJ
-              trades on its own account and works alongside three associated companies, so a
+              Most of what separates a supplier from an agent is where they stand in the chain.{' '}
+              <strong className="co">HENJ</strong> trades on its own account and works alongside three associated companies, so a
               conversation that starts in Dubai does not have to be handed to a stranger at the other
               end of it.
             </p>
             <p>
-              Nihal Traders is at origin in Hosur&ndash;Bangalore. Aidan Arab General Trading is in
-              Ajman, where it runs the supermarket pictured below. Nihal Investments is in Muscat. Between
-              them the group has people in three markets, which is why we can answer for what
-              happens in each.
+              <strong className="co">Nihal Traders</strong> is at origin in Hosur&ndash;Bangalore.{' '}
+              <strong className="co">Aidan Arab General Trading</strong> is in Ajman, where it runs
+              the supermarket pictured below. <strong className="co">Nihal Investments</strong> is in
+              Muscat. Between them the group has people in three markets, which is why we can answer
+              for what happens in each.
             </p>
           </div>
           <div className="panel">
