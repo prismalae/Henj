@@ -4,7 +4,6 @@ import PhotoGallery from '@/components/PhotoGallery';
 import GroupCompanies from '@/components/GroupCompanies';
 import CtaBand from '@/components/CtaBand';
 import Icon from '@/components/Icon';
-import { site } from '@/content/site';
 
 export const metadata = {
   title: 'Our Group',
@@ -23,6 +22,7 @@ const FARM = [
 ];
 
 const STORE = [
+  { src: 'aidan-storefront', alt: 'The Aidan Arab General Trading shopfront on Hafiz Ibrahim Street, Ajman', wide: true },
   { src: 'aidan-canned-goods', alt: 'Canned goods and breakfast cereals along the main aisle' },
   { src: 'aidan-confectionery', alt: 'Confectionery and snack shelves beside the drinks chiller' },
   { src: 'aidan-snack-baskets', alt: 'Open baskets of crisps and biscuits on the supermarket floor', wide: true },
@@ -38,10 +38,11 @@ export default function OurGroupPage() {
   return (
     <>
       <Hero
-        image="/img/group/aidan-storefront.jpg"
+        image="/img/hero-group.jpg"
+        scrim="heavy"
         title="One Group, Three Markets."
         strapline="Our Group"
-        lede={`${site.shortName} does not trade alone. Three associated companies stand alongside it — one at origin, one running a supermarket in Ajman, one in Muscat.`}
+        lede="Connecting Trade, Farming and Retail Across India, Oman and the UAE — one at origin, one running a supermarket in Ajman, one in Muscat."
       />
 
       <section className="section section--paper">

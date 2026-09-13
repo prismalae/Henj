@@ -371,6 +371,20 @@ ul { margin: 0; padding: 0; list-style: none; }
     linear-gradient(90deg, rgba(var(--green-900-rgb), 0.74) 0%, rgba(var(--green-900-rgb), 0.68) 38%, rgba(var(--green-900-rgb), 0.54) 62%, rgba(var(--green-900-rgb), 0.20) 78%, rgba(var(--green-900-rgb), 0) 88%),
     linear-gradient(100deg, var(--green-900) 6%, rgba(var(--green-900-rgb), 0.9) 32%, rgba(var(--green-900-rgb), 0.35) 60%, rgba(var(--green-900-rgb), 0.1) 100%);
 }
+/* Most hero photographs are composed with a dark, quiet left third for the copy
+   to sit on. One is not — the group triptych is lit edge to edge — and on it the
+   gold strapline measured 3.68:1 against the 4.5:1 it needs. This carries the
+   text-column scrim roughly 0.12 heavier for those. */
+.hero--scrim-heavy .hero-bg::after {
+  background:
+    linear-gradient(90deg, rgba(var(--green-900-rgb), 0.9) 0%, rgba(var(--green-900-rgb), 0.87) 34%, rgba(var(--green-900-rgb), 0.72) 50%, rgba(var(--green-900-rgb), 0.28) 66%, rgba(var(--green-900-rgb), 0) 78%),
+    linear-gradient(100deg, var(--green-900) 4%, rgba(var(--green-900-rgb), 0.86) 28%, rgba(var(--green-900-rgb), 0.34) 56%, rgba(var(--green-900-rgb), 0.08) 100%);
+}
+/* The copy column narrows with it. The scrim has to cover whatever the text
+   spans, so a 640px column on a 1037px hero means veiling 62% of the picture —
+   which on a triptych hides two of the three panels it exists to show. */
+.hero--scrim-heavy .hero-inner { max-width: 500px; }
+.hero--scrim-heavy .hero-lede { max-width: 40ch; }
 .hero-inner {
   position: relative; z-index: 1;
   padding-block: clamp(0.75rem, 1.8vw, 1.5rem);
