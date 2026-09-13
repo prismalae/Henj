@@ -402,6 +402,10 @@ ul { margin: 0; padding: 0; list-style: none; }
   text-shadow: 0 1px 2px rgba(8, 34, 19, 0.55), 0 2px 18px rgba(8, 34, 19, 0.6);
 }
 .hero-strapline, .hero-lede { text-shadow: 0 1px 10px rgba(8, 34, 19, 0.5); }
+/* The second line of a two-part hero headline, a step down so the first line
+   leads. In em so it tracks the heading's own clamp rather than fixing a size. */
+.h1-sm { font-size: 0.84em; }
+
 .hero-strapline {
   /* Light and lightly tracked, the way the guide sets its sub-lines. A weight
      this thin closes up at display size without the tracking. */
