@@ -90,11 +90,11 @@ export const nav = [
     href: '/about',
     children: [
       { label: 'Our Story', href: '/about' },
-      { label: 'Our Group', href: '/our-group' },
       { label: 'Quality & Certifications', href: '/quality' },
       { label: 'FAQ', href: '/faq' },
     ],
   },
+  { label: 'Our Group', href: '/our-group' },
   {
     label: 'Products',
     href: '/products',
