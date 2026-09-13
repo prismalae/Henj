@@ -9,6 +9,7 @@ export default function sitemap() {
   const routes = [
     { path: '/', priority: 1.0 },
     { path: '/about', priority: 0.8 },
+    { path: '/our-group', priority: 0.7 },
     { path: '/products', priority: 0.9 },
     ...categories.map((c) => ({ path: c.href, priority: 0.9 })),
     { path: '/services', priority: 0.8 },

@@ -57,6 +57,7 @@ export const site = {
 export const sisterConcerns = [
   {
     name: 'Aidan Arab General Trading L.L.C.',
+    country: 'ae',
     role: 'General trading — United Arab Emirates',
     lines: ['Hafiz Ibrahim Street', 'Al Nuaimiya 1, Ajman', 'United Arab Emirates'],
     phones: [
@@ -66,12 +67,14 @@ export const sisterConcerns = [
   },
   {
     name: 'Nihal Traders',
+    country: 'in',
     role: 'Sourcing & procurement — India',
     lines: ['Hosur – Bangalore', 'India'],
     phones: [{ display: '+91 80563 71276', tel: '+918056371276' }],
   },
   {
     name: 'Nihal Investments',
+    country: 'om',
     role: 'Trading & distribution — Oman',
     lines: ['Madinat Qaboos', 'Ghala Industrial Estate', 'Muscat, Sultanate of Oman'],
     phones: [{ display: '+968 7958 2463', tel: '+96879582463' }],
@@ -87,6 +90,7 @@ export const nav = [
     href: '/about',
     children: [
       { label: 'Our Story', href: '/about' },
+      { label: 'Our Group', href: '/our-group' },
       { label: 'Quality & Certifications', href: '/quality' },
       { label: 'FAQ', href: '/faq' },
     ],

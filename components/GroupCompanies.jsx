@@ -1,4 +1,5 @@
 import Icon from './Icon';
+import Flag from './Flag';
 import SectionHeading from './SectionHeading';
 import { site, sisterConcerns } from '@/content/site';
 
@@ -21,8 +22,11 @@ export default function GroupCompanies({ tone = 'paper-deep', heading = true }) 
         <div className="grid grid--3">
           {sisterConcerns.map((c) => (
             <div className="card" key={c.name} style={{ padding: '1.75rem' }}>
-              <div className="feature-icon" style={{ margin: '0 0 1rem' }}>
-                <Icon name="building" size={28} />
+              <div className="company-mark">
+                <div className="feature-icon" style={{ margin: 0 }}>
+                  <Icon name="building" size={28} />
+                </div>
+                {c.country && <span className="company-flag"><Flag code={c.country} /></span>}
               </div>
               <h3 style={{ color: 'var(--green-900)', fontSize: '1.05rem' }}>{c.name}</h3>
               <p className="eyebrow" style={{ marginBottom: '0.85rem' }}>{c.role}</p>

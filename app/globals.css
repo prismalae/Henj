@@ -453,6 +453,52 @@ ul { margin: 0; padding: 0; list-style: none; }
 .card-body h3 { font-size: 1.05rem; margin-bottom: 0.35rem; color: var(--green-900); }
 .card-body p { font-size: 0.85rem; line-height: 1.55; color: var(--ink-soft); }
 
+/* Country flag beside the mark on a group card. Sized to the cap height of the
+   company name rather than the icon, so it reads as a label not a second icon. */
+.company-mark { display: flex; align-items: center; gap: 0.7rem; margin-bottom: 1rem; }
+.company-flag {
+  flex: none; width: 26px; height: 26px; border-radius: 50%; overflow: hidden;
+  box-shadow: 0 0 0 1px rgba(var(--green-900-rgb), 0.18), 0 1px 3px rgba(0, 0, 0, 0.18);
+}
+.company-flag svg { width: 100%; height: 100%; display: block; }
+
+/* ---------- photo gallery ----------
+   A three-column grid where some frames span two columns, so a run of shop
+   photographs reads as a wall rather than a filmstrip. Every tile crops to the
+   same ratio: the source mixes portrait and landscape, and letting each keep
+   its own shape left ragged rows. */
+.gallery {
+  display: grid; gap: clamp(0.6rem, 1.4vw, 1rem);
+  grid-template-columns: repeat(3, 1fr);
+  /* Sparse placement never backfills, so a two-column tile that cannot fit the
+     remaining slot leaves a hole mid-grid. Reordering the wide tiles cannot fix
+     it for both breakpoints at once — three columns want each wide followed by
+     one single, two columns want an even number — so the flow backfills
+     instead. Visual order then diverges from DOM order, which is harmless here:
+     the tiles are non-interactive figures whose captions live in alt. */
+  grid-auto-flow: dense;
+}
+.gallery-item {
+  margin: 0; overflow: hidden; border-radius: var(--r-md);
+  border: 1px solid var(--line-card); background: var(--paper-deep);
+  aspect-ratio: 4 / 3;
+}
+.gallery-item--wide { grid-column: span 2; aspect-ratio: 8 / 3; }
+.gallery-item img {
+  width: 100%; height: 100%; object-fit: cover; display: block;
+  transition: transform var(--dur-slow) var(--ease-out);
+}
+.gallery-item:hover img { transform: scale(1.04); }
+
+@media (max-width: 860px) {
+  .gallery { grid-template-columns: repeat(2, 1fr); }
+  .gallery-item--wide { grid-column: span 2; }
+}
+@media (max-width: 520px) {
+  .gallery { grid-template-columns: 1fr; }
+  .gallery-item, .gallery-item--wide { grid-column: span 1; aspect-ratio: 4 / 3; }
+}
+
 /* empty image slot — awaiting photography */
 .slot {
   aspect-ratio: 4 / 3; background: var(--paper-deep);
@@ -1067,8 +1113,10 @@ ul { margin: 0; padding: 0; list-style: none; }
 }
 .card--glow:hover::before { opacity: 1; }
 
-/* The body sits on cream rather than pure white so the wash reads through. */
-.card--glow .card-body { background: rgba(255, 255, 255, 0.82); }
+/* The body is translucent so the gold wash underneath reads through it. It was
+   white, which is what kept these cards looking white long after --card went
+   green; it now carries the page green at the same alpha. */
+.card--glow .card-body { background: rgba(var(--paper-rgb), 0.82); }
 
 @keyframes glow-border {
   from { background-position: 0 0, 0% 50%; }

@@ -152,6 +152,22 @@ certificate, packing list and commercial invoice.
   prepared before departure**. It also says the route runs **through Saudi Arabia**, which is
   geographically true but implies you hold the transit permissions to do it. Confirm all four, or
   tell me which to soften.
+- **Our Group — a new page built around photographs you supplied.** `/our-group`
+  (`app/our-group/page.jsx`), linked from About Us. Three things in it need your eye:
+  - **The relationship is described as "associated", never "owned".** `content/site.js` calls
+    them `sisterConcerns` and the About page says "associated companies", so the page says the
+    same. If HENJ actually owns them — or if the tie is looser than "associated" — the wording
+    on this page and the ownership implication in the CTA ("Talk to the Group, Not a
+    Middleman") both need changing.
+  - **The Ajman shop.** Eleven photographs are published as Aidan Arab General Trading's retail
+    floor on Hafiz Ibrahim Street. The attribution comes from the shopfront sign in your own
+    photo, not from a claim you made in writing. `content/site.js` gives Aidan Arab only the role
+    "General trading", so "runs the shop pictured below" is a step beyond your data — confirm it,
+    and confirm you are happy for the interior to be public.
+  - **A phone number that does not match.** The shopfront sign reads WhatsApp **055 801 0016**;
+    `sisterConcerns` lists Aidan Arab's second number as **+971 52 762 9767**. One of them is
+    wrong or out of date. The site currently shows the `sisterConcerns` pair — unchanged, pending
+    your answer.
 - **Social profile URLs** — `site.socials` points every icon at `#`.
 - **Domain** — defaults to `https://henj-uae.com`, inferred from the email in the comps. Override with
   `NEXT_PUBLIC_SITE_URL=https://yourdomain.com npm run build`.
