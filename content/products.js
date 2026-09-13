@@ -69,7 +69,7 @@ export const fruitsVegetables = [
   {
     name: 'Fresh Fruits',
     description: 'Seasonal fruit sourced at peak ripeness for market and retail.',
-    image: '/img/products/fresh-fruits.jpg',
+    image: '/img/products/fresh-fruits.png',
     specs: {
       Origin: 'India, Egypt, Kenya, South Africa',
       Range: 'Mango, pomegranate, grapes, banana, papaya, guava, citrus',
@@ -91,7 +91,7 @@ export const fruitsVegetables = [
   {
     name: 'Tomatoes',
     description: 'Firm, even-coloured tomatoes graded for market and retail supply.',
-    image: '/img/products/tomatoes.jpg',
+    image: '/img/products/tomatoes.png',
     specs: {
       Origin: 'India, Jordan, Turkey, local UAE farms',
       Grades: 'Round and roma, graded by size and colour stage',
@@ -102,7 +102,7 @@ export const fruitsVegetables = [
   {
     name: 'Capsicum',
     description: 'Green, red and yellow bell peppers with thick, glossy walls.',
-    image: '/img/products/capsicum.jpg',
+    image: '/img/products/capsicum.png',
     specs: {
       Origin: 'India, Jordan, Netherlands, local UAE farms',
       Grades: 'Green, red, yellow; 150–250 g typical',
@@ -124,7 +124,7 @@ export const fruitsVegetables = [
   {
     name: 'Potatoes',
     description: 'Table and processing potatoes, washed and size graded.',
-    image: '/img/products/potatoes.jpg',
+    image: '/img/products/potatoes.png',
     specs: {
       Origin: 'India, Pakistan, Egypt, Netherlands',
       Grades: '40–60 mm, 55–75 mm; table and processing varieties',
@@ -135,7 +135,7 @@ export const fruitsVegetables = [
   {
     name: 'Coconuts',
     description: 'Mature and tender coconuts, husked or semi-husked to order.',
-    image: '/img/products/coconuts.jpg',
+    image: '/img/products/coconuts.png',
     specs: {
       Origin: 'India (Tamil Nadu, Kerala), Sri Lanka',
       Grades: 'Semi-husked, fully husked, tender green',
@@ -157,7 +157,7 @@ export const fruitsVegetables = [
   {
     name: 'Pomegranates',
     description: 'Deep-coloured, high-arils pomegranates in export cartons.',
-    image: '/img/products/pomegranates.jpg',
+    image: '/img/products/pomegranates.png',
     specs: {
       Origin: 'India (Maharashtra), Egypt',
       Varieties: 'Bhagwa, Ganesh, Wonderful',
