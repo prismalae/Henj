@@ -40,7 +40,7 @@ export default function OurGroupPage() {
       <Hero
         image="/img/hero-group.jpg"
         scrim="heavy"
-        title={<>One Group,<br />Three Markets.</>}
+        title={<>One Group<br />Three Markets.</>}
         strapline="Our Group"
         lede="Connecting Trade, Farming and Retail Across India, Oman and the UAE — one at origin, one running a supermarket in Ajman, one in Muscat."
       />
