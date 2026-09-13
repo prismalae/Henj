@@ -21,6 +21,7 @@
   /* The pale champagne gold the guide sets BRAND in — lighter and far less
      saturated than --gold-light, for type rather than for metal. */
   --gold-pale: #e9d6a3;
+  --gold-pale-rgb: 233, 214, 163;
   --gold-deep: #a8841c;
   --red: #d81f26;
 
@@ -376,7 +377,7 @@ ul { margin: 0; padding: 0; list-style: none; }
   letter-spacing: 0.05em;
   color: var(--gold-light); margin: 0 0 1.25rem;
 }
-.hero-lede { color: rgba(255,255,255,0.9); max-width: 46ch; font-size: 1rem; }
+.hero-lede { color: rgba(var(--gold-pale-rgb), 0.9); max-width: 46ch; font-size: 1rem; }
 
 /* ---------- hero GCC route strip ---------- */
 .hero-route { margin: clamp(1rem, 2.2vw, 1.5rem) 0 0; max-width: 46ch; }
@@ -453,6 +454,60 @@ ul { margin: 0; padding: 0; list-style: none; }
 .card-body h3 { font-size: 1.05rem; margin-bottom: 0.35rem; color: var(--green-900); }
 .card-body p { font-size: 0.85rem; line-height: 1.55; color: var(--ink-soft); }
 
+/* A section whose title is a company name rather than a phrase. The name is the
+   point, so it runs at hero scale — but it is a long string, so the lower bound
+   stays modest and the tracking tightens as it grows. Still an h2: the page has
+   its h1 in the hero. */
+.section--named .sec-head h2 {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4.4vw, 3.35rem);
+  letter-spacing: -0.02em;
+}
+
+/* ---------- lightbox ----------
+   Full-size view for a gallery tile. Fixed overlay, image capped to the viewport
+   so a tall photograph never needs scrolling, and the caption repeated
+   underneath because the alt text is the only description these have. */
+.lightbox {
+  position: fixed; inset: 0; z-index: 120;
+  background: rgba(var(--green-900-rgb), 0.94);
+  display: grid; grid-template-columns: auto 1fr auto; align-items: center;
+  gap: clamp(0.5rem, 2vw, 1.5rem); padding: clamp(1rem, 4vw, 2.5rem);
+  animation: lightbox-in var(--dur) var(--ease-out);
+}
+@keyframes lightbox-in { from { opacity: 0; } to { opacity: 1; } }
+.lightbox-figure {
+  grid-column: 2; margin: 0; min-width: 0;
+  display: flex; flex-direction: column; align-items: center; gap: 0.9rem;
+}
+.lightbox-figure img {
+  max-width: 100%; max-height: calc(100vh - 9rem);
+  width: auto; height: auto; object-fit: contain;
+  border-radius: var(--r-md); box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
+}
+.lightbox-figure figcaption {
+  color: rgba(255, 255, 255, 0.88); font-size: 0.88rem; text-align: center;
+  max-width: 60ch; display: flex; gap: 0.9rem; align-items: baseline; flex-wrap: wrap;
+  justify-content: center;
+}
+.lightbox-count { color: var(--gold-light); font-variant-numeric: tabular-nums; }
+.lightbox-close, .lightbox-nav {
+  background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(201, 162, 39, 0.4);
+  color: var(--gold-light); border-radius: 50%; cursor: pointer;
+  width: 44px; height: 44px; display: grid; place-items: center; flex: none;
+  transition: background var(--dur) var(--ease), transform var(--dur) var(--ease);
+}
+.lightbox-close:hover, .lightbox-nav:hover { background: rgba(255, 255, 255, 0.2); }
+.lightbox-close { position: absolute; top: clamp(0.75rem, 2vw, 1.5rem); right: clamp(0.75rem, 2vw, 1.5rem); }
+.lightbox-nav--prev { grid-column: 1; transform: scaleX(-1); }
+.lightbox-nav--next { grid-column: 3; }
+.lightbox-nav--prev:hover { transform: scaleX(-1) translateX(2px); }
+.lightbox-nav--next:hover { transform: translateX(2px); }
+
+@media (prefers-reduced-motion: reduce) {
+  .lightbox { animation: none; }
+}
+
 /* Country flag beside the mark on a group card. Sized to the cap height of the
    company name rather than the icon, so it reads as a label not a second icon. */
 .company-mark { display: flex; align-items: center; gap: 0.7rem; margin-bottom: 1rem; }
@@ -479,10 +534,25 @@ ul { margin: 0; padding: 0; list-style: none; }
   grid-auto-flow: dense;
 }
 .gallery-item {
-  margin: 0; overflow: hidden; border-radius: var(--r-md);
+  margin: 0; padding: 0; overflow: hidden; border-radius: var(--r-md);
   border: 1px solid var(--line-card); background: var(--paper-deep);
   aspect-ratio: 4 / 3;
+  position: relative; display: block; width: 100%; cursor: zoom-in;
+  font: inherit; color: inherit;
 }
+/* The magnifier only appears on pointer hover; it would be noise on touch,
+   where the whole tile is the target anyway. */
+.gallery-zoom {
+  position: absolute; right: 10px; bottom: 10px; width: 34px; height: 34px;
+  border-radius: 50%; display: grid; place-items: center;
+  background: rgba(var(--green-900-rgb), 0.72); color: var(--gold-light);
+  opacity: 0; transform: translateY(4px);
+  transition: opacity var(--dur) var(--ease), transform var(--dur) var(--ease);
+}
+@media (hover: hover) and (pointer: fine) {
+  .gallery-item:hover .gallery-zoom { opacity: 1; transform: none; }
+}
+.gallery-item:focus-visible .gallery-zoom { opacity: 1; transform: none; }
 .gallery-item--wide { grid-column: span 2; aspect-ratio: 8 / 3; }
 .gallery-item img {
   width: 100%; height: 100%; object-fit: cover; display: block;

@@ -1,5 +1,6 @@
 import Hero from '@/components/Hero';
 import SectionHeading from '@/components/SectionHeading';
+import PhotoGallery from '@/components/PhotoGallery';
 import GroupCompanies from '@/components/GroupCompanies';
 import CtaBand from '@/components/CtaBand';
 import MetaStrip from '@/components/MetaStrip';
@@ -12,12 +13,20 @@ export const metadata = {
     'HENJ Trading L.L.C. trades alongside Aidan Arab General Trading in Ajman, Nihal Traders in India and Nihal Investments in Oman — buying at origin and delivering across three markets under one relationship.',
 };
 
-/* The retail floor at Aidan Arab, photographed in Ajman. Captions describe what
+/* The supermarket at Aidan Arab, photographed in Ajman. Captions describe what
    is actually in frame rather than making a claim about the business. */
+const FARM = [
+  { src: 'oman-coriander', alt: 'Coriander growing under shade net at the Oman farm', wide: true },
+  { src: 'oman-mint', alt: 'Mint in crates, ready to cut' },
+  { src: 'oman-seedlings', alt: 'Cucurbit seedlings in propagation trays' },
+  { src: 'oman-watermelon', alt: 'Watermelons ripening on the vine under the shade house', wide: true },
+  { src: 'oman-propagation', alt: 'Propagation trays running the length of the house' },
+];
+
 const STORE = [
   { src: 'aidan-canned-goods', alt: 'Canned goods and breakfast cereals along the main aisle' },
   { src: 'aidan-confectionery', alt: 'Confectionery and snack shelves beside the drinks chiller' },
-  { src: 'aidan-snack-baskets', alt: 'Open baskets of crisps and biscuits on the shop floor', wide: true },
+  { src: 'aidan-snack-baskets', alt: 'Open baskets of crisps and biscuits on the supermarket floor', wide: true },
   { src: 'aidan-noodles', alt: 'Instant noodles stocked by the case and the pack' },
   { src: 'aidan-spreads', alt: 'Oats, spreads and preserves above canned pulses' },
   { src: 'aidan-dry-store', alt: 'The back store: bulk grain jars, cased dry goods and disposables', wide: true },
@@ -34,7 +43,7 @@ export default function OurGroupPage() {
         image="/img/group/aidan-storefront.jpg"
         title="One Group, Three Markets."
         strapline="Our Group"
-        lede={`${site.shortName} does not trade alone. Three associated companies stand alongside it — one at origin, one on a shop floor in Ajman, one in Muscat.`}
+        lede={`${site.shortName} does not trade alone. Three associated companies stand alongside it — one at origin, one running a supermarket in Ajman, one in Muscat.`}
       />
 
       <section className="section section--paper">
@@ -50,7 +59,7 @@ export default function OurGroupPage() {
             </p>
             <p>
               Nihal Traders is at origin in Hosur&ndash;Bangalore. Aidan Arab General Trading is in
-              Ajman, where it runs the shop pictured below. Nihal Investments is in Muscat. Between
+              Ajman, where it runs the supermarket pictured below. Nihal Investments is in Muscat. Between
               them the group has people in three markets, which is why we can answer for what
               happens in each.
             </p>
@@ -58,7 +67,7 @@ export default function OurGroupPage() {
               items={[
                 'Three associated companies',
                 'Present at origin in India',
-                'Trading and retail in the UAE',
+                'A supermarket and trading in the UAE',
                 'Trading and distribution in Oman',
               ]}
             />
@@ -86,22 +95,29 @@ export default function OurGroupPage() {
 
       <GroupCompanies tone="paper-deep" />
 
-      {/* The retail floor. Photographs earn their place here because "we also run
-          a shop" is a claim a buyer can otherwise only take on trust. */}
-      <section className="section section--paper">
+      {/* The supermarket. Photographs earn their place here because "we also run
+          a supermarket" is a claim a buyer can otherwise only take on trust. */}
+      <section className="section section--paper section--named">
         <div className="wrap">
           <SectionHeading
-            eyebrow="Aidan Arab General Trading"
-            title="The Retail Floor in Ajman"
-            lede="The group's shop on Hafiz Ibrahim Street in Ajman — groceries, dry goods and household lines over the counter."
+            eyebrow="The supermarket"
+            title="Aidan Arab General Trading"
           />
-          <div className="gallery">
-            {STORE.map((p) => (
-              <figure className={`gallery-item${p.wide ? ' gallery-item--wide' : ''}`} key={p.src}>
-                <img src={`/img/group/${p.src}.jpg`} alt={p.alt} loading="lazy" />
-              </figure>
-            ))}
-          </div>
+          <PhotoGallery items={STORE} />
+        </div>
+      </section>
+
+      {/* The Oman growing operation. Confirmed by the owner: the farm runs under
+          Nihal Investments, which content/site.js still lists only as trading
+          and distribution — see docs/ASSUMPTIONS.md. */}
+      <section className="section section--paper-deep section--named">
+        <div className="wrap">
+          <SectionHeading
+            eyebrow="Grown in Oman"
+            title="Nihal Investments"
+            lede="Leafy vegetables, herbs and watermelon — raised from seed on site and grown under shade net."
+          />
+          <PhotoGallery items={FARM} />
         </div>
       </section>
 

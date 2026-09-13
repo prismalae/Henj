@@ -159,15 +159,23 @@ certificate, packing list and commercial invoice.
     same. If HENJ actually owns them — or if the tie is looser than "associated" — the wording
     on this page and the ownership implication in the CTA ("Talk to the Group, Not a
     Middleman") both need changing.
-  - **The Ajman shop.** Eleven photographs are published as Aidan Arab General Trading's retail
-    floor on Hafiz Ibrahim Street. The attribution comes from the shopfront sign in your own
+  - **The Ajman supermarket.** Eleven photographs are published as Aidan Arab General Trading's
+    supermarket on Hafiz Ibrahim Street. The attribution comes from the shopfront sign in your own
     photo, not from a claim you made in writing. `content/site.js` gives Aidan Arab only the role
-    "General trading", so "runs the shop pictured below" is a step beyond your data — confirm it,
+    "General trading", so "runs the supermarket pictured below" is a step beyond your data — confirm it,
     and confirm you are happy for the interior to be public.
   - **A phone number that does not match.** The shopfront sign reads WhatsApp **055 801 0016**;
     `sisterConcerns` lists Aidan Arab's second number as **+971 52 762 9767**. One of them is
     wrong or out of date. The site currently shows the `sisterConcerns` pair — unchanged, pending
     your answer.
+  - **The Oman farm.** Five photographs are published as a growing operation under Nihal
+    Investments, captioned as leafy vegetables, herbs and watermelon raised from seed on site
+    and grown under shade net. You told me this directly, so the claim is yours, not mine — but
+    `content/site.js` still gives Nihal Investments the single role
+    **"Trading & distribution — Oman"**, which no longer covers it. Say how you want that role
+    worded and I will change it. The crops named come from what is visible in the photographs
+    (coriander, mint, watermelon, seedling trays); if you grow more than that, the line should
+    say so.
 - **Social profile URLs** — `site.socials` points every icon at `#`.
 - **Domain** — defaults to `https://henj-uae.com`, inferred from the email in the comps. Override with
   `NEXT_PUBLIC_SITE_URL=https://yourdomain.com npm run build`.
