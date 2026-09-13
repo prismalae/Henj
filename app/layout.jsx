@@ -1,4 +1,4 @@
-import { Montserrat, Poppins, Lato } from 'next/font/google';
+import { Playfair_Display, Montserrat, Poppins, Lato } from 'next/font/google';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import CallBar from '@/components/CallBar';
@@ -6,9 +6,14 @@ import FruitCursor from '@/components/FruitCursor';
 import { site } from '@/content/site';
 import './globals.css';
 
-/* Three faces: Montserrat carries titles, hero text and the company name — the
-   face the logo artwork is set in — Poppins SemiBold the section sub-headings
-   and interface, Lato every paragraph. */
+/* Playfair Display carries titles and hero text, matching the serif the brand
+   guide sets its own cover in. Montserrat stays for the typeset company name
+   only, because that has to match the logo artwork rather than the headings.
+   Poppins SemiBold takes section sub-headings and interface, Lato every
+   paragraph. */
+const playfair = Playfair_Display({
+  subsets: ['latin'], weight: ['600', '700'], variable: '--font-playfair', display: 'swap',
+});
 const poppins = Poppins({
   subsets: ['latin'], weight: ['300', '400', '500', '600'], variable: '--font-poppins', display: 'swap',
 });
@@ -16,7 +21,7 @@ const lato = Lato({
   subsets: ['latin'], weight: ['400', '700'], variable: '--font-lato', display: 'swap',
 });
 const montserrat = Montserrat({
-  subsets: ['latin'], weight: ['400', '600', '700'], variable: '--font-montserrat', display: 'swap',
+  subsets: ['latin'], weight: ['700'], variable: '--font-montserrat', display: 'swap',
 });
 
 export const metadata = {
@@ -63,7 +68,7 @@ const jsonLd = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${montserrat.variable} ${poppins.variable} ${lato.variable}`}>
+    <html lang="en" className={`${playfair.variable} ${montserrat.variable} ${poppins.variable} ${lato.variable}`}>
       <body>
         <script
           type="application/ld+json"

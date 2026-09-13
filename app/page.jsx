@@ -127,8 +127,10 @@ export default function HomePage() {
         </div>
       </section>
 
+      <GroupCompanies tone="paper" />
+
       {/* Who we supply */}
-      <section className="section section--paper">
+      <section className="section section--paper-deep">
         <div className="wrap">
           <SectionHeading
             eyebrow="Who we supply"
@@ -156,7 +158,7 @@ export default function HomePage() {
 
       {/* Catering supply — the one offer with its own commercial shape, so it
           gets a slab here rather than staying a line in the buyer grid above. */}
-      <section className="section section--paper-deep">
+      <section className="section section--paper">
         <div className="wrap split split--wide-left">
           <div>
             <p className="eyebrow">Catering supply</p>
@@ -373,8 +375,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
-      <GroupCompanies tone="paper" />
 
       <CtaBand
         title="Let's Build a Stronger Food Supply Chain Together"

@@ -25,6 +25,12 @@
   --red: #d81f26;
 
   --paper: #eaf1d9;
+  /* Card surface: the page green itself, not a tint of it. On --paper sections
+     that makes the card the same value as its ground, so the card reads as an
+     outline rather than a panel — see the heavier --line-card it uses for its
+     border, without which the edge disappears. */
+  --card: var(--paper);
+  --line-card: rgba(var(--green-900-rgb), 0.22);
   --paper-rgb: 234, 241, 217;
   --paper-deep: #dee4c6;
   --ink: #1f2a22;
@@ -47,11 +53,13 @@
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-spring: cubic-bezier(0.34, 1.4, 0.64, 1);
 
-  /* Three roles, three faces. --font-display carries titles, hero text and the
-     typeset company name — plain Montserrat, the face of the logo artwork, so
-     headings and the mark read as one system. --font-heading carries section
-     sub-headings and interface chrome, --font-body every paragraph. */
-  --font-display: var(--font-montserrat), 'Segoe UI', sans-serif;
+  /* --font-display carries titles and hero text: the serif the brand guide sets
+     its own cover in. --font-heading carries section sub-headings and interface
+     chrome, --font-body every paragraph. --font-wordmark is separate and stays
+     Montserrat, because the typeset company name sits under the logo and has to
+     match the artwork rather than the headings. */
+  --font-display: var(--font-playfair), Georgia, 'Times New Roman', serif;
+  --font-wordmark: var(--font-montserrat), 'Segoe UI', sans-serif;
   --font-heading: var(--font-poppins), -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --font-body: var(--font-lato), -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
@@ -351,7 +359,9 @@ ul { margin: 0; padding: 0; list-style: none; }
 }
 .hero--center .hero-inner { max-width: 780px; margin-inline: auto; text-align: center; }
 .hero h1 {
-  font-size: clamp(2rem, 4.2vw, 3.35rem); margin-bottom: 0.3em;
+  /* A little larger than the sans it replaced: Playfair's smaller x-height and
+     finer strokes read a size down at the same px. */
+  font-size: clamp(2.15rem, 4.8vw, 3.8rem); margin-bottom: 0.28em;
   color: var(--gold-pale);
   /* Gold sits closer to the photograph's own values than white did, so the
      headline carries a tighter dark shadow as well as the soft one — the soft
@@ -360,8 +370,11 @@ ul { margin: 0; padding: 0; list-style: none; }
 }
 .hero-strapline, .hero-lede { text-shadow: 0 1px 10px rgba(8, 34, 19, 0.5); }
 .hero-strapline {
-  font-family: var(--font-heading); font-weight: 600; font-size: clamp(1rem, 1.7vw, 1.25rem);
-  color: #fff; margin: 0 0 1.25rem;
+  /* Light and lightly tracked, the way the guide sets its sub-lines. A weight
+     this thin closes up at display size without the tracking. */
+  font-family: var(--font-heading); font-weight: 300; font-size: clamp(1.02rem, 1.8vw, 1.3rem);
+  letter-spacing: 0.05em;
+  color: var(--gold-light); margin: 0 0 1.25rem;
 }
 .hero-lede { color: rgba(255,255,255,0.9); max-width: 46ch; font-size: 1rem; }
 
@@ -426,7 +439,7 @@ ul { margin: 0; padding: 0; list-style: none; }
 .grid--6 { grid-template-columns: repeat(6, 1fr); }
 
 .card {
-  background: #fff; border: 1px solid var(--line); border-radius: var(--r-md);
+  background: var(--card); border: 1px solid var(--line-card); border-radius: var(--r-md);
   overflow: hidden; transition: transform var(--dur) var(--ease), box-shadow var(--dur) var(--ease);
   /* Column layout so the Specifications row can sit at the card's bottom edge,
      aligned across a whole row regardless of how long each description runs. */
@@ -726,7 +739,7 @@ ul { margin: 0; padding: 0; list-style: none; }
 .footer-links a:hover { color: var(--gold-light); }
 .footer-brand .logo { width: 150px; margin-bottom: 0.75rem; }
 .footer-brand .name {
-  font-family: var(--font-display); font-weight: 700; letter-spacing: 0.04em;
+  font-family: var(--font-wordmark); font-weight: 700; letter-spacing: 0.04em;
   font-size: 1.25rem; color: var(--gold);
 }
 .footer-brand .sub { font-size: 0.66rem; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.6); margin-bottom: 0.9rem; }
@@ -925,13 +938,13 @@ ul { margin: 0; padding: 0; list-style: none; }
 }
 .meta-strip li {
   display: inline-flex; align-items: center; gap: 0.45rem;
-  border: 1px solid var(--line); background: #fff; border-radius: 999px;
+  border: 1px solid var(--line); background: var(--card); border-radius: 999px;
   padding: 0.4rem 0.9rem; font-size: 0.78rem; font-weight: 500; color: var(--green-900);
 }
 .meta-strip svg { color: var(--gold-deep); }
 
 /* ---------- reference table ---------- */
-.spec-table { overflow-x: auto; border: 1px solid var(--line); border-radius: var(--r-md); background: #fff; }
+.spec-table { overflow-x: auto; border: 1px solid var(--line); border-radius: var(--r-md); background: var(--card); }
 .spec-table table { width: 100%; border-collapse: collapse; min-width: 640px; }
 .spec-table caption {
   caption-side: top; text-align: left; padding: 1rem 1.1rem 0;
@@ -953,7 +966,7 @@ ul { margin: 0; padding: 0; list-style: none; }
 /* ---------- FAQ accordion ---------- */
 .faq { max-width: 860px; margin-inline: auto; display: grid; gap: 0.75rem; }
 .faq details {
-  background: #fff; border: 1px solid var(--line); border-radius: var(--r-md);
+  background: var(--card); border: 1px solid var(--line); border-radius: var(--r-md);
   overflow: hidden; transition: border-color var(--dur) var(--ease);
 }
 .faq details[open] { border-color: rgba(201,162,39,0.55); }
@@ -1024,7 +1037,7 @@ ul { margin: 0; padding: 0; list-style: none; }
   /* Solid fill on padding-box, animated gradient on border-box — the
      gradient is only ever visible in the 1px border ring. */
   background:
-    linear-gradient(#fff, #fff) padding-box,
+    linear-gradient(var(--card), var(--card)) padding-box,
     linear-gradient(
       115deg,
       var(--gold-light) 0%, var(--gold) 18%, rgba(201,162,39,0.18) 34%,
@@ -1148,7 +1161,7 @@ ul { margin: 0; padding: 0; list-style: none; }
 }
 
 /* Product cutouts sit on white and are shown whole, not cropped. */
-.slot--photo { background: #fff; }
+.slot--photo { background: var(--card); }
 .slot--photo img { object-fit: contain; padding: 7%; }
 
 /* ============================================================
