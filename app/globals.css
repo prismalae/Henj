@@ -404,7 +404,10 @@ ul { margin: 0; padding: 0; list-style: none; }
 .hero-route-flag svg { width: 100%; height: 100%; display: block; }
 .hero-route-note {
   margin: 0.7rem 0 0; font-size: 0.84rem; line-height: 1.5;
-  color: rgba(255, 255, 255, 0.82);
+  /* Same 0.82 softening it had as white. A caption under the lede, so it takes
+     the pale gold at a lower alpha than the lede's 0.9 rather than the brighter
+     --gold-light the strapline uses. */
+  color: rgba(var(--gold-pale-rgb), 0.82);
 }
 .hero--center .hero-route { margin-inline: auto; }
 

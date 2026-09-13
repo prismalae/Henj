@@ -94,7 +94,7 @@ export const nav = [
       { label: 'FAQ', href: '/faq' },
     ],
   },
-  { label: 'Our Group', href: '/our-group' },
+  { label: 'Group', href: '/our-group' },
   {
     label: 'Products',
     href: '/products',
