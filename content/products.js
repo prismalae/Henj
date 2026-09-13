@@ -80,7 +80,7 @@ export const fruitsVegetables = [
   {
     name: 'Vegetables',
     description: 'A broad daily range of everyday and specialty vegetables.',
-    image: '/img/products/vegetables.jpg',
+    image: '/img/products/vegetables.png',
     specs: {
       Origin: 'India, Egypt, Jordan, local UAE farms',
       Range: 'Okra, brinjal, gourds, beans, tomato, capsicum, cucumber',
@@ -113,7 +113,7 @@ export const fruitsVegetables = [
   {
     name: 'Carrots',
     description: 'Sweet, straight carrots washed and graded for length.',
-    image: '/img/products/carrots.jpg',
+    image: '/img/products/carrots.png',
     specs: {
       Origin: 'India, Pakistan, China, Netherlands',
       Grades: 'Washed and topped, or bunched with tops',
@@ -146,7 +146,7 @@ export const fruitsVegetables = [
   {
     name: 'Onions',
     description: 'Red and white onions graded by size and packed for bulk trade.',
-    image: '/img/products/onions.jpg',
+    image: '/img/products/onions.png',
     specs: {
       Origin: 'India (Nashik), Egypt, Netherlands',
       Grades: '40–60 mm, 55–75 mm, 70 mm+',
@@ -168,7 +168,7 @@ export const fruitsVegetables = [
   {
     name: 'Chilli',
     description: 'Green and red fresh chilli in a range of heat levels.',
-    image: '/img/products/chilli.jpg',
+    image: '/img/products/chilli.png',
     specs: {
       Origin: 'India, Oman, local UAE farms',
       Varieties: 'Green long, bird’s eye, jwala, capsicum-type mild',
@@ -179,7 +179,7 @@ export const fruitsVegetables = [
   {
     name: 'Drumsticks',
     description: 'Tender moringa drumsticks, bundled and air freighted.',
-    image: '/img/products/drumsticks.jpg',
+    image: '/img/products/drumsticks.png',
     specs: {
       Origin: 'India (Tamil Nadu, Andhra Pradesh)',
       Season: 'Year-round, peak February to June',
@@ -190,7 +190,7 @@ export const fruitsVegetables = [
   {
     name: 'Curry Leaves',
     description: 'Aromatic fresh curry leaves picked and packed the same day.',
-    image: '/img/products/curry-leaves.jpg',
+    image: '/img/products/curry-leaves.png',
     specs: {
       Origin: 'India (Tamil Nadu, Karnataka)',
       Season: 'Year-round',
@@ -201,7 +201,7 @@ export const fruitsVegetables = [
   {
     name: 'Mint / Pudina',
     description: 'Fresh pudina bunches kept cold from field to flight.',
-    image: '/img/products/mint.jpg',
+    image: '/img/products/mint.png',
     specs: {
       Origin: 'India, Jordan, local UAE farms',
       Season: 'Year-round',
@@ -212,7 +212,7 @@ export const fruitsVegetables = [
   {
     name: 'Banana Leaves',
     description: 'Large, unblemished leaves cut and packed flat for transit.',
-    image: '/img/products/banana-leaves.jpg',
+    image: '/img/products/banana-leaves.png',
     specs: {
       Origin: 'India (Kerala, Tamil Nadu)',
       Grades: 'Full leaf and cut-to-size, 1.5–2.5 m',
@@ -223,7 +223,7 @@ export const fruitsVegetables = [
   {
     name: 'Leafy Vegetables',
     description: 'Spinach, coriander, fenugreek and other leafy greens.',
-    image: '/img/products/spinach.jpg',
+    image: '/img/products/spinach.png',
     specs: {
       Origin: 'India, Jordan, local UAE farms',
       Range: 'Spinach, coriander, fenugreek (methi), dill, amaranth',
@@ -234,7 +234,7 @@ export const fruitsVegetables = [
   {
     name: 'Other Fresh Items',
     description: 'Additional fresh air-shipment lines sourced on request.',
-    image: '/img/products/other-fresh-items.jpg',
+    image: '/img/products/other-fresh-items.png',
     specs: {
       Origin: 'Sourced to requirement',
       Range: 'Ginger, garlic, turmeric root, raw mango, specialty herbs',
