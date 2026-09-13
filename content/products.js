@@ -376,7 +376,7 @@ export const pulsesSpices = [
   {
     name: 'Turmeric',
     description: 'Bright, pure and finely ground turmeric.',
-    image: '/img/products/turmeric.jpg',
+    image: '/img/products/turmeric.png',
     specs: {
       Origin: 'India (Erode, Nizamabad, Sangli)',
       Grades: 'Finger and bulb, whole or ground; 2–5% curcumin',
@@ -387,7 +387,7 @@ export const pulsesSpices = [
   {
     name: 'Chilli Powder',
     description: 'Vibrant colour and authentic heat in every pinch.',
-    image: '/img/products/chilli-powder.jpg',
+    image: '/img/products/chilli-powder.png',
     specs: {
       Origin: 'India (Guntur, Byadgi), Pakistan',
       Grades: 'By heat and colour — Guntur hot, Byadgi high-colour (ASTA 60–120)',
@@ -398,7 +398,7 @@ export const pulsesSpices = [
   {
     name: 'Mixed Spices',
     description: 'A perfect blend of whole spices for authentic taste and aroma.',
-    image: '/img/products/mixed-spices.jpg',
+    image: '/img/products/mixed-spices.png',
     specs: {
       Origin: 'Blended in India to your recipe',
       Blends: 'Garam masala, curry, tandoori, biryani and custom mixes',
@@ -409,7 +409,7 @@ export const pulsesSpices = [
   {
     name: 'Coriander',
     description: 'Freshly ground coriander with rich aroma — seed and powder.',
-    image: '/img/products/coriander.jpg',
+    image: '/img/products/coriander.png',
     specs: {
       Origin: 'India (Rajasthan, Madhya Pradesh)',
       Grades: 'Eagle and Scooter seed, single or double parrot; whole or ground',
