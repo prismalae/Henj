@@ -242,6 +242,7 @@ ul { margin: 0; padding: 0; list-style: none; }
 .nav { margin-left: auto; display: flex; align-items: center; gap: clamp(1rem, 2.2vw, 2rem); }
 .nav-link {
   position: relative; font-size: 0.95rem; font-weight: 500; color: var(--ink);
+  white-space: nowrap;
   padding: 0.4rem 0; background: none; border: 0; font-family: var(--font-heading); cursor: pointer;
   display: inline-flex; align-items: center; gap: 0.35rem;
 }
@@ -347,10 +348,12 @@ ul { margin: 0; padding: 0; list-style: none; }
 .hero {
   position: relative; background: var(--green-900); color: #fff; isolation: isolate;
   display: flex; flex-direction: column;
-  /* The hero introduces the page rather than filling it: half the viewport is
-     the target. It grows past that only where the headline genuinely needs the
-     room, because clipping a hero headline is worse than a tall hero. */
-  min-height: 50vh;
+  /* Every hero is the same height on a given screen. The floor is whichever is
+     larger of half the viewport and 32rem — 32rem clears the tallest content
+     any hero carries (a two-line title over a three-line lede, 521px at the
+     widest the title clamp reaches), so no hero exceeds the floor and they all land on it. On a screen
+     tall enough for 50vh to win, that is exactly half the viewport. */
+  min-height: max(50vh, 33rem);
 }
 /* The fixed header floats over the hero, so the content band clears it and then
    centres in whatever is left. */
@@ -413,7 +416,10 @@ ul { margin: 0; padding: 0; list-style: none; }
   letter-spacing: 0.05em;
   color: var(--gold-light); margin: 0 0 1.25rem;
 }
-.hero-lede { color: var(--paper); max-width: 46ch; font-size: 1rem; }
+/* Full column width, not 46ch. The narrow measure pushed the longer ledes onto
+   a fourth line, which was half the height difference between one product hero
+   and the next. */
+.hero-lede { color: var(--paper); max-width: 58ch; font-size: 1rem; }
 
 /* ---------- hero GCC route strip ---------- */
 .hero-route { margin: clamp(1rem, 2.2vw, 1.5rem) 0 0; max-width: 46ch; }
@@ -976,10 +982,16 @@ ul { margin: 0; padding: 0; list-style: none; }
   .footer-cols { grid-template-columns: 1fr 1fr; }
 }
 
-@media (max-width: 860px) {
-  :root { --header-h: 82px; }
+/* The bar needs 983px to hold six items, the CTA and the logo without
+   wrapping — measured, not guessed, after Catering joined the top level.
+   Below that the burger takes over; letting it wrap put the CTA on two lines. */
+@media (max-width: 1000px) {
   .nav { display: none; }
   .burger { display: inline-flex; }
+}
+
+@media (max-width: 860px) {
+  :root { --header-h: 82px; }
   .grid--3, .grid--4 { grid-template-columns: repeat(2, 1fr); }
   .features { grid-template-columns: repeat(2, 1fr); row-gap: 2rem; }
   .feature:nth-child(odd)::before { display: none; }

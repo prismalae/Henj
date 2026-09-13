@@ -37,7 +37,6 @@ export default function EggsPage() {
         title="Fresh Eggs"
         strapline={category.strapline}
         lede={category.intro}
-        badges={category.badges}
       />
 
       <section className="section section--paper">

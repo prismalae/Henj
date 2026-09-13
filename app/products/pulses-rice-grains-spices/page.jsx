@@ -29,7 +29,6 @@ export default function PulsesPage() {
         title={<>Pulses, Rice<br />&amp; Spices</>}
         strapline={category.strapline}
         lede={category.intro}
-        badges={category.badges}
       />
 
       <section className="section section--paper">

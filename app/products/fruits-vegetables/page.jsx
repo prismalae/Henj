@@ -30,7 +30,6 @@ export default function FruitsVegetablesPage() {
         title="Fruits & Vegetables"
         strapline={category.strapline}
         lede={category.intro}
-        badges={category.badges}
       />
 
       <section className="section section--paper">

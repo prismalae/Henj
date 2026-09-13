@@ -30,7 +30,6 @@ export default function DriedFruitsNutsPage() {
         title={<>Dried Fruits<br />&amp; Nuts</>}
         strapline={category.strapline}
         lede={category.intro}
-        badges={category.badges}
       />
 
       <section className="section section--paper">

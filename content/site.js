@@ -130,12 +130,15 @@ export const nav = [
       },
     ],
   },
+  /* 'Catering' not 'Catering Supply': at the full label the bar wrapped to two
+     rows just above the burger breakpoint. Same reason the Products children
+     are shortened. */
+  { label: 'Catering', href: '/catering-supply' },
   {
     label: 'Services',
     href: '/services',
     children: [
       { label: 'All Services', href: '/services' },
-      { label: 'Catering Supply', href: '/catering-supply' },
       { label: 'Packing & Shipping', href: '/packing-shipping' },
     ],
   },
