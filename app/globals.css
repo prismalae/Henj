@@ -1334,7 +1334,13 @@ ul { margin: 0; padding: 0; list-style: none; }
    7%, so the slot's colour shows as a border and the photo's own white edge is
    visible against it. Kept on --card by preference. */
 .slot--photo { background: var(--card); }
-.slot--photo img { object-fit: contain; padding: 7%; }
+.slot--photo img {
+  object-fit: contain; padding: 7%;
+  /* Cut-outs need an edge on a light ground. White eggs on --card were all but
+     invisible while the brown ones read fine; a soft shadow separates the pale
+     products without tinting the slot or changing the dark ones. */
+  filter: drop-shadow(0 4px 10px rgba(var(--green-900-rgb), 0.22));
+}
 
 /* ============================================================
    Products mega-menu
