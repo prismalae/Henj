@@ -164,7 +164,7 @@ export default function HomePage() {
         <div className="wrap split split--wide-left">
           <div>
             <p className="eyebrow">Catering supply</p>
-            <h2>Full Container Loads for Hospitality Kitchens.</h2>
+            <h2>Full Container Loads for Catering Kitchens.</h2>
             <p>
               Catering companies in Abu Dhabi and across the Emirates take rice, dal, sugar and
               spices from us by the container rather than the pallet — the grade fixed, the price
