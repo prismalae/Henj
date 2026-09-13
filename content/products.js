@@ -257,6 +257,50 @@ export const pulsesSpices = [
     },
   },
   {
+    name: 'Cardamom',
+    image: '/img/products/cardamom.png',
+    description: 'Naturally aromatic green cardamom (elaichi).',
+    specs: {
+      Origin: 'India (Kerala, Idukki), Guatemala',
+      Grades: '6 mm, 7 mm, 7.5 mm, 8 mm bold — AGEB and similar',
+      Packing: '5 / 10 / 20 kg vacuum or laminated cartons',
+      Shipment: 'Air freight preferred — aroma retention',
+    },
+  },
+  {
+    name: 'Cloves',
+    description: 'Whole cloves with strong, clean aroma and dark colour.',
+    image: '/img/products/cloves.jpg',
+    specs: {
+      Origin: 'Indonesia, Madagascar, Sri Lanka, India',
+      Grades: 'Hand-picked, headless below 2%, moisture below 12%',
+      Packing: '10 / 25 / 50 kg PP bags and cartons',
+      Shipment: 'Sea — FCL and LCL',
+    },
+  },
+  {
+    name: 'Bay Leaves',
+    description: 'Hand-sorted bay leaves, dried to hold their fragrance.',
+    image: '/img/products/bay-leaves.jpg',
+    specs: {
+      Origin: 'India, Turkey',
+      Grades: 'Whole hand-selected, semi-broken, tea-cut',
+      Packing: '5 / 10 / 20 kg cartons, poly-lined',
+      Shipment: 'Sea — LCL; air for small lots',
+    },
+  },
+  {
+    name: 'Black Pepper',
+    description: 'Bold, pungent and high-piperine black peppercorns.',
+    image: '/img/products/black-pepper.png',
+    specs: {
+      Origin: 'India (Malabar), Vietnam, Indonesia',
+      Grades: 'MG1, ASTA, 500 / 550 / 570 g/l bulk density',
+      Packing: '25 / 50 kg PP and jute bags',
+      Shipment: 'Sea — FCL and LCL',
+    },
+  },
+  {
     name: 'Toor Dal',
     description: 'Pure, clean and nutritious toor dal (Arhar dal).',
     specs: {
@@ -321,56 +365,12 @@ export const pulsesSpices = [
     },
   },
   {
-    name: 'Cardamom',
-    image: '/img/products/cardamom.png',
-    description: 'Naturally aromatic green cardamom (elaichi).',
-    specs: {
-      Origin: 'India (Kerala, Idukki), Guatemala',
-      Grades: '6 mm, 7 mm, 7.5 mm, 8 mm bold — AGEB and similar',
-      Packing: '5 / 10 / 20 kg vacuum or laminated cartons',
-      Shipment: 'Air freight preferred — aroma retention',
-    },
-  },
-  {
-    name: 'Cloves',
-    description: 'Whole cloves with strong, clean aroma and dark colour.',
-    image: '/img/products/cloves.jpg',
-    specs: {
-      Origin: 'Indonesia, Madagascar, Sri Lanka, India',
-      Grades: 'Hand-picked, headless below 2%, moisture below 12%',
-      Packing: '10 / 25 / 50 kg PP bags and cartons',
-      Shipment: 'Sea — FCL and LCL',
-    },
-  },
-  {
-    name: 'Bay Leaves',
-    description: 'Hand-sorted bay leaves, dried to hold their fragrance.',
-    image: '/img/products/bay-leaves.jpg',
-    specs: {
-      Origin: 'India, Turkey',
-      Grades: 'Whole hand-selected, semi-broken, tea-cut',
-      Packing: '5 / 10 / 20 kg cartons, poly-lined',
-      Shipment: 'Sea — LCL; air for small lots',
-    },
-  },
-  {
     name: 'Star Anise',
     description: 'Whole star anise with intact points and deep aroma.',
     specs: {
       Origin: 'Vietnam, China',
       Grades: 'Whole 95% intact, autumn and spring crop',
       Packing: '10 / 20 / 25 kg cartons and PP bags',
-      Shipment: 'Sea — FCL and LCL',
-    },
-  },
-  {
-    name: 'Black Pepper',
-    description: 'Bold, pungent and high-piperine black peppercorns.',
-    image: '/img/products/black-pepper.png',
-    specs: {
-      Origin: 'India (Malabar), Vietnam, Indonesia',
-      Grades: 'MG1, ASTA, 500 / 550 / 570 g/l bulk density',
-      Packing: '25 / 50 kg PP and jute bags',
       Shipment: 'Sea — FCL and LCL',
     },
   },
