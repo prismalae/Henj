@@ -53,7 +53,7 @@ export default function AirShipmentPage() {
   return (
     <>
       <Hero
-        tone="warm"
+        image="/img/hero-air.jpg"
         title="Air Shipment"
         strapline="Freshness Takes the Fastest Route."
         lede="Every day, HENJ Trading L.L.C. airlifts carefully selected fruits, vegetables, leafy greens and herbs from Kerala to Dubai — shortening the distance between harvest and market while protecting freshness at every stage."
