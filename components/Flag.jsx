@@ -79,6 +79,26 @@ const FLAGS = {
       </>
     ),
   },
+  sa: {
+    name: 'Saudi Arabia',
+    art: (
+      <>
+        <rect width="24" height="24" fill="#006c35" />
+        {/* The shahada, as the two ticked bands the script reads as at this
+            size, over the sword. Drawing the calligraphy is pointless below
+            about 60px — it turns to grey mush. */}
+        <g stroke="#fff" strokeLinecap="round" fill="none">
+          <path d="M4.2 8.2h15.6" strokeWidth="1.7" strokeDasharray="2.1 1.4" />
+          <path d="M6.6 12h10.8" strokeWidth="1.3" strokeDasharray="1.5 1.2" />
+        </g>
+        {/* the sword: blade, tip and hilt, which is what stops the three white
+            marks reading as a menu icon at pill size */}
+        <path fill="#fff" d="M3.3 16.9 6.8 15.95v1.9L3.3 16.9Z" />
+        <path stroke="#fff" strokeWidth="1.9" strokeLinecap="butt" d="M6 16.9h11" />
+        <path stroke="#fff" strokeWidth="1.3" strokeLinecap="round" d="M17.9 15.1v3.6" />
+      </>
+    ),
+  },
   bh: {
     name: 'Bahrain',
     art: (
@@ -94,6 +114,11 @@ const FLAGS = {
 };
 
 export const flagName = (code) => FLAGS[code]?.name;
+
+/** Reverse lookup, so a list that carries country names (site.markets) can show
+    a flag without keeping a second copy of the codes beside it. */
+export const flagCode = (name) =>
+  Object.keys(FLAGS).find((c) => FLAGS[c].name === name);
 
 export default function Flag({ code, className = '' }) {
   const f = FLAGS[code];

@@ -564,6 +564,25 @@ ul { margin: 0; padding: 0; list-style: none; }
   .lightbox { animation: none; }
 }
 
+/* The markets row on the home page: a pill per country, each led by its flag.
+   The disc sits inside the pill, so the left padding is cut to keep the gap
+   even — a full 1.25rem in front of a round flag reads as a hole. */
+.markets {
+  display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center;
+  margin: 0 0 3rem;
+}
+.markets li {
+  display: inline-flex; align-items: center; gap: 0.6rem;
+  border: 1px solid rgba(201, 162, 39, 0.45); border-radius: 999px;
+  padding: 0.4rem 1.15rem 0.4rem 0.45rem;
+  font-size: 0.9rem; color: rgba(255, 255, 255, 0.9);
+}
+.market-flag {
+  flex: none; width: 24px; height: 24px; border-radius: 50%; overflow: hidden;
+  box-shadow: 0 0 0 1px rgba(201, 162, 39, 0.6);
+}
+.market-flag svg { width: 100%; height: 100%; display: block; }
+
 /* Country flag beside the mark on a group card. Sized to the cap height of the
    company name rather than the icon, so it reads as a label not a second icon. */
 .company-mark { display: flex; align-items: center; gap: 0.7rem; margin-bottom: 1rem; }

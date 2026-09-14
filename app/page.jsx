@@ -6,6 +6,7 @@ import CtaBand from '@/components/CtaBand';
 import StatStrip from '@/components/StatStrip';
 import RoadFreightBand from '@/components/RoadFreightBand';
 import Icon from '@/components/Icon';
+import Flag, { flagCode } from '@/components/Flag';
 import { site } from '@/content/site';
 import Faq from '@/components/Faq';
 import GroupCompanies from '@/components/GroupCompanies';
@@ -212,15 +213,12 @@ export default function HomePage() {
             lede="From our base at Al Aweer Fruits & Vegetables Market in Ras Al Khor, Dubai."
             gold
           />
-          <ul style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem', justifyContent: 'center', marginBottom: '3rem' }}>
+          {/* Flags are decorative — every country is named in the pill beside its
+              own flag, so nothing here depends on recognising one. */}
+          <ul className="markets">
             {site.markets.map((m) => (
-              <li
-                key={m}
-                style={{
-                  border: '1px solid rgba(201,162,39,0.45)', borderRadius: '999px',
-                  padding: '0.5rem 1.25rem', fontSize: '0.9rem', color: 'rgba(255,255,255,0.9)',
-                }}
-              >
+              <li key={m}>
+                <span className="market-flag"><Flag code={flagCode(m)} /></span>
                 {m}
               </li>
             ))}

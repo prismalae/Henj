@@ -35,22 +35,23 @@ export default function AboutPage() {
         <div className="wrap split split--wide-left">
           <div>
             <p className="eyebrow">Our story</p>
-            <h2>A Trading House Built on the Market Floor.</h2>
+            <h2>Built Close to the Market. Connected Beyond Borders.</h2>
             <p>
-              Most food importers work from an office and take their supplier&apos;s word for it. HENJ
-              was built the other way round — from a stand at Al Aweer Fruits &amp; Vegetables Market in
-              Ras Al Khor, where the region&apos;s fresh trade is actually done, in person, every morning.
+              <strong className="co">HENJ Trading L.L.C.</strong> operates from Al Aweer Fruits &amp; Vegetables Market in Dubai,
+              connecting trusted growers and producers with wholesalers, retailers, restaurants and
+              commercial kitchens across the UAE.
             </p>
             <p>
-              That is not nostalgia. It is how we know what a crate really contains before it is
-              bought, why a price moved this week, and which supplier quietly changed his grade. The
-              things that decide whether a shipment is worth having are visible on the floor and
-              invisible on a spec sheet.
+              Through daily air shipments from Kerala, we bring fresh fruits, vegetables, leafy greens
+              and herbs to Dubai, supported by a wider portfolio of rice, pulses, grains, spices, dried
+              goods and eggs.
             </p>
-            <p>
-              From that base we buy, import and distribute four ranges — fresh produce, pulses and
-              grains, spices, dried fruit and nuts, and eggs — to wholesalers, retailers, hotels and
-              processors across the Emirates and the wider Gulf.
+            {/* The closing claim carries the page's weight, so it is set like the
+                other closing lines on the site rather than as another body paragraph. */}
+            <p style={{ fontWeight: 600, color: 'var(--green-900)' }}>
+              Built on careful sourcing, reliable service and lasting partnerships,{' '}
+              <strong className="co">HENJ Trading L.L.C.</strong> supplies businesses across the UAE and dispatches shipments
+              by road from Dubai to Qatar, Kuwait and Bahrain.
             </p>
           </div>
           <div className="slot slot--square" style={{ borderRadius: 'var(--r-lg)', border: '1px solid var(--line)' }}>
@@ -82,21 +83,22 @@ export default function AboutPage() {
         <div className="wrap">
           <div className="panel split">
             <div>
-              <h2 style={{ fontSize: 'clamp(1.5rem, 2.6vw, 2rem)' }}>How We Actually Trade</h2>
+              <h2 style={{ fontSize: 'clamp(1.5rem, 2.6vw, 2rem)' }}>How We Trade</h2>
               <p>
-                We buy on our own account rather than broking someone else&apos;s cargo. If a consignment
-                is wrong, it is our money and our name — which is the only reason a buyer should believe
-                a supplier who says quality matters to them.
+                <strong className="co">HENJ</strong> trades on its own account, taking direct responsibility for every
+                consignment we purchase and supply. From selecting the source to delivering the order,
+                every decision is guided by quality, market suitability and customer requirements.
               </p>
               <p>
-                Fresh produce is bought close to harvest and flown, because a week of sea freight is a
-                week of shelf life gone. Rice, pulses and spices move by container, where the economics
-                belong. Eggs travel temperature-controlled. Each range gets the route it needs, not the
-                route that happens to be cheapest for us.
+                Fresh produce is sourced close to harvest and transported by air when speed and shelf
+                life are critical. Rice, pulses, grains and spices move efficiently by container, while
+                eggs receive suitable temperature-controlled handling. Each product follows the route
+                and process required to protect its quality.
               </p>
               <p>
-                We would rather turn down an order than fill it with stock we would not sell twice. Most
-                of our business is repeat business, and that only works one way.
+                We choose consistency over short-term volume. Products that do not meet our standards do
+                not enter our supply chain. This disciplined approach, together with honest service and
+                dependable delivery, is what turns first orders into lasting business relationships.
               </p>
             </div>
             <div className="slot slot--square" style={{ borderRadius: 'var(--r-lg)', border: '1px solid var(--line)' }}>
