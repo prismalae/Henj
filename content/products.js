@@ -477,7 +477,7 @@ export const pulsesSpices = [
   {
     name: 'Chickpeas',
     description: 'Premium kabuli chickpeas (white chana).',
-    image: '/img/products/chickpeas.jpg',
+    image: '/img/products/chickpeas.png',
     specs: {
       Origin: 'India, Turkey, Argentina, Mexico',
       Grades: '7 mm, 8 mm, 9 mm, 10 mm, 12 mm calibre',
