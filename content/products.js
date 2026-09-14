@@ -413,7 +413,7 @@ export const pulsesSpices = [
   {
     name: 'Cloves',
     description: 'Whole cloves with strong, clean aroma and dark colour.',
-    image: '/img/products/cloves.jpg',
+    image: '/img/products/cloves.png',
     specs: {
       Origin: 'Indonesia, Madagascar, Sri Lanka, India',
       Grades: 'Hand-picked, headless below 2%, moisture below 12%',
