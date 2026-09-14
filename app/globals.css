@@ -240,6 +240,17 @@ ul { margin: 0; padding: 0; list-style: none; }
 .brand .logo { width: clamp(130px, 14vw, 190px); }
 
 .nav { margin-left: auto; display: flex; align-items: center; gap: clamp(1rem, 2.2vw, 2rem); }
+
+/* The header CTA is a nav item's neighbour, not a page button. At the shared
+   .btn size it stood 56px tall in a 104px bar and was the widest thing in the
+   row; trimmed it reads as a control beside the links rather than a slab over
+   them, and the bar now fits its seven items 60px sooner. The extra left margin
+   on top of the nav gap keeps it from being read as an eighth link. */
+.nav > .btn {
+  font-size: 0.875rem;
+  padding: 0.62rem 1.3rem;
+  margin-left: clamp(0.25rem, 1vw, 0.85rem);
+}
 .nav-link {
   position: relative; font-size: 0.95rem; font-weight: 500; color: var(--ink);
   white-space: nowrap;
@@ -1002,11 +1013,13 @@ ul { margin: 0; padding: 0; list-style: none; }
   .footer-cols { grid-template-columns: 1fr 1fr; }
 }
 
-/* The bar needs 1115px to hold seven items, the CTA and the logo without
-   wrapping — measured, not guessed, and re-measured when Air Shipment joined the
-   top level (it was 983px for six). Below that the burger takes over; letting it
-   wrap put Get In Touch on two lines and ran Catering into Air Shipment. */
-@media (max-width: 1114px) {
+/* The bar needs 1100px to hold seven items, the CTA and the logo without
+   wrapping — measured, not guessed, and re-measured twice: at 983px for six
+   items, 1115px once Air Shipment joined the top level, and 1100px after the
+   header CTA was trimmed to nav scale. Below that the burger takes over;
+   letting it wrap put Get In Touch on two lines and ran Catering into
+   Air Shipment. */
+@media (max-width: 1099px) {
   .nav { display: none; }
   .burger { display: inline-flex; }
 }
