@@ -982,10 +982,11 @@ ul { margin: 0; padding: 0; list-style: none; }
   .footer-cols { grid-template-columns: 1fr 1fr; }
 }
 
-/* The bar needs 983px to hold six items, the CTA and the logo without
-   wrapping — measured, not guessed, after Catering joined the top level.
-   Below that the burger takes over; letting it wrap put the CTA on two lines. */
-@media (max-width: 1000px) {
+/* The bar needs 1115px to hold seven items, the CTA and the logo without
+   wrapping — measured, not guessed, and re-measured when Air Shipment joined the
+   top level (it was 983px for six). Below that the burger takes over; letting it
+   wrap put Get In Touch on two lines and ran Catering into Air Shipment. */
+@media (max-width: 1114px) {
   .nav { display: none; }
   .burger { display: inline-flex; }
 }

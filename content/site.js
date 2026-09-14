@@ -134,6 +134,10 @@ export const nav = [
      rows just above the burger breakpoint. Same reason the Products children
      are shortened. */
   { label: 'Catering', href: '/catering-supply' },
+  /* 'Air Shipment' rather than 'Air Shipments': singular keeps the bar one row
+     at the widths just above the burger breakpoint, same constraint as the
+     shortened labels above. */
+  { label: 'Air Shipment', href: '/air-shipment' },
   {
     label: 'Services',
     href: '/services',
