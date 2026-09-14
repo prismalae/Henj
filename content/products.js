@@ -424,7 +424,7 @@ export const pulsesSpices = [
   {
     name: 'Bay Leaves',
     description: 'Hand-sorted bay leaves, dried to hold their fragrance.',
-    image: '/img/products/bay-leaves.jpg',
+    image: '/img/products/bay-leaves.png',
     specs: {
       Origin: 'India, Turkey',
       Grades: 'Whole hand-selected, semi-broken, tea-cut',
