@@ -3,7 +3,7 @@
  *
  * Every tile renders an empty image slot until an `image` field is added here —
  * no layout change is needed when photography arrives. Add e.g.
- * image: '/img/products/rice.jpg'.
+ * image: '/img/products/rice.png'.
  *
  * `specs` renders as a native <details> disclosure inside the card. Keys are shown
  * in the order written. All spec values are INDUSTRY-STANDARD TRADE DEFAULTS and are
@@ -391,7 +391,7 @@ export const pulsesSpices = [
   {
     name: 'Rice',
     description: 'Long grain, Basmati, Non-Basmati & Parboiled varieties.',
-    image: '/img/products/rice.jpg',
+    image: '/img/products/rice.png',
     specs: {
       Origin: 'India, Pakistan',
       Varieties: 'Basmati 1121 & 1509, Sona Masoori, IR64, Parboiled, Sella',
