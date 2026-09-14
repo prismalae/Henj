@@ -653,6 +653,26 @@ ul { margin: 0; padding: 0; list-style: none; }
   padding: clamp(1.5rem, 3vw, 2.5rem); border: 1px solid var(--line);
 }
 
+/* The label/value list inside an "At a glance" panel. It columnises on width
+   rather than at a breakpoint, because the panel is a narrow right-hand column
+   on a wide screen and full width once the split stacks — the same viewport can
+   give it 400px or 700px. One column below 32rem of panel, two above: at tablet
+   width a single column left a stack of four-word values against 450px of
+   nothing. Values are short, so the columns do not need to align row by row. */
+.panel-facts {
+  display: grid;
+  gap: 1.1rem 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  margin: 0;
+}
+.panel-facts dt {
+  font-size: 0.68rem; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--gold-deep); margin-bottom: 0.25rem;
+}
+.panel-facts dd {
+  margin: 0; font-size: 0.92rem; color: var(--green-900); line-height: 1.55;
+}
+
 /* experience seal */
 .seal {
   width: clamp(110px, 13vw, 150px); aspect-ratio: 1; border-radius: 50%;

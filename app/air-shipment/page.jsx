@@ -92,7 +92,7 @@ export default function AirShipmentPage() {
           </div>
           <div className="panel">
             <p className="eyebrow">At a glance</p>
-            <dl style={{ display: 'grid', gap: '1.1rem', margin: 0 }}>
+            <dl className="panel-facts">
               {[
                 ['Origin', 'Kerala, India — farm level and pack house'],
                 ['Destination', 'Dubai, United Arab Emirates'],
@@ -102,8 +102,8 @@ export default function AirShipmentPage() {
                 ['Onward', `Road distribution across the UAE and into ${site.markets.filter((m) => m !== 'United Arab Emirates' && m !== 'Saudi Arabia').join(', ')}`],
               ].map(([k, v]) => (
                 <div key={k}>
-                  <dt style={{ fontSize: '0.68rem', letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--gold-deep)', marginBottom: '0.25rem' }}>{k}</dt>
-                  <dd style={{ margin: 0, fontSize: '0.92rem', color: 'var(--green-900)', lineHeight: 1.55 }}>{v}</dd>
+                  <dt>{k}</dt>
+                  <dd>{v}</dd>
                 </div>
               ))}
             </dl>
