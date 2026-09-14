@@ -499,7 +499,7 @@ export const pulsesSpices = [
   {
     name: 'Cumin Seeds',
     description: 'Aromatic and flavorful cumin seeds of the finest grade.',
-    image: '/img/products/cumin.jpg',
+    image: '/img/products/cumin.png',
     specs: {
       Origin: 'India (Gujarat, Rajasthan), Syria',
       Grades: '99% / 99.5% purity, singapore & europe quality, sortex-cleaned',
