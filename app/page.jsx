@@ -41,14 +41,15 @@ export default function HomePage() {
         <div className="wrap split split--wide-left">
           <div>
             <p className="eyebrow">Welcome to HENJ Trading</p>
-            <h2>Premium Food Import &amp; Distribution for Seamless Regional Supply.</h2>
+            <h2>Premium Food Import &amp; Distribution Across the UAE and GCC Region</h2>
             <p>
-              <strong className="co">HENJ Trading L.L.C.</strong> is a trusted importer and distributor of high-quality fruits &amp;
-              vegetables, pulses, rice, grains, spices and eggs across the UAE and the wider region.
+              <strong className="co">HENJ Trading L.L.C.</strong> bridges global agriculture with local markets. As a premier
+              importer and distributor across the UAE and surrounding region, we supply high-quality
+              fresh produce, grains, pulses, spices, and eggs.
             </p>
             <p>
-              With a strong commitment to quality, reliability and long-term partnerships, we bridge
-              global farms to local markets — ensuring freshness, consistency and value in every shipment.
+              Built on trust, consistency, and strong international partnerships, we deliver fresh,
+              reliable product solutions tailored to regional demand.
             </p>
             <Link href="/about" className="btn btn--green" style={{ marginTop: '0.5rem' }}>
               About HENJ <Icon name="arrow" size={18} />
