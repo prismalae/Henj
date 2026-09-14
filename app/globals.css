@@ -385,6 +385,21 @@ ul { margin: 0; padding: 0; list-style: none; }
     linear-gradient(90deg, rgba(var(--green-900-rgb), 0.74) 0%, rgba(var(--green-900-rgb), 0.68) 38%, rgba(var(--green-900-rgb), 0.54) 62%, rgba(var(--green-900-rgb), 0.20) 78%, rgba(var(--green-900-rgb), 0) 88%),
     linear-gradient(100deg, var(--green-900) 6%, rgba(var(--green-900-rgb), 0.9) 32%, rgba(var(--green-900-rgb), 0.35) 60%, rgba(var(--green-900-rgb), 0.1) 100%);
 }
+/* A centred hero needs a different scrim shape. The default and the heavy
+   variant are horizontal wipes built for copy in the left third; centred copy
+   sits where a wipe has already faded out, which on a bright photograph left
+   the title at 1.05:1. This one darkens by height instead, so the veil is the
+   same at every x the copy can reach. */
+.hero--scrim-center .hero-bg::after {
+  background: linear-gradient(
+    180deg,
+    rgba(var(--green-900-rgb), 0.88) 0%,
+    rgba(var(--green-900-rgb), 0.84) 45%,
+    rgba(var(--green-900-rgb), 0.74) 74%,
+    rgba(var(--green-900-rgb), 0.5) 100%
+  );
+}
+
 /* Most hero photographs are composed with a dark, quiet left third for the copy
    to sit on. One is not — the group triptych is lit edge to edge — and on it the
    gold strapline measured 3.68:1 against the 4.5:1 it needs. This carries the

@@ -22,9 +22,11 @@ export default function QualityPage() {
     <>
       <Hero
         image="/img/hero-quality.jpg"
+        focus="center"
+        scrim="center"
         title="Quality & Certifications"
         strapline="We stand behind what we ship."
-        lede={<><strong className="co co--onDark">HENJ</strong> trades on its own account. That means the grade you approved is our responsibility, not a supplier&rsquo;s — from inspection at origin to the moment it reaches your door.</>}
+        lede={<><strong className="co co--onDark">HENJ</strong> trades on its own account. That means the grade you approved is our responsibility — from inspection at origin to the moment it reaches your door.</>}
         center
       />
 
