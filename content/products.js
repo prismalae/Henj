@@ -456,7 +456,7 @@ export const pulsesSpices = [
   {
     name: 'Chana Dal',
     description: 'Rich in protein and perfect for everyday cooking.',
-    image: '/img/products/chana-dal.jpg',
+    image: '/img/products/chana-dal.png',
     specs: {
       Origin: 'India, Australia',
       Grades: 'Sortex-cleaned, standard and premium polish',
