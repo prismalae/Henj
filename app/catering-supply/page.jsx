@@ -72,23 +72,24 @@ export default function CateringSupplyPage() {
       <section className="section section--paper">
         <div className="wrap split split--wide-left">
           <div>
-            <p className="eyebrow">Why the container</p>
-            <h2>Buy the Volume You Were Going to Cook Anyway.</h2>
+            <p className="eyebrow">Planned for professional kitchens</p>
+            <h2>Consistent Products. Dependable Supply.</h2>
             <p>
-              A catering kitchen&apos;s dry store is the most predictable thing in the business. The
-              headcount is known, the menu cycle repeats, and the rice, dal and sugar going out of the
-              store this month will go out again next month. Buying that by the pallet, weekly, at
-              whatever the market moved to, is paying a premium for volume you had already committed to.
+              High-volume kitchens need more than competitive pricing — they need consistent
+              specifications, reliable availability and deliveries that arrive when expected.{' '}
+              <strong className="co">HENJ Trading LLC</strong> coordinates the bulk supply of rice, dals, pulses, sugar, grains,
+              spices, dried fruits and nuts, supported by fresh produce and eggs.
             </p>
             <p>
-              We supply it at container level instead: the grade fixed, the price held for the term,
-              and deliveries released against your consumption rather than dumped on you at once. The
-              weekly reordering stops being the chef&apos;s problem.
+              Orders can be arranged as single-product or consolidated loads, with the required grade,
+              packing, quantity and delivery schedule agreed in advance. This helps customers plan
+              inventory efficiently, reduce urgent purchases and maintain consistency across every
+              service.
             </p>
             <p>
-              Where a single line will not fill a container — and for most kitchens sugar alone will
-              not — we consolidate several staples into one load, so you get container economics
-              without a year of one commodity sitting in the store.
+              From full-container requirements to recurring local deliveries,{' '}
+              <strong className="co">HENJ Trading LLC</strong> provides one dependable point of contact for sourcing,
+              coordination and distribution across the UAE.
             </p>
             <MetaStrip
               items={[

@@ -9,7 +9,7 @@ import { site } from '@/content/site';
 export const metadata = {
   title: 'Services',
   description:
-    'Import and export, air and sea shipments, road and UAE distribution, catering and contract supply, GCC supply, product sourcing, packaging, logistics and shipment documentation from HENJ Trading L.L.C.',
+    'Import and export, air and sea shipments, road and UAE distribution, catering and contract supply, GCC supply, product sourcing, packaging, logistics and shipment documentation from HENJ Trading LLC',
 };
 
 const SERVICES = [

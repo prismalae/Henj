@@ -8,7 +8,7 @@ import { site } from '@/content/site';
 export const metadata = {
   title: 'Contact Us',
   description:
-    'Contact HENJ Trading L.L.C. at Al Aweer Fruits & Vegetables Market, Ras Al Khor, Dubai. Call or WhatsApp +971 54 404 3463 / +971 50 482 6424, or email info@henj-uae.com.',
+    'Contact HENJ Trading LLC at Al Aweer Fruits & Vegetables Market, Ras Al Khor, Dubai. Call or WhatsApp +971 54 404 3463 / +971 50 482 6424, or email info@henj-uae.com.',
 };
 
 const ASSURANCES = [

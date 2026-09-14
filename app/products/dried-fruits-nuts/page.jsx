@@ -12,7 +12,7 @@ const category = categories.find((c) => c.slug === 'dried-fruits-nuts');
 export const metadata = {
   title: 'Dried Fruits & Nuts',
   description:
-    'Cashews, almonds, pistachios, walnuts, raisins, dates, figs, apricots and seeds — graded by count and packed for retail or bulk by HENJ Trading L.L.C.',
+    'Cashews, almonds, pistachios, walnuts, raisins, dates, figs, apricots and seeds — graded by count and packed for retail or bulk by HENJ Trading LLC',
 };
 
 const WHY = [

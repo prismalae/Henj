@@ -9,7 +9,7 @@ import { packingTable, containerGuide, modeGuide } from '@/content/products';
 export const metadata = {
   title: 'Packing & Shipping',
   description:
-    'Packing formats, palletisation and container loadability by product family, plus when HENJ Trading L.L.C. ships by air, by sea reefer or by road across the UAE and the Gulf.',
+    'Packing formats, palletisation and container loadability by product family, plus when HENJ Trading LLC ships by air, by sea reefer or by road across the UAE and the Gulf.',
 };
 
 export default function PackingShippingPage() {

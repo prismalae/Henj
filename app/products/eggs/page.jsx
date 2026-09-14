@@ -12,7 +12,7 @@ const category = categories.find((c) => c.slug === 'eggs');
 export const metadata = {
   title: 'Fresh Eggs',
   description:
-    'White and brown table eggs in every common grade, in trays, cartons or container loads — imported by HENJ Trading L.L.C. from India, Turkey and other trusted origins.',
+    'White and brown table eggs in every common grade, in trays, cartons or container loads — imported by HENJ Trading LLC from India, Turkey and other trusted origins.',
 };
 
 const ASSURANCES = [
@@ -33,6 +33,7 @@ export default function EggsPage() {
   return (
     <>
       <Hero
+        tall
         image={category.hero}
         title="Fresh Eggs"
         strapline={category.strapline}
@@ -74,16 +75,16 @@ export default function EggsPage() {
         <div className="wrap split">
           <div>
             <p className="eyebrow">Import Sourcing</p>
-            <h2 style={{ fontSize: 'clamp(1.5rem, 2.6vw, 2rem)' }}>Sourced from India, Turkey and beyond.</h2>
+            <h2 style={{ fontSize: 'clamp(1.5rem, 2.6vw, 2rem)' }}>Sourced from India, Turkey and Beyond.</h2>
             <p>
-              We import eggs from established producers in India and Turkey, along with other origins
-              as season and price make sense. Multiple sources means supply holds steady when any
-              single market tightens.
+              We source white and brown eggs from established producers in India, Turkey and other
+              trusted origins, selected for consistent quality, reliable grading and dependable
+              year-round supply.
             </p>
             <p>
-              Supply runs from single trays for retail through to full container loads for wholesale
-              and institutional buyers, in white and brown, across small, medium, large and
-              extra-large grades — sorted by weight to the specification you sell against.
+              From retail trays to bulk and container quantities, every order is matched to the
+              required size and specification, with careful temperature-controlled handling from
+              source to delivery.
             </p>
           </div>
           <div className="grid grid--2">
@@ -113,7 +114,7 @@ export default function EggsPage() {
       </section>
 
       <CtaBand
-        body={<>Looking for a dependable egg supply partner? Partner with <strong className="co co--onDark">HENJ Trading L.L.C.</strong> for quality you can trust and service you can rely on.</>}
+        body={<>Looking for a dependable egg supply partner? Partner with <strong className="co co--onDark">HENJ Trading LLC</strong> for quality you can trust and service you can rely on.</>}
         message="Hello HENJ Trading, I would like to enquire about your egg supply."
       />
     </>

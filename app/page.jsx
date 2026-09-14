@@ -15,7 +15,7 @@ import { categories, faqs } from '@/content/products';
 export const metadata = {
   title: 'Food Import, Export & Distribution in Dubai',
   description:
-    'HENJ Trading L.L.C. imports, exports and distributes premium fruits, vegetables, pulses, rice, grains, spices and eggs from Al Aweer Market, Dubai, across the UAE and the Gulf.',
+    'HENJ Trading LLC imports, exports and distributes premium fruits, vegetables, pulses, rice, grains, spices and eggs from Al Aweer Market, Dubai, across the UAE and the Gulf.',
 };
 
 const WHY = [
@@ -32,7 +32,7 @@ export default function HomePage() {
         image="/img/hero-home.jpg"
         title="Fresh From the World. Delivered Across the Gulf."
         strapline="Import & Export – Distribution"
-        lede={<><strong className="co co--onDark">HENJ Trading L.L.C.</strong> supplies fruits, vegetables, pulses, rice, grains, spices and eggs to wholesalers, retailers and kitchens across the UAE and beyond.</>}
+        lede={<><strong className="co co--onDark">HENJ Trading LLC</strong> supplies fruits, vegetables, pulses, rice, grains, spices and eggs to wholesalers, retailers and kitchens across the UAE and beyond.</>}
         route
         badges={['Carefully Sourced', 'Premium Quality', 'Air Freighted', 'Timely Delivered']}
       />
@@ -44,7 +44,7 @@ export default function HomePage() {
             <p className="eyebrow">Welcome to HENJ Trading</p>
             <h2>Premium Food Import &amp; Distribution Across the UAE and GCC Region</h2>
             <p>
-              <strong className="co">HENJ Trading L.L.C.</strong> bridges global agriculture with local markets. As a premier
+              <strong className="co">HENJ Trading LLC</strong> bridges global agriculture with local markets. As a premier
               importer and distributor across the UAE and surrounding region, we supply high-quality
               fresh produce, grains, pulses, spices, and eggs.
             </p>
@@ -379,7 +379,7 @@ export default function HomePage() {
 
       <CtaBand
         title="Let's Build a Stronger Food Supply Chain Together"
-        body={<>Partner with <strong className="co co--onDark">HENJ Trading L.L.C.</strong> for quality you can trust and service you can rely on.</>}
+        body={<>Partner with <strong className="co co--onDark">HENJ Trading LLC</strong> for quality you can trust and service you can rely on.</>}
         action="Partner With Us"
       />
     </>

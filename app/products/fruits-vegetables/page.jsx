@@ -12,7 +12,7 @@ const category = categories.find((c) => c.slug === 'fruits-vegetables');
 export const metadata = {
   title: 'Fruits & Vegetables',
   description:
-    'Fresh fruits, vegetables, coconuts, onions, pomegranates, chilli, drumsticks, curry leaves, mint and banana leaves — air freighted daily by HENJ Trading L.L.C.',
+    'Fresh fruits, vegetables, coconuts, onions, pomegranates, chilli, drumsticks, curry leaves, mint and banana leaves — air freighted daily by HENJ Trading LLC',
 };
 
 const WHY = [

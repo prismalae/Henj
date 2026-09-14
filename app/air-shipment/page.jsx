@@ -11,7 +11,7 @@ import { site } from '@/content/site';
 export const metadata = {
   title: 'Air Shipment',
   description:
-    'Daily air freight of fruits, vegetables, leafy greens and herbs from Kerala to Dubai — packed at source, flown out overnight, cleared at Al Aweer and delivered the same day by HENJ Trading L.L.C.',
+    'Daily air freight of fruits, vegetables, leafy greens and herbs from Kerala to Dubai — packed at source, flown out overnight, cleared at Al Aweer and delivered the same day by HENJ Trading LLC',
 };
 
 /* The lines that actually justify a seat on an aircraft. Shelf life and packing
@@ -56,7 +56,7 @@ export default function AirShipmentPage() {
         image="/img/hero-air.jpg"
         title="Air Shipment"
         strapline="Freshness Takes the Fastest Route."
-        lede="Every day, HENJ Trading L.L.C. airlifts carefully selected fruits, vegetables, leafy greens and herbs from Kerala to Dubai — shortening the distance between harvest and market while protecting freshness at every stage."
+        lede="Every day, HENJ Trading LLC airlifts carefully selected fruits, vegetables, leafy greens and herbs from Kerala to Dubai — shortening the distance between harvest and market while protecting freshness at every stage."
         badges={['Farm Sourced', 'Air Freighted', 'Cold Chain', 'Daily Supply']}
       />
 

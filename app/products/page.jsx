@@ -8,7 +8,7 @@ import { categories } from '@/content/products';
 export const metadata = {
   title: 'Products',
   description:
-    'Fresh fruits and vegetables, pulses, rice, grains and spices, and fresh eggs — supplied by HENJ Trading L.L.C. across the UAE and the Gulf.',
+    'Fresh fruits and vegetables, pulses, rice, grains and spices, and fresh eggs — supplied by HENJ Trading LLC across the UAE and the Gulf.',
 };
 
 export default function ProductsPage() {
@@ -24,22 +24,25 @@ export default function ProductsPage() {
 
       <section className="section section--paper">
         <div className="wrap">
+          {/* The old lede duplicated the opening sentence of the copy below it, so
+              the heading now runs straight into the three paragraphs. */}
           <SectionHeading
             eyebrow="Explore the range"
-            title="Choose a Category"
-            lede="Every line below is available for wholesale, retail and institutional supply."
+            title="Quality Products for Every Market"
           />
           <div style={{ maxWidth: '68ch', margin: '0 auto clamp(2rem, 4vw, 3rem)', textAlign: 'center' }}>
             <p style={{ color: 'var(--ink-soft)' }}>
-              The four ranges are separated because they behave differently, not because they are sold
-              by different people. Fresh produce is a weekly rhythm decided by the season and the
-              aircraft. Rice, pulses and spices are a specification and a container. Nuts and dried
-              fruit are bought by count and judged on condition after a Gulf summer. Eggs are a
-              standing order that cannot be short.
+              From fresh produce to essential food staples, <strong className="co">HENJ Trading LLC</strong> offers a carefully
+              sourced portfolio for wholesale, retail, food-service and institutional requirements.
             </p>
             <p style={{ color: 'var(--ink-soft)' }}>
-              One point of contact covers all four. Most customers start with one and add others once
-              they have seen how the first arrives.
+              Explore our core categories — fruits and vegetables; rice, pulses, grains and spices;
+              dried fruits and nuts; and eggs. Each range is managed with the appropriate sourcing,
+              handling, storage and delivery to ensure dependable quality.
+            </p>
+            <p style={{ color: 'var(--ink-soft)' }}>
+              With one trusted point of contact across every category, sourcing becomes simpler,
+              faster and more reliable.
             </p>
           </div>
           <div className="grid grid--2">

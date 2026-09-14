@@ -20,7 +20,7 @@ export const categories = [
     summary:
       'Daily air shipments of fresh fruits, vegetables, leaves and herbs — picked, packed and flown so they arrive market-ready.',
     intro:
-      'At HENJ Trading L.L.C., we handle fresh produce the way it deserves to be handled — sourced close to harvest, cold-chained through packing, and moved by air so freshness survives the journey.',
+      'At HENJ Trading LLC, we handle fresh produce the way it deserves to be handled — sourced close to harvest, cold-chained through packing, and moved by air so freshness survives the journey.',
     badges: ['Farm Sourced', 'Air Freighted', 'Cold Chain', 'Daily Supply'],
     meta: ['Pre-cooled at source', 'Cold chain maintained', 'Phytosanitary certificate issued', 'MOQ: 100 kg per line'],
   },
@@ -33,7 +33,7 @@ export const categories = [
     summary:
       'Rice, dals, chickpeas, lentils and whole or ground spices, sourced from trusted mills and cleaned to specification.',
     intro:
-      'At HENJ Trading L.L.C., we source the finest pulses, rice, and spices from trusted farms and producers around the world—ensuring purity, authenticity, and unmatched quality in every grain and every spice.',
+      'At HENJ Trading LLC, we source the finest pulses, rice, and spices from trusted farms and producers around the world—ensuring purity, authenticity, and unmatched quality in every grain and every spice.',
     badges: ['Carefully Sourced', 'Premium Quality', 'Hygienically Processed', 'Timely Delivered'],
     meta: ['Sortex cleaned', 'Moisture tested', 'Private label available', 'MOQ: 1 MT per variety'],
   },
@@ -46,7 +46,7 @@ export const categories = [
     summary:
       'Cashews, almonds, pistachios and walnuts alongside raisins, dates, figs and seeds — graded, sorted and packed for retail or bulk.',
     intro:
-      'At HENJ Trading L.L.C., we source nuts, dried fruit and seeds from the origins that grow them best — graded to count, sorted for uniformity, and packed to hold condition through the Gulf summer.',
+      'At HENJ Trading LLC, we source nuts, dried fruit and seeds from the origins that grow them best — graded to count, sorted for uniformity, and packed to hold condition through the Gulf summer.',
     badges: ['Carefully Sourced', 'Premium Quality', 'Hygienically Processed', 'Timely Delivered'],
     meta: ['Grade and count verified', 'Moisture tested', 'Vacuum and bulk packing', 'MOQ: 100 kg per variety'],
   },
@@ -59,7 +59,7 @@ export const categories = [
     summary:
       'White and brown table eggs in every common grade, supplied by the tray, the carton or the container load.',
     intro:
-      'At HENJ Trading L.L.C., we source premium eggs from trusted farms, ensuring superior quality, food safety, and consistent supply to meet global demands.',
+      'At HENJ Trading LLC, we source premium eggs from trusted farms, ensuring superior quality, food safety, and consistent supply to meet global demands.',
     badges: ['Farm Fresh', 'Hygienically Handled', 'Quality Assured', 'Timely Delivery'],
     meta: ['Candled and washed', 'Weight graded', 'Temperature controlled', 'MOQ: 1 pallet'],
   },

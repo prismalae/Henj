@@ -7,7 +7,7 @@ import { qualityPillars } from '@/content/products';
 export const metadata = {
   title: 'Quality & Certifications',
   description:
-    'How HENJ Trading L.L.C. inspects at origin, holds the cold chain, meets UAE and destination food-safety requirements, and issues documentation with every shipment.',
+    'How HENJ Trading LLC inspects at origin, holds the cold chain, meets UAE and destination food-safety requirements, and issues documentation with every shipment.',
 };
 
 const DOCS = [

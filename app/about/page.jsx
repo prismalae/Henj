@@ -10,7 +10,7 @@ import { site } from '@/content/site';
 export const metadata = {
   title: 'About Us',
   description:
-    'HENJ Trading L.L.C. is a Dubai-based importer, exporter and distributor of fresh produce, pulses, rice, grains, spices and eggs, operating from Al Aweer Market, Ras Al Khor.',
+    'HENJ Trading LLC is a Dubai-based importer, exporter and distributor of fresh produce, pulses, rice, grains, spices and eggs, operating from Al Aweer Market, Ras Al Khor.',
 };
 
 const STRENGTHS = [
@@ -37,7 +37,7 @@ export default function AboutPage() {
             <p className="eyebrow">Our story</p>
             <h2>Built Close to the Market. Connected Beyond Borders.</h2>
             <p>
-              <strong className="co">HENJ Trading L.L.C.</strong> operates from Al Aweer Fruits &amp; Vegetables Market in Dubai,
+              <strong className="co">HENJ Trading LLC</strong> operates from Al Aweer Fruits &amp; Vegetables Market in Dubai,
               connecting trusted growers and producers with wholesalers, retailers, restaurants and
               commercial kitchens across the UAE.
             </p>
@@ -50,7 +50,7 @@ export default function AboutPage() {
                 other closing lines on the site rather than as another body paragraph. */}
             <p style={{ fontWeight: 600, color: 'var(--green-900)' }}>
               Built on careful sourcing, reliable service and lasting partnerships,{' '}
-              <strong className="co">HENJ Trading L.L.C.</strong> supplies businesses across the UAE and dispatches shipments
+              <strong className="co">HENJ Trading LLC</strong> supplies businesses across the UAE and dispatches shipments
               by road from Dubai to Qatar, Kuwait and Bahrain.
             </p>
           </div>

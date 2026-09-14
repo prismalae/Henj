@@ -1,5 +1,5 @@
 /* ============================================================
-   HENJ Trading L.L.C. — design tokens & base
+   HENJ Trading LLC — design tokens & base
    ============================================================ */
 :root {
   /* The brand palette's four swatches, deep to pale. Swatch 4 is the page
@@ -239,7 +239,11 @@ ul { margin: 0; padding: 0; list-style: none; }
 .brand { display: flex; align-items: center; flex: none; }
 .brand .logo { width: clamp(130px, 14vw, 190px); }
 
-.nav { margin-left: auto; display: flex; align-items: center; gap: clamp(1rem, 2.2vw, 2rem); }
+/* The gap's ceiling is 1.6rem, not 2rem. Above 1200px the .wrap stops growing
+   while a vw-based gap does not, so the widest screens are the tightest case for
+   the bar, not the roomiest: at 2rem and seven labels there was 1px spare at
+   1600px and the CTA was being squeezed into two lines. */
+.nav { margin-left: auto; display: flex; align-items: center; gap: clamp(1rem, 2.2vw, 1.6rem); }
 
 /* The header CTA is a nav item's neighbour, not a page button. At the shared
    .btn size it stood 56px tall in a 104px bar and was the widest thing in the
@@ -250,6 +254,11 @@ ul { margin: 0; padding: 0; list-style: none; }
   font-size: 0.875rem;
   padding: 0.62rem 1.3rem;
   margin-left: clamp(0.25rem, 1vw, 0.85rem);
+  /* The label never breaks. Flex will shrink this item before it shrinks the
+     links, and at a couple of pixels under its natural width the text silently
+     wrapped to two lines — which is how the bar failed the last two times a
+     label grew. It either fits on one line or the burger takes over. */
+  white-space: nowrap; flex: none;
 }
 .nav-link {
   position: relative; font-size: 0.95rem; font-weight: 500; color: var(--ink);
@@ -366,6 +375,9 @@ ul { margin: 0; padding: 0; list-style: none; }
      tall enough for 50vh to win, that is exactly half the viewport. */
   min-height: max(50vh, 33rem);
 }
+/* One deliberate exception to the shared height above: the eggs hero is asked to
+   fill the screen, so the photograph reads as a picture rather than a band. */
+.hero--tall { min-height: 96vh; }
 /* The fixed header floats over the hero, so the content band clears it and then
    centres in whatever is left. */
 .hero > .wrap { flex: 1 0 auto; display: flex; align-items: center; padding-top: calc(var(--header-h) - 0.75rem); }
@@ -1047,12 +1059,12 @@ ul { margin: 0; padding: 0; list-style: none; }
   .footer-cols { grid-template-columns: 1fr 1fr; }
 }
 
-/* The bar needs 1100px to hold seven items, the CTA and the logo without
-   wrapping — measured, not guessed, and re-measured twice: at 983px for six
-   items, 1115px once Air Shipment joined the top level, and 1100px after the
-   header CTA was trimmed to nav scale. Below that the burger takes over;
-   letting it wrap put Get In Touch on two lines and ran Catering into
-   Air Shipment. */
+/* The bar needs 1100px to hold seven items, the CTA and the logo — measured as
+   spare width in the header row, not guessed, and re-measured on every change
+   to it: 983px for six items, 1115px once Air Shipment joined the top level,
+   1100px after the CTA was trimmed to nav scale, 1163px when Group became
+   Our Groups, and 1100px again once the nav gap's ceiling came down. Below that
+   the burger takes over. */
 @media (max-width: 1099px) {
   .nav { display: none; }
   .burger { display: inline-flex; }

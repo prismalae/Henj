@@ -8,7 +8,7 @@ import { site } from '@/content/site';
 export const metadata = {
   title: 'Frequently Asked Questions',
   description:
-    'Minimum order quantities, lead times, payment terms, samples, private label and documentation — common questions about trading with HENJ Trading L.L.C. in Dubai.',
+    'Minimum order quantities, lead times, payment terms, samples, private label and documentation — common questions about trading with HENJ Trading LLC in Dubai.',
 };
 
 /** FAQPage structured data — the questions are the same array the page renders. */
@@ -29,6 +29,7 @@ export default function FaqPage() {
 
       <Hero
         image="/img/hero-faq.jpg"
+        scrim="center"
         title="Frequently Asked Questions"
         strapline="The things buyers ask before the first order."
         lede="Straight answers on quantities, timing, terms and paperwork. If yours is not here, ask us directly — we would rather answer than have you guess."

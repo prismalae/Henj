@@ -1,12 +1,12 @@
 export const site = {
-  name: 'HENJ Trading L.L.C.',
+  name: 'HENJ Trading LLC',
   /** Absolute base for canonical/OG URLs. Override with NEXT_PUBLIC_SITE_URL at build time. */
   url: process.env.NEXT_PUBLIC_SITE_URL || 'https://henj-uae.com',
   shortName: 'HENJ',
   tagline: 'Import & Export – Distribution',
   strapline: 'Premium Food Import & Distribution for a Healthier Tomorrow.',
   description:
-    'HENJ Trading L.L.C. imports, exports and distributes premium fruits, vegetables, pulses, rice, grains, spices and eggs across the UAE and the wider Gulf.',
+    'HENJ Trading LLC imports, exports and distributes premium fruits, vegetables, pulses, rice, grains, spices and eggs across the UAE and the wider Gulf.',
 
   phones: [
     { label: 'Call / WhatsApp', display: '+971 54 404 3463', tel: '+971544043463', wa: '971544043463' },
@@ -94,7 +94,7 @@ export const nav = [
       { label: 'FAQ', href: '/faq' },
     ],
   },
-  { label: 'Group', href: '/our-group' },
+  { label: 'Our Groups', href: '/our-group' },
   {
     label: 'Products',
     href: '/products',
