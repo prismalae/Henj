@@ -488,7 +488,7 @@ export const pulsesSpices = [
   {
     name: 'Lentils',
     description: 'Red and green lentils in retail and bulk packing.',
-    image: '/img/products/lentils.jpg',
+    image: '/img/products/lentils.png',
     specs: {
       Origin: 'Canada, Australia, Turkey, India',
       Varieties: 'Red split (masoor), whole red, green, brown',
