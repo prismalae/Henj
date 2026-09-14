@@ -11,7 +11,7 @@ const category = categories.find((c) => c.slug === 'pulses-rice-grains-spices');
 export const metadata = {
   title: 'Pulses, Rice, Grains & Spices',
   description:
-    'Rice, moong dal, toor dal, chana dal, chickpeas, lentils, cumin, cardamom, cloves, black pepper, turmeric and more — sourced and supplied by HENJ Trading LLC',
+    'Rice, moong dal, toor dal, chana dal, chickpeas, lentils, cumin, cardamom, cloves, black pepper, turmeric and more, sourced and supplied by HENJ Trading LLC',
 };
 
 const WHY = [
@@ -52,7 +52,7 @@ export default function PulsesPage() {
 
       <CtaBand
         title="Send Us Your Specification"
-        body="Give us the variety, the grade, the packing and the destination. We will come back with origins, a price and a shipping window — and a sample from the exact lot before you commit."
+        body="Give us the variety, the grade, the packing and the destination. We will come back with origins, a price and a shipping window, and a sample from the exact lot before you commit."
         action="Request a Quote"
         message="Hello HENJ Trading, I would like to enquire about pulses, rice, grains and spices."
       />

@@ -27,7 +27,7 @@ export default function Footer() {
         <div className="footer-cols">
           <div className="footer-brand">
             <Logo gradientId="henj-logo-footer" />
-            <div className="name">HENJ TRADING L.L.C</div>
+            <div className="name">HENJ TRADING LLC</div>
             <div className="sub">{site.tagline}</div>
             <p>{site.strapline}</p>
             <div className="socials">

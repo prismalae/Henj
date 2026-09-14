@@ -27,7 +27,7 @@ export default function AboutPage() {
         image="/img/hero-vegetables.jpg"
         title="About Us"
         strapline="Import & Export – Distribution"
-        lede="Bridging global farms to Gulf markets — with freshness, consistency and value in every shipment."
+        lede="Bridging global farms to Gulf markets, with freshness, consistency and value in every shipment."
         center
       />
 
@@ -65,7 +65,7 @@ export default function AboutPage() {
           <SectionHeading title="What We Do" align="left" />
           <div className="grid grid--3">
             {[
-              { icon: 'search', title: 'Product Sourcing', body: 'We find the grade, origin and price point a customer actually needs — then hold suppliers to it shipment after shipment.' },
+              { icon: 'search', title: 'Product Sourcing', body: 'We find the grade, origin and price point a customer actually needs, then hold suppliers to it shipment after shipment.' },
               { icon: 'plane', title: 'Import & Export', body: 'Air and sea freight in both directions, with documentation and clearance handled end to end.' },
               { icon: 'truck', title: 'Distribution', body: 'Road distribution across the UAE and onward supply to Qatar, Bahrain, Kuwait and Saudi Arabia.' },
             ].map((c) => (
@@ -123,7 +123,7 @@ export default function AboutPage() {
               <div className="vm-icon"><Icon name="target" size={28} /></div>
               <div>
                 <h3>Our Mission</h3>
-                <p>To source the best produce from around the globe and deliver it reliably across the UAE and beyond — driven by integrity, innovation and long-term partnerships.</p>
+                <p>To source the best produce from around the globe and deliver it reliably across the UAE and beyond, driven by integrity, innovation and long-term partnerships.</p>
               </div>
             </div>
           </div>

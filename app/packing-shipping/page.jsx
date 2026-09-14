@@ -19,7 +19,7 @@ export default function PackingShippingPage() {
         image="/img/hero-shipping.jpg"
         title="Packing & Shipping"
         strapline="What fits in a container, and how it travels."
-        lede="A working reference for buyers sizing an order — packing formats, pallet configuration, container loadability and the honest trade-off between air and sea."
+        lede="A working reference for buyers sizing an order: packing formats, pallet configuration, container loadability and the honest trade-off between air and sea."
       />
 
       <section className="section section--paper">
@@ -32,7 +32,7 @@ export default function PackingShippingPage() {
           <SpecTable
             columns={packingTable.columns}
             rows={packingTable.rows}
-            caption="Indicative formats — final packing is confirmed per order."
+            caption="Indicative formats: final packing is confirmed per order."
           />
         </div>
       </section>

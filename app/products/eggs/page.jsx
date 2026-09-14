@@ -12,7 +12,7 @@ const category = categories.find((c) => c.slug === 'eggs');
 export const metadata = {
   title: 'Fresh Eggs',
   description:
-    'White and brown table eggs in every common grade, in trays, cartons or container loads — imported by HENJ Trading LLC from India, Turkey and other trusted origins.',
+    'White and brown table eggs in every common grade, in trays, cartons or container loads, imported by HENJ Trading LLC from India, Turkey and other trusted origins.',
 };
 
 const ASSURANCES = [

@@ -69,7 +69,7 @@ export default function EnquiryForm() {
         first?.focus();
         return;
       }
-      const subject = `${values.subject.trim()} — ${values.name.trim()}`;
+      const subject = `${values.subject.trim()}: ${values.name.trim()}`;
       window.location.href =
         channel === 'whatsapp'
           ? whatsappHref(`*${subject}*\n\n${summary()}`)
@@ -141,7 +141,7 @@ export default function EnquiryForm() {
         <a href={`https://wa.me/${primaryPhone.wa}`} style={{ color: 'var(--green-600)', fontWeight: 600 }}>
           {primaryPhone.display}
         </a>{' '}
-        or <a href={`mailto:${site.email}`} style={{ color: 'var(--green-600)', fontWeight: 600 }}>{site.email}</a> — nothing is stored on this site.
+        or <a href={`mailto:${site.email}`} style={{ color: 'var(--green-600)', fontWeight: 600 }}>{site.email}</a>. Nothing is stored on this site.
       </p>
     </form>
   );

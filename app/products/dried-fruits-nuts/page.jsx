@@ -12,12 +12,12 @@ const category = categories.find((c) => c.slug === 'dried-fruits-nuts');
 export const metadata = {
   title: 'Dried Fruits & Nuts',
   description:
-    'Cashews, almonds, pistachios, walnuts, raisins, dates, figs, apricots and seeds — graded by count and packed for retail or bulk by HENJ Trading LLC',
+    'Cashews, almonds, pistachios, walnuts, raisins, dates, figs, apricots and seeds, graded by count and packed for retail or bulk by HENJ Trading LLC',
 };
 
 const WHY = [
-  { icon: 'globe', title: 'Origin Matters', body: 'Cashew from India and Vietnam, almonds from California, pistachios from Iran — we buy where each grows best.' },
-  { icon: 'quality', title: 'Graded by Count', body: 'W180 through W450, 21/25 pistachios, sized apricots — you get the grade you priced, not an approximation.' },
+  { icon: 'globe', title: 'Origin Matters', body: 'Cashew from India and Vietnam, almonds from California, pistachios from Iran: we buy where each grows best.' },
+  { icon: 'quality', title: 'Graded by Count', body: 'W180 through W450, 21/25 pistachios, sized apricots: you get the grade you priced, not an approximation.' },
   { icon: 'shield', title: 'Condition Held', body: 'Vacuum and lined packing, with reefer where kernels need it. Nuts turn rancid in Gulf heat if handled carelessly.' },
   { icon: 'box', title: 'Retail or Bulk', body: 'Bulk cartons for processors and repackers, or private-label retail packs to your own specification.' },
 ];
@@ -50,7 +50,7 @@ export default function DriedFruitsNutsPage() {
             <h2 style={{ color: '#fff' }}>Nuts fail quietly.</h2>
             <p style={{ color: 'rgba(255,255,255,0.85)' }}>
               A kernel that has gone rancid still looks fine in the bag. It is discovered by the
-              customer, not by the buyer — which is why we care more about how nuts are packed and
+              customer, not by the buyer, which is why we care more about how nuts are packed and
               stored than about how they photograph.
             </p>
             <p style={{ color: 'rgba(255,255,255,0.85)' }}>
@@ -85,7 +85,7 @@ export default function DriedFruitsNutsPage() {
 
       <CtaBand
         title="Buying by Count or by Container?"
-        body="Retail packs, bulk cartons or a full load — tell us the grade and the volume and we will price it against the origins that suit your season."
+        body="Retail packs, bulk cartons or a full load: tell us the grade and the volume and we will price it against the origins that suit your season."
         action="Enquire Now"
         message="Hello HENJ Trading, I would like to enquire about dried fruits and nuts."
       />

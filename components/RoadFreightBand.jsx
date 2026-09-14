@@ -20,7 +20,7 @@ export default function RoadFreightBand({ tone = 'paper' }) {
               <p className="eyebrow eyebrow--gold">Overland GCC delivery</p>
               <h2>By Road to Qatar, Bahrain &amp; Kuwait</h2>
               <p className="roadband-lede">
-                Our own trucks, loaded at Al Aweer and running overland through Saudi Arabia —
+                Our own trucks, loaded at Al Aweer and running overland through Saudi Arabia,
                 so the last leg of your order is not handed to a third party.
               </p>
             </div>

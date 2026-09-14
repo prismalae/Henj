@@ -24,7 +24,7 @@ const STAPLES = {
     ['Dals & pulses', 'Toor, chana, moong and urad dal; chickpeas, black chana, lentils', '1 / 5 / 25 / 50 kg PP bags', '25–27 MT'],
     ['Sugar', 'Refined white, ICUMSA 45', '25 / 50 kg PP bags', '25–27 MT'],
     ['Whole & ground spices', 'Chilli, turmeric, coriander, cumin, pepper, garam masala', '10 / 25 / 50 kg PP bags and lined cartons', '20–24 MT'],
-    ['Dried fruit & nuts', 'Cashew, almond, raisins, dates — for bulk kitchen use', '10 / 12.5 / 25 kg cartons and vacuum packs', 'By volume, usually consolidated'],
+    ['Dried fruit & nuts', 'Cashew, almond, raisins, dates, for bulk kitchen use', '10 / 12.5 / 25 kg cartons and vacuum packs', 'By volume, usually consolidated'],
     ['Mixed consolidation', 'Any combination of the above in one load', 'As per line', 'One container, several staples'],
   ],
 };
@@ -33,7 +33,7 @@ const BUYERS = [
   {
     icon: 'building',
     title: 'Hospitality Catering Companies',
-    body: 'Abu Dhabi contract caterers running multiple sites off one central store — the volume that makes container buying obvious.',
+    body: 'Abu Dhabi contract caterers running multiple sites off one central store, the volume that makes container buying obvious.',
   },
   {
     icon: 'people',
@@ -53,7 +53,7 @@ const BUYERS = [
 ];
 
 const STEPS = [
-  { n: '01', title: 'Your Consumption', body: 'Tell us what the kitchens actually get through in a month — by line, by grade, by pack size. That is what sizes the container, not a guess.' },
+  { n: '01', title: 'Your Consumption', body: 'Tell us what the kitchens actually get through in a month: by line, by grade, by pack size. That is what sizes the container, not a guess.' },
   { n: '02', title: 'Grade & Price Agreed', body: 'We quote against the specific grade, send samples from the lot for dry goods, and hold the price for the term agreed.' },
   { n: '03', title: 'Container Booked', body: 'One line if it fills a container, or several staples consolidated into one load where a single line would sit too long in your store.' },
   { n: '04', title: 'Delivered on Schedule', body: `Released against your delivery schedule from Al Aweer by our own vehicles, across Abu Dhabi, Dubai and the northern Emirates.` },
@@ -75,7 +75,7 @@ export default function CateringSupplyPage() {
             <p className="eyebrow">Planned for professional kitchens</p>
             <h2>Consistent Products. Dependable Supply.</h2>
             <p>
-              High-volume kitchens need more than competitive pricing — they need consistent
+              High-volume kitchens need more than competitive pricing: they need consistent
               specifications, reliable availability and deliveries that arrive when expected.{' '}
               <strong className="co">HENJ Trading LLC</strong> coordinates the bulk supply of rice, dals, pulses, sugar, grains,
               spices, dried fruits and nuts, supported by fresh produce and eggs.
@@ -130,7 +130,7 @@ export default function CateringSupplyPage() {
           <SpecTable
             columns={STAPLES.columns}
             rows={STAPLES.rows}
-            caption="Indicative grades and loadability — final packing and quantity are confirmed per contract."
+            caption="Indicative grades and loadability: final packing and quantity are confirmed per contract."
           />
         </div>
       </section>
@@ -207,7 +207,7 @@ export default function CateringSupplyPage() {
               <h2 style={{ fontSize: 'clamp(1.5rem, 2.6vw, 2rem)' }}>Beyond the Dry Store</h2>
               <p>
                 Catering customers rarely need only staples. The same delivery run that brings your
-                rice and dal carries fresh fruit and vegetables from Al Aweer, and eggs by the pallet —
+                rice and dal carries fresh fruit and vegetables from Al Aweer, and eggs by the pallet,
                 so one supplier covers the dry store and the daily fresh order.
               </p>
               <p>
@@ -226,7 +226,7 @@ export default function CateringSupplyPage() {
         title="Send Us a Month of Consumption"
         body="Tell us what your kitchens get through in a month and where they are. We will come back with grades, a container plan, a delivery schedule and a held price."
         action="Request a Catering Quote"
-        message="Hello HENJ Trading, I would like a quote for catering foodstuff supply — full container loads of rice, dal, sugar and dry staples."
+        message="Hello HENJ Trading, I would like a quote for catering foodstuff supply: full container loads of rice, dal, sugar and dry staples."
       />
     </>
   );

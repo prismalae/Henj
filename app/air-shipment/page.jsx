@@ -11,7 +11,7 @@ import { site } from '@/content/site';
 export const metadata = {
   title: 'Air Shipment',
   description:
-    'Daily air freight of fruits, vegetables, leafy greens and herbs from Kerala to Dubai — packed at source, flown out overnight, cleared at Al Aweer and delivered the same day by HENJ Trading LLC',
+    'Daily air freight of fruits, vegetables, leafy greens and herbs from Kerala to Dubai: packed at source, flown out overnight, cleared at Al Aweer and delivered the same day by HENJ Trading LLC',
 };
 
 /* The lines that actually justify a seat on an aircraft. Shelf life and packing
@@ -20,12 +20,12 @@ export const metadata = {
 const FLOWN = {
   columns: ['Line', 'Why it flies', 'Packing', 'Mode'],
   rows: [
-    ['Curry leaves, mint & coriander', 'Days of shelf life, not weeks — value is lost on the ground', '100 / 200 g bunches in vented cartons', 'Air only'],
+    ['Curry leaves, mint & coriander', 'Days of shelf life, not weeks: value is lost on the ground', '100 / 200 g bunches in vented cartons', 'Air only'],
     ['Banana leaves', 'Bruise and dry out quickly; sold on appearance', 'Folded, lined cartons', 'Air only'],
     ['Drumsticks (moringa)', 'Tender pods stiffen and shrivel within days of picking', 'Bundled, 5 / 10 kg cartons', 'Air only'],
     ['Tender coconut', 'Cut-to-drink window is short and the water spoils first', 'Trimmed, cartoned by count', 'Air only'],
     ['Green chilli, beans & gourds', 'Firmness and colour carry the price', '5 / 10 kg vented cartons', 'Air, sea reefer in volume'],
-    ['Seasonal fruit', 'Ripeness peaks in transit — days matter at both ends', '3 / 5 / 10 kg cartons', 'Air, sea reefer in volume'],
+    ['Seasonal fruit', 'Ripeness peaks in transit, so days matter at both ends', '3 / 5 / 10 kg cartons', 'Air, sea reefer in volume'],
     ['Cardamom & aromatic spice', 'Aroma is the product, and it fades with time and heat', 'Lined cartons and vacuum packs', 'Air preferred'],
     ['Samples & urgent top-ups', 'A gap on the shelf costs more than the freight', 'As per line', 'Air'],
   ],
@@ -35,7 +35,7 @@ const FLOWN = {
    carries the hour it happens rather than a vague adjective. */
 const DAY = [
   { n: '01', title: 'Picked That Morning', body: 'Harvested at farm level in Kerala and moved to the pack house the same morning, while field heat is still coming out of the produce.' },
-  { n: '02', title: 'Graded & Packed at Source', body: 'Sorted to grade, trimmed, bunched and packed into vented export cartons at origin — so nothing is repacked later in a warmer room.' },
+  { n: '02', title: 'Graded & Packed at Source', body: 'Sorted to grade, trimmed, bunched and packed into vented export cartons at origin, so nothing is repacked later in a warmer room.' },
   { n: '03', title: 'Documented & Uplifted', body: 'Phytosanitary certificate, invoice and packing list raised against the booking, then delivered to the airline for the evening departure.' },
   { n: '04', title: 'Overnight Flight', body: 'Four hours in the air from Kerala to Dubai. The produce is in the destination market before it would otherwise have left the district.' },
   { n: '05', title: 'Cleared on Arrival', body: 'Customs and food-control clearance handled on landing, with cool storage at the airport if a consignment has to wait for the run.' },
@@ -44,7 +44,7 @@ const DAY = [
 
 const GUARDS = [
   { icon: 'leaf', title: 'Packed at Origin', body: 'Every carton is made up in Kerala, so the produce is handled once and travels in the box it was graded into.' },
-  { icon: 'shield', title: 'Cold Chain Held', body: 'Cool storage before uplift, cool storage on arrival, refrigerated vehicles for the last leg — the gaps are where freshness is lost.' },
+  { icon: 'shield', title: 'Cold Chain Held', body: 'Cool storage before uplift, cool storage on arrival, refrigerated vehicles for the last leg. The gaps are where freshness is lost.' },
   { icon: 'doc', title: 'Papers With the Freight', body: 'Phytosanitary certificate, certificate of origin, invoice and packing list travel with the consignment, not behind it.' },
   { icon: 'eye', title: 'Checked on Arrival', body: 'Consignments are inspected at Al Aweer before release. Anything that did not travel well is taken out, not passed on.' },
 ];
@@ -56,7 +56,7 @@ export default function AirShipmentPage() {
         image="/img/hero-air.jpg"
         title="Air Shipment"
         strapline="Freshness Takes the Fastest Route."
-        lede="Every day, HENJ Trading LLC airlifts carefully selected fruits, vegetables, leafy greens and herbs from Kerala to Dubai — shortening the distance between harvest and market while protecting freshness at every stage."
+        lede="Every day, HENJ Trading LLC airlifts carefully selected fruits, vegetables, leafy greens and herbs from Kerala to Dubai, shortening the distance between harvest and market while protecting freshness at every stage."
         badges={['Farm Sourced', 'Air Freighted', 'Cold Chain', 'Daily Supply']}
       />
 
@@ -68,8 +68,8 @@ export default function AirShipmentPage() {
             <p>
               Curry leaves picked in Kerala on Monday morning are on a Dubai counter on Tuesday. By
               sea the same bunch would arrive with most of its shelf life already spent, and the buyer
-              would be marking it down before it ever reached a kitchen. That gap — between what was
-              harvested and what is worth selling — is the whole reason this range flies.
+              would be marking it down before it ever reached a kitchen. That gap, between what was
+              harvested and what is worth selling, is the whole reason this range flies.
             </p>
             <p>
               We run it daily rather than weekly. A daily uplift means a buyer orders against what the
@@ -78,7 +78,7 @@ export default function AirShipmentPage() {
             </p>
             <p>
               Air freight costs more per kilogram and we do not pretend otherwise. For a product with
-              a five-day life it is the only mode that delivers something still worth paying for —
+              a five-day life it is the only mode that delivers something still worth paying for,
               which is why the heavy, long-life lines stay on the water where they belong.
             </p>
             <MetaStrip
@@ -94,7 +94,7 @@ export default function AirShipmentPage() {
             <p className="eyebrow">At a glance</p>
             <dl className="panel-facts">
               {[
-                ['Origin', 'Kerala, India — farm level and pack house'],
+                ['Origin', 'Kerala, India: farm level and pack house'],
                 ['Destination', 'Dubai, United Arab Emirates'],
                 ['Frequency', 'Daily, including urgent top-ups'],
                 ['Transit', '1–3 days from harvest to customer'],
@@ -121,7 +121,7 @@ export default function AirShipmentPage() {
           <SpecTable
             columns={FLOWN.columns}
             rows={FLOWN.rows}
-            caption="Indicative — availability, grade and packing are confirmed per shipment and by season."
+            caption="Indicative: availability, grade and packing are confirmed per shipment and by season."
           />
         </div>
       </section>
@@ -151,7 +151,7 @@ export default function AirShipmentPage() {
           <SectionHeading
             eyebrow="Protecting freshness"
             title="Where Freshness Is Actually Lost"
-            lede="Rarely in the air. It goes in the waiting — on a hot loading bay, in a repack, or in a consignment held back for paperwork."
+            lede="Rarely in the air. It goes in the waiting: on a hot loading bay, in a repack, or in a consignment held back for paperwork."
           />
           <div className="grid grid--4">
             {GUARDS.map((g) => (
@@ -179,7 +179,7 @@ export default function AirShipmentPage() {
                 both.
               </p>
               <p>
-                Most start with a short weekly list — leaves, herbs, drumsticks — and add lines as the
+                Most start with a short weekly list of leaves, herbs and drumsticks, then add lines as the
                 run proves itself. Fresh produce is a weekly conversation, not an annual contract.
               </p>
               <Link className="btn btn--ghost" href="/products/fruits-vegetables" style={{ marginTop: '0.5rem' }}>
@@ -194,7 +194,7 @@ export default function AirShipmentPage() {
                 ventilated dry container, and the loadability is set out on the packing page.
               </p>
               <p>
-                Where a customer takes both, the two arrive on the same delivery run — the container
+                Where a customer takes both, the two arrive on the same delivery run: the container
                 staples and the daily fresh order from one supplier.
               </p>
               <Link className="btn btn--ghost" href="/packing-shipping" style={{ marginTop: '0.5rem' }}>

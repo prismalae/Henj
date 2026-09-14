@@ -8,7 +8,7 @@ import { categories } from '@/content/products';
 export const metadata = {
   title: 'Products',
   description:
-    'Fresh fruits and vegetables, pulses, rice, grains and spices, and fresh eggs — supplied by HENJ Trading LLC across the UAE and the Gulf.',
+    'Fresh fruits and vegetables, pulses, rice, grains and spices, and fresh eggs, supplied by HENJ Trading LLC across the UAE and the Gulf.',
 };
 
 export default function ProductsPage() {
@@ -18,7 +18,7 @@ export default function ProductsPage() {
         image="/img/hero-products.jpg"
         title="Our Products"
         strapline="Sourced with care. Delivered with consistency."
-        lede="Four core ranges, each handled the way that category demands — from daily air freight for fresh produce to container loads of dry goods."
+        lede="Four core ranges, each handled the way that category demands, from daily air freight for fresh produce to container loads of dry goods."
         center
       />
 
@@ -36,7 +36,7 @@ export default function ProductsPage() {
               sourced portfolio for wholesale, retail, food-service and institutional requirements.
             </p>
             <p style={{ color: 'var(--ink-soft)' }}>
-              Explore our core categories — fruits and vegetables; rice, pulses, grains and spices;
+              Explore our core categories: fruits and vegetables; rice, pulses, grains and spices;
               dried fruits and nuts; and eggs. Each range is managed with the appropriate sourcing,
               handling, storage and delivery to ensure dependable quality.
             </p>

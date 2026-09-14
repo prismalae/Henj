@@ -16,7 +16,7 @@ export default function GroupCompanies({ tone = 'paper-deep', heading = true }) 
           <SectionHeading
             eyebrow="Our group"
             title="Sister Concerns"
-            lede={`${site.shortName} trades alongside three associated companies across the UAE, India and Oman — which is how we buy at origin and deliver in three markets under one relationship.`}
+            lede={`${site.shortName} trades alongside three associated companies across the UAE, India and Oman, which is how we buy at origin and deliver in three markets under one relationship.`}
           />
         )}
         <div className="grid grid--3">

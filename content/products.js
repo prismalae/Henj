@@ -18,9 +18,9 @@ export const categories = [
     hero: '/img/hero-fruits.jpg',
     strapline: 'Freshness You Can Trust.',
     summary:
-      'Daily air shipments of fresh fruits, vegetables, leaves and herbs — picked, packed and flown so they arrive market-ready.',
+      'Daily air shipments of fresh fruits, vegetables, leaves and herbs, picked, packed and flown so they arrive market-ready.',
     intro:
-      'At HENJ Trading LLC, we handle fresh produce the way it deserves to be handled — sourced close to harvest, cold-chained through packing, and moved by air so freshness survives the journey.',
+      'At HENJ Trading LLC, we handle fresh produce the way it deserves to be handled: sourced close to harvest, cold-chained through packing, and moved by air so freshness survives the journey.',
     badges: ['Farm Sourced', 'Air Freighted', 'Cold Chain', 'Daily Supply'],
     meta: ['Pre-cooled at source', 'Cold chain maintained', 'Phytosanitary certificate issued', 'MOQ: 100 kg per line'],
   },
@@ -33,7 +33,7 @@ export const categories = [
     summary:
       'Rice, dals, chickpeas, lentils and whole or ground spices, sourced from trusted mills and cleaned to specification.',
     intro:
-      'At HENJ Trading LLC, we source the finest pulses, rice, and spices from trusted farms and producers around the world—ensuring purity, authenticity, and unmatched quality in every grain and every spice.',
+      'At HENJ Trading LLC, we source the finest pulses, rice, and spices from trusted farms and producers around the world, ensuring purity, authenticity, and unmatched quality in every grain and every spice.',
     badges: ['Carefully Sourced', 'Premium Quality', 'Hygienically Processed', 'Timely Delivered'],
     meta: ['Sortex cleaned', 'Moisture tested', 'Private label available', 'MOQ: 1 MT per variety'],
   },
@@ -44,9 +44,9 @@ export const categories = [
     hero: '/img/hero-nuts.jpg',
     strapline: 'Naturally Sweet. Carefully Graded.',
     summary:
-      'Cashews, almonds, pistachios and walnuts alongside raisins, dates, figs and seeds — graded, sorted and packed for retail or bulk.',
+      'Cashews, almonds, pistachios and walnuts alongside raisins, dates, figs and seeds, graded, sorted and packed for retail or bulk.',
     intro:
-      'At HENJ Trading LLC, we source nuts, dried fruit and seeds from the origins that grow them best — graded to count, sorted for uniformity, and packed to hold condition through the Gulf summer.',
+      'At HENJ Trading LLC, we source nuts, dried fruit and seeds from the origins that grow them best: graded to count, sorted for uniformity, and packed to hold condition through the Gulf summer.',
     badges: ['Carefully Sourced', 'Premium Quality', 'Hygienically Processed', 'Timely Delivered'],
     meta: ['Grade and count verified', 'Moisture tested', 'Vacuum and bulk packing', 'MOQ: 100 kg per variety'],
   },
@@ -129,7 +129,7 @@ export const fruitsVegetables = [
       Origin: 'India, Pakistan, Egypt, Netherlands',
       Grades: '40–60 mm, 55–75 mm; table and processing varieties',
       Packing: '10 / 20 / 25 kg mesh and jute bags',
-      Shipment: 'Sea — FCL, ventilated container',
+      Shipment: 'Sea: FCL, ventilated container',
     },
   },
   {
@@ -151,7 +151,7 @@ export const fruitsVegetables = [
       Origin: 'India (Nashik), Egypt, Netherlands',
       Grades: '40–60 mm, 55–75 mm, 70 mm+',
       Packing: '5 / 10 / 20 / 25 kg mesh or jute bags',
-      Shipment: 'Sea — FCL, ventilated container',
+      Shipment: 'Sea: FCL, ventilated container',
     },
   },
   {
@@ -184,7 +184,7 @@ export const fruitsVegetables = [
       Origin: 'India (Tamil Nadu, Andhra Pradesh)',
       Season: 'Year-round, peak February to June',
       Packing: '5 kg cartons, bundled and moisture-wrapped',
-      Shipment: 'Air freight only — short shelf life',
+      Shipment: 'Air freight only: short shelf life',
     },
   },
   {
@@ -195,7 +195,7 @@ export const fruitsVegetables = [
       Origin: 'India (Tamil Nadu, Karnataka)',
       Season: 'Year-round',
       Packing: '2 / 5 kg cartons, poly-lined, pre-cooled',
-      Shipment: 'Air freight only — same-week movement',
+      Shipment: 'Air freight only: same-week movement',
     },
   },
   {
@@ -253,7 +253,7 @@ export const pulsesSpices = [
       Origin: 'India, Pakistan',
       Varieties: 'Basmati 1121 & 1509, Sona Masoori, IR64, Parboiled, Sella',
       Packing: '5 / 10 / 25 / 50 kg PP and jute bags; private label available',
-      Shipment: 'Sea — FCL and LCL',
+      Shipment: 'Sea: FCL and LCL',
     },
   },
   {
@@ -262,9 +262,9 @@ export const pulsesSpices = [
     description: 'Naturally aromatic green cardamom (elaichi).',
     specs: {
       Origin: 'India (Kerala, Idukki), Guatemala',
-      Grades: '6 mm, 7 mm, 7.5 mm, 8 mm bold — AGEB and similar',
+      Grades: '6 mm, 7 mm, 7.5 mm, 8 mm bold: AGEB and similar',
       Packing: '5 / 10 / 20 kg vacuum or laminated cartons',
-      Shipment: 'Air freight preferred — aroma retention',
+      Shipment: 'Air freight preferred: aroma retention',
     },
   },
   {
@@ -275,7 +275,7 @@ export const pulsesSpices = [
       Origin: 'Indonesia, Madagascar, Sri Lanka, India',
       Grades: 'Hand-picked, headless below 2%, moisture below 12%',
       Packing: '10 / 25 / 50 kg PP bags and cartons',
-      Shipment: 'Sea — FCL and LCL',
+      Shipment: 'Sea: FCL and LCL',
     },
   },
   {
@@ -286,7 +286,7 @@ export const pulsesSpices = [
       Origin: 'India, Turkey',
       Grades: 'Whole hand-selected, semi-broken, tea-cut',
       Packing: '5 / 10 / 20 kg cartons, poly-lined',
-      Shipment: 'Sea — LCL; air for small lots',
+      Shipment: 'Sea: LCL; air for small lots',
     },
   },
   {
@@ -297,7 +297,7 @@ export const pulsesSpices = [
       Origin: 'India (Malabar), Vietnam, Indonesia',
       Grades: 'MG1, ASTA, 500 / 550 / 570 g/l bulk density',
       Packing: '25 / 50 kg PP and jute bags',
-      Shipment: 'Sea — FCL and LCL',
+      Shipment: 'Sea: FCL and LCL',
     },
   },
   {
@@ -307,7 +307,7 @@ export const pulsesSpices = [
       Origin: 'India, Myanmar, Tanzania, Mozambique',
       Grades: 'Machine-cleaned and sortex, polished or unpolished',
       Packing: '1 / 5 / 25 / 50 kg PP bags',
-      Shipment: 'Sea — FCL and LCL',
+      Shipment: 'Sea: FCL and LCL',
     },
   },
   {
@@ -318,7 +318,7 @@ export const pulsesSpices = [
       Origin: 'India, Australia',
       Grades: 'Sortex-cleaned, standard and premium polish',
       Packing: '1 / 5 / 25 / 50 kg PP bags',
-      Shipment: 'Sea — FCL and LCL',
+      Shipment: 'Sea: FCL and LCL',
     },
   },
   {
@@ -328,7 +328,7 @@ export const pulsesSpices = [
       Origin: 'India, Tanzania',
       Grades: 'Counts per 100 g: 42/44, 44/46, 58/60',
       Packing: '25 / 50 kg PP and jute bags',
-      Shipment: 'Sea — FCL',
+      Shipment: 'Sea: FCL',
     },
   },
   {
@@ -339,7 +339,7 @@ export const pulsesSpices = [
       Origin: 'India, Turkey, Argentina, Mexico',
       Grades: '7 mm, 8 mm, 9 mm, 10 mm, 12 mm calibre',
       Packing: '25 / 50 kg PP and jute bags',
-      Shipment: 'Sea — FCL',
+      Shipment: 'Sea: FCL',
     },
   },
   {
@@ -350,7 +350,7 @@ export const pulsesSpices = [
       Origin: 'Canada, Australia, Turkey, India',
       Varieties: 'Red split (masoor), whole red, green, brown',
       Packing: '1 / 5 / 25 / 50 kg PP bags',
-      Shipment: 'Sea — FCL and LCL',
+      Shipment: 'Sea: FCL and LCL',
     },
   },
   {
@@ -361,7 +361,7 @@ export const pulsesSpices = [
       Origin: 'India (Gujarat, Rajasthan), Syria',
       Grades: '99% / 99.5% purity, singapore & europe quality, sortex-cleaned',
       Packing: '10 / 25 / 50 kg PP bags and cartons',
-      Shipment: 'Sea — FCL and LCL; air for small lots',
+      Shipment: 'Sea: FCL and LCL; air for small lots',
     },
   },
   {
@@ -371,7 +371,7 @@ export const pulsesSpices = [
       Origin: 'Vietnam, China',
       Grades: 'Whole 95% intact, autumn and spring crop',
       Packing: '10 / 20 / 25 kg cartons and PP bags',
-      Shipment: 'Sea — FCL and LCL',
+      Shipment: 'Sea: FCL and LCL',
     },
   },
   {
@@ -382,7 +382,7 @@ export const pulsesSpices = [
       Origin: 'India (Erode, Nizamabad, Sangli)',
       Grades: 'Finger and bulb, whole or ground; 2–5% curcumin',
       Packing: '10 / 25 / 50 kg PP bags; retail packs to order',
-      Shipment: 'Sea — FCL and LCL',
+      Shipment: 'Sea: FCL and LCL',
     },
   },
   {
@@ -391,9 +391,9 @@ export const pulsesSpices = [
     image: '/img/products/chilli-powder.png',
     specs: {
       Origin: 'India (Guntur, Byadgi), Pakistan',
-      Grades: 'By heat and colour — Guntur hot, Byadgi high-colour (ASTA 60–120)',
+      Grades: 'By heat and colour: Guntur hot, Byadgi high-colour (ASTA 60–120)',
       Packing: '10 / 25 / 50 kg PP bags; retail packs to order',
-      Shipment: 'Sea — FCL and LCL',
+      Shipment: 'Sea: FCL and LCL',
     },
   },
   {
@@ -404,18 +404,18 @@ export const pulsesSpices = [
       Origin: 'Blended in India to your recipe',
       Blends: 'Garam masala, curry, tandoori, biryani and custom mixes',
       Packing: '10 / 25 kg PP bags; retail packs and private label to order',
-      Shipment: 'Sea — FCL and LCL',
+      Shipment: 'Sea: FCL and LCL',
     },
   },
   {
     name: 'Coriander',
-    description: 'Freshly ground coriander with rich aroma — seed and powder.',
+    description: 'Freshly ground coriander with rich aroma, seed and powder.',
     image: '/img/products/coriander.png',
     specs: {
       Origin: 'India (Rajasthan, Madhya Pradesh)',
       Grades: 'Eagle and Scooter seed, single or double parrot; whole or ground',
       Packing: '25 / 50 kg PP bags',
-      Shipment: 'Sea — FCL and LCL',
+      Shipment: 'Sea: FCL and LCL',
     },
   },
 ];
@@ -456,7 +456,7 @@ export const packingTable = {
     ['Fresh vegetables', '5 / 10 kg perforated cartons and crates', '80–120 cartons per pallet', 'Air, daily'],
     ['Leaves & herbs', '2 / 3 / 5 kg pre-cooled poly-lined cartons', 'Loose-stacked, air ULD', 'Air only'],
     ['Onions & coconuts', '5 / 10 / 20 / 25 kg mesh or jute bags', '1,000–1,250 kg per pallet', 'Sea, ventilated container'],
-    ['Rice & pulses', '1 / 5 / 25 / 50 kg PP and jute bags', '20 bags per pallet (50 kg)', 'Sea — FCL and LCL'],
+    ['Rice & pulses', '1 / 5 / 25 / 50 kg PP and jute bags', '20 bags per pallet (50 kg)', 'Sea: FCL and LCL'],
     ['Whole & ground spices', '10 / 25 / 50 kg PP bags and lined cartons', '18–24 bags per pallet', 'Sea; air for cardamom and small lots'],
     ['Eggs', '30-egg trays, 360 eggs per carton', '36 cartons per pallet', 'Sea reefer and air, temperature controlled'],
   ],
@@ -465,7 +465,7 @@ export const packingTable = {
 export const containerGuide = [
   { format: '40 ft reefer', detail: 'Approx. 380,000–400,000 eggs, or 24–26 MT of palletised fresh produce.' },
   { format: '20 ft dry', detail: 'Approx. 25–27 MT of bagged rice, pulses or spices.' },
-  { format: '40 ft dry', detail: 'Approx. 26–28 MT bagged — volume-limited rather than weight-limited.' },
+  { format: '40 ft dry', detail: 'Approx. 26–28 MT bagged, volume-limited rather than weight-limited.' },
   { format: 'Air ULD', detail: 'Per-shipment consolidation for perishables; no minimum container commitment.' },
 ];
 
@@ -497,7 +497,7 @@ export const modeGuide = [
 export const faqs = [
   {
     q: 'What is your minimum order quantity?',
-    a: 'It depends on the line. Fresh produce starts at around 100 kg per item because we consolidate air shipments. Rice, pulses and spices are typically 1 MT per variety, and full container loads are the most economical. Eggs start at one pallet. If your requirement is smaller, ask anyway — we consolidate mixed orders regularly.',
+    a: 'It depends on the line. Fresh produce starts at around 100 kg per item because we consolidate air shipments. Rice, pulses and spices are typically 1 MT per variety, and full container loads are the most economical. Eggs start at one pallet. If your requirement is smaller, ask anyway. We consolidate mixed orders regularly.',
   },
   {
     q: 'How quickly can you ship?',
@@ -509,7 +509,7 @@ export const faqs = [
   },
   {
     q: 'Can I get a sample before ordering?',
-    a: 'Yes. For dry goods we send samples of the exact lot you would be buying, so what you approve is what ships. For fresh produce a sample is less meaningful than an inspection — you are welcome to see the goods at Al Aweer before they move.',
+    a: 'Yes. For dry goods we send samples of the exact lot you would be buying, so what you approve is what ships. For fresh produce a sample is less meaningful than an inspection: you are welcome to see the goods at Al Aweer before they move.',
   },
   {
     q: 'What are your payment terms?',
@@ -552,7 +552,7 @@ export const qualityPillars = [
   {
     icon: 'doc',
     title: 'Documentation Per Shipment',
-    body: 'Certificate of origin, phytosanitary or health certificate as the product requires, packing list and commercial invoice — prepared ahead of arrival.',
+    body: 'Certificate of origin, phytosanitary or health certificate as the product requires, packing list and commercial invoice, prepared ahead of arrival.',
   },
   {
     icon: 'box',
@@ -575,7 +575,7 @@ export const driedFruitsNuts = [
       Origin: 'India, Vietnam, Ivory Coast',
       Grades: 'W180, W210, W240, W320, W450; splits, butts and pieces',
       Packing: '10 / 22.68 kg vacuum tins and cartons',
-      Shipment: 'Sea — FCL and LCL; air for small lots',
+      Shipment: 'Sea: FCL and LCL; air for small lots',
     },
   },
   {
@@ -586,7 +586,7 @@ export const driedFruitsNuts = [
       Origin: 'USA (California), Australia, Iran',
       Grades: 'Nonpareil, Independence, Carmel; 23/25, 27/30 count',
       Packing: '10 / 25 kg cartons and PP bags',
-      Shipment: 'Sea — FCL and LCL',
+      Shipment: 'Sea: FCL and LCL',
     },
   },
   {
@@ -597,7 +597,7 @@ export const driedFruitsNuts = [
       Origin: 'Iran, USA, Turkey',
       Grades: '21/25, 26/30 count; jumbo and standard',
       Packing: '10 / 25 kg cartons, vacuum or bulk',
-      Shipment: 'Sea — FCL and LCL',
+      Shipment: 'Sea: FCL and LCL',
     },
   },
   {
@@ -608,7 +608,7 @@ export const driedFruitsNuts = [
       Origin: 'Chile, USA, India, Ukraine',
       Grades: 'Light halves, light amber, quarters and pieces',
       Packing: '10 / 25 kg cartons, vacuum lined',
-      Shipment: 'Sea reefer preferred — kernels hold better cold',
+      Shipment: 'Sea reefer preferred: kernels hold better cold',
     },
   },
   {
@@ -619,7 +619,7 @@ export const driedFruitsNuts = [
       Origin: 'India, Iran, Turkey, Afghanistan',
       Grades: 'Golden, black, sultana; seedless',
       Packing: '10 / 12.5 / 25 kg cartons and PP bags',
-      Shipment: 'Sea — FCL and LCL',
+      Shipment: 'Sea: FCL and LCL',
     },
   },
   {
@@ -640,7 +640,7 @@ export const driedFruitsNuts = [
       Origin: 'Turkey, Afghanistan, Iran',
       Grades: 'Lerida, Protoben; sorted by diameter and colour',
       Packing: '5 / 10 kg cartons, layered or loose',
-      Shipment: 'Sea — LCL; air for small lots',
+      Shipment: 'Sea: LCL; air for small lots',
     },
   },
   {
@@ -650,7 +650,7 @@ export const driedFruitsNuts = [
       Origin: 'Turkey (Malatya), Afghanistan',
       Grades: 'Number 1 to 6 by size; sulphured or natural',
       Packing: '5 / 10 / 12.5 kg cartons',
-      Shipment: 'Sea — FCL and LCL',
+      Shipment: 'Sea: FCL and LCL',
     },
   },
   {
@@ -660,7 +660,7 @@ export const driedFruitsNuts = [
       Origin: 'Chile, USA, France',
       Grades: '30/40, 40/50, 60/70 count per 500 g',
       Packing: '10 / 12.5 kg cartons',
-      Shipment: 'Sea — FCL and LCL',
+      Shipment: 'Sea: FCL and LCL',
     },
   },
   {
@@ -670,7 +670,7 @@ export const driedFruitsNuts = [
       Origin: 'China, India, Argentina, Ukraine',
       Range: 'Pumpkin (AA, A, GWS), sunflower, chia, flax, sesame',
       Packing: '25 / 50 kg PP bags; retail packs to order',
-      Shipment: 'Sea — FCL and LCL',
+      Shipment: 'Sea: FCL and LCL',
     },
   },
 ];

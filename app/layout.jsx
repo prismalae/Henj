@@ -28,7 +28,7 @@ export const metadata = {
   metadataBase: new URL(site.url),
   alternates: { canonical: '/' },
   title: {
-    default: `${site.name} — Food Import, Export & Distribution in Dubai`,
+    default: `${site.name} | Food Import, Export & Distribution in Dubai`,
     template: `%s | ${site.shortName}`,
   },
   description: site.description,
@@ -39,7 +39,7 @@ export const metadata = {
   openGraph: {
     type: 'website',
     siteName: site.name,
-    title: `${site.name} — Food Import, Export & Distribution in Dubai`,
+    title: `${site.name} | Food Import, Export & Distribution in Dubai`,
     description: site.description,
     images: [{ url: '/img/hero-home.jpg', width: 1800, height: 1013 }],
   },

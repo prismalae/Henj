@@ -109,7 +109,7 @@ export default function Header() {
   /* Two instances render (header + drawer), so each needs its own gradient id —
      duplicate ids in one document all resolve to the first definition. */
   const brandLink = (id) => (
-    <Link href="/" className="brand" aria-label={`${site.name} — home`}>
+    <Link href="/" className="brand" aria-label={`${site.name} home`}>
       <Logo gradientId={id} />
     </Link>
   );

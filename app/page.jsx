@@ -86,7 +86,7 @@ export default function HomePage() {
               <h2 style={{ fontSize: 'clamp(1.6rem, 2.8vw, 2.1rem)' }}>The Same Standard, Four Different Trades</h2>
               <p>
                 Fresh produce, grains and pulses, dried fruit and nuts, eggs. Four trades that are bought
-                differently, priced differently and moved differently — a crate of curry leaves and a
+                differently, priced differently and moved differently: a crate of curry leaves and a
                 container of chickpeas have almost nothing in common except who is answerable for them.
               </p>
               <p>
@@ -169,7 +169,7 @@ export default function HomePage() {
             <h2>Full Container Loads for Catering Kitchens.</h2>
             <p>
               Catering companies in Abu Dhabi and across the Emirates take rice, dal, sugar and
-              spices from us by the container rather than the pallet — the grade fixed, the price
+              spices from us by the container rather than the pallet: the grade fixed, the price
               held for the contract term, and deliveries released against consumption instead of
               dumped on the store at once.
             </p>
@@ -186,7 +186,7 @@ export default function HomePage() {
             <p className="eyebrow">What fills a container</p>
             <div style={{ display: 'grid', gap: '0.7rem', marginTop: '0.25rem' }}>
               {[
-                'Rice — by grade and origin',
+                'Rice, by grade and origin',
                 'Dal, pulses and chickpeas',
                 'Sugar, oil and cooking staples',
                 'Spices, whole and ground',
@@ -225,7 +225,7 @@ export default function HomePage() {
           </ul>
           <div className="grid grid--2">
             {[
-              { icon: 'plane', title: 'Air Shipments', body: 'Daily air freight for fresh produce, leaves and herbs — packed at source and moving within hours so shelf life reaches the customer, not the runway.' },
+              { icon: 'plane', title: 'Air Shipments', body: 'Daily air freight for fresh produce, leaves and herbs, packed at source and moving within hours so shelf life reaches the customer, not the runway.' },
               { icon: 'ship', title: 'Sea Shipments', body: 'Container loads of rice, pulses, grains and spices, consolidated and documented for efficient, economical bulk supply.' },
             ].map((s) => (
               <div key={s.title} style={{ display: 'flex', gap: '1.25rem' }}>
@@ -270,13 +270,13 @@ export default function HomePage() {
             <h3 style={{ fontSize: '1.35rem', color: 'var(--green-900)' }}>We buy where we can see the goods.</h3>
             <p style={{ fontSize: '0.92rem' }}>
               <strong className="co">HENJ</strong> works from the floor of Al Aweer Fruits &amp; Vegetables Market. We inspect what
-              lands, reject what misses the grade, and move the rest the same day — so the problem is
+              lands, reject what misses the grade, and move the rest the same day, so the problem is
               caught before it becomes your problem.
             </p>
             <p style={{ fontSize: '0.92rem' }}>
               We trade on our own account, which means the grade you approved is our responsibility,
               not a supplier&apos;s excuse. And if a shipment is going to be late, you hear it from us
-              first — early enough to do something about it.
+              first, early enough to do something about it.
             </p>
             <div style={{ display: 'grid', gap: '0.7rem', marginTop: '1.25rem' }}>
               {['Inspected before it moves', 'Same grade, shipment after shipment', 'Told early when something slips'].map((t) => (
@@ -296,14 +296,14 @@ export default function HomePage() {
           <SectionHeading
             eyebrow="What We Do"
             title="More Than Supply"
-            lede="We handle the whole chain — or just the part you need."
+            lede="We handle the whole chain, or just the part you need."
           />
           <div className="grid grid--3">
             {[
               { icon: 'globe', title: 'Import & Export', body: 'Two-way trade with sourcing, buying and compliance handled by us.' },
-              { icon: 'plane', title: 'Air & Sea Freight', body: 'Perishables by air, dry goods by container — whichever the cargo demands.' },
+              { icon: 'plane', title: 'Air & Sea Freight', body: 'Perishables by air, dry goods by container, whichever the cargo demands.' },
               { icon: 'truck', title: 'Road Distribution', body: 'Our own vehicles moving stock across the Emirates from Al Aweer.' },
-              { icon: 'search', title: 'Product Sourcing', body: 'Tell us the grade, origin and price point — we find it and hold suppliers to it.' },
+              { icon: 'search', title: 'Product Sourcing', body: 'Tell us the grade, origin and price point: we find it and hold suppliers to it.' },
               { icon: 'box', title: 'Packaging', body: 'Export cartons, retail packs and custom packing to your specification.' },
               { icon: 'doc', title: 'Documentation', body: 'Certificates, clearance and shipment coordination, prepared ahead of arrival.' },
             ].map((s) => (
@@ -366,7 +366,7 @@ export default function HomePage() {
           <SectionHeading
             eyebrow="Before you enquire"
             title="Questions Buyers Ask First"
-            lede="Quantities, timing and terms — answered plainly."
+            lede="Quantities, timing and terms, answered plainly."
           />
           <Faq items={faqs.slice(0, 5)} />
           <div style={{ textAlign: 'center', marginTop: '2rem' }}>

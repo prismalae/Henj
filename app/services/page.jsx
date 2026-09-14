@@ -14,15 +14,15 @@ export const metadata = {
 
 const SERVICES = [
   { icon: 'globe', title: 'Import & Export', body: 'Two-way trade in fresh produce, dry goods and eggs, with the sourcing, buying and compliance handled by us.' },
-  { icon: 'plane', title: 'Air Shipments', body: 'Fast air freight for perishables — the difference between produce that sells and produce that gets marked down.' },
+  { icon: 'plane', title: 'Air Shipments', body: 'Fast air freight for perishables: the difference between produce that sells and produce that gets marked down.' },
   { icon: 'ship', title: 'Sea Shipments', body: 'Container loads of rice, pulses, grains and spices, consolidated for economical bulk supply.' },
   { icon: 'truck', title: 'Road Distribution', body: 'Our own vehicles moving stock from Al Aweer across the Emirates, and overland into Qatar, Bahrain and Kuwait.' },
   { icon: 'pin', title: 'UAE Distribution', body: 'Wholesale, retail and institutional supply throughout Dubai, Abu Dhabi, Sharjah and the northern Emirates.' },
   { icon: 'building', title: 'Catering & Contract Supply', body: 'Full container loads of rice, dal, sugar and other dry staples for hospitality catering companies in Abu Dhabi and across the Emirates, delivered on a standing schedule.' },
   { icon: 'people', title: 'GCC Supply', body: `Onward supply to ${site.markets.filter((m) => m !== 'United Arab Emirates').join(', ')}.` },
-  { icon: 'search', title: 'Product Sourcing', body: 'Tell us the grade, origin, spec and price point — we find it and hold the supplier to it.' },
+  { icon: 'search', title: 'Product Sourcing', body: 'Tell us the grade, origin, spec and price point: we find it and hold the supplier to it.' },
   { icon: 'box', title: 'Packaging', body: 'Export cartons, retail packs, private-label and custom packing to your specification.' },
-  { icon: 'shield', title: 'Logistics', body: 'Cold chain, warehousing and consolidation — the unglamorous work that decides whether food arrives sellable.' },
+  { icon: 'shield', title: 'Logistics', body: 'Cold chain, warehousing and consolidation: the unglamorous work that decides whether food arrives sellable.' },
   { icon: 'doc', title: 'Documentation & Coordination', body: 'Certificates, clearance and shipment coordination, so your consignment does not sit waiting on paperwork.' },
 ];
 
@@ -33,8 +33,7 @@ export default function ServicesPage() {
         image="/img/hero-services.jpg"
         title="Our Services"
         strapline="Import & Export – Distribution"
-        lede="Everything between a farm somewhere in the world and a shelf somewhere in the Gulf — sourcing, freight, clearance, packing and delivery."
-        center
+        lede="Everything between a farm somewhere in the world and a shelf somewhere in the Gulf: sourcing, freight, clearance, packing and delivery."
       />
 
       <section className="section section--paper">
@@ -64,7 +63,7 @@ export default function ServicesPage() {
               <h2 style={{ fontSize: 'clamp(1.5rem, 2.6vw, 2rem)' }}>Container Loads for Catering Kitchens.</h2>
               <p>
                 Hospitality catering companies in Abu Dhabi and across the Emirates take dry staples
-                from us by the full container — rice, dal, sugar and spices — rather than pallet by
+                from us by the full container (rice, dal, sugar and spices) rather than pallet by
                 pallet. It is the cheapest way to buy volume that is going to be consumed anyway, and
                 it takes the weekly reordering off the kitchen.
               </p>
@@ -107,7 +106,7 @@ export default function ServicesPage() {
           <div className="grid grid--4">
             {[
               { n: '01', title: 'Enquiry & Spec', body: 'You tell us the product, grade, volume and destination. We come back with origin options and pricing.' },
-              { n: '02', title: 'Sourcing & Inspection', body: 'We buy against the agreed spec and check it before it moves — not after it lands.' },
+              { n: '02', title: 'Sourcing & Inspection', body: 'We buy against the agreed spec and check it before it moves, not after it lands.' },
               { n: '03', title: 'Freight & Clearance', body: 'Air or sea as the cargo demands, with documentation prepared ahead of arrival.' },
               { n: '04', title: 'Delivery', body: 'Distributed across the UAE or forwarded into the wider Gulf, on the date agreed.' },
             ].map((s) => (
@@ -123,7 +122,7 @@ export default function ServicesPage() {
 
       <CtaBand
         title="Tell Us What You Need Supplied"
-        body="Send us the product, the volume and the destination — we will come back with origins, timing and a price."
+        body="Send us the product, the volume and the destination. We will come back with origins, timing and a price."
         action="Request a Quote"
         message="Hello HENJ Trading, I would like to request a quote."
       />

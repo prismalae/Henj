@@ -12,7 +12,7 @@ const category = categories.find((c) => c.slug === 'fruits-vegetables');
 export const metadata = {
   title: 'Fruits & Vegetables',
   description:
-    'Fresh fruits, vegetables, coconuts, onions, pomegranates, chilli, drumsticks, curry leaves, mint and banana leaves — air freighted daily by HENJ Trading LLC',
+    'Fresh fruits, vegetables, coconuts, onions, pomegranates, chilli, drumsticks, curry leaves, mint and banana leaves, air freighted daily by HENJ Trading LLC',
 };
 
 const WHY = [
@@ -54,7 +54,7 @@ export default function FruitsVegetablesPage() {
               while it is still the product the buyer paid for.
             </p>
             <p style={{ color: 'rgba(255,255,255,0.85)' }}>
-              Heavier lines — onions, coconuts, pomegranates — move by sea or air depending on volume,
+              Heavier lines such as onions, coconuts and pomegranates move by sea or air depending on volume,
               season and how quickly you need them on the shelf.
             </p>
           </div>

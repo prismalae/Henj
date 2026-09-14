@@ -70,7 +70,7 @@ export default function PhotoGallery({ items, dir = '/img/group' }) {
               openerRef.current = e.currentTarget;
               setOpen(i);
             }}
-            aria-label={`${p.alt} — view larger`}
+            aria-label={`${p.alt}, view larger`}
           >
             <img src={`${dir}/${p.src}.jpg`} alt={p.alt} loading="lazy" />
             <span className="gallery-zoom" aria-hidden="true"><Icon name="search" size={18} /></span>

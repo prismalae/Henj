@@ -26,7 +26,7 @@ export default function QualityPage() {
         scrim="center"
         title="Quality & Certifications"
         strapline="We stand behind what we ship."
-        lede={<><strong className="co co--onDark">HENJ</strong> trades on its own account. That means the grade you approved is our responsibility — from inspection at origin to the moment it reaches your door.</>}
+        lede={<><strong className="co co--onDark">HENJ</strong> trades on its own account. That means the grade you approved is our responsibility, from inspection at origin to the moment it reaches your door.</>}
         center
       />
 
@@ -77,7 +77,7 @@ export default function QualityPage() {
             <p className="eyebrow">Being on the market floor</p>
             <h2 style={{ fontSize: 'clamp(1.5rem, 2.6vw, 2rem)' }}>We see the goods before you do.</h2>
             <p>
-              HENJ operates from Al Aweer Fruits &amp; Vegetables Market in Ras Al Khor — the point where
+              HENJ operates from Al Aweer Fruits &amp; Vegetables Market in Ras Al Khor, the point where
               the region&apos;s fresh trade actually happens. Being on the floor is itself a quality
               control: we inspect what lands, reject what does not meet the grade, and move the rest
               the same day.

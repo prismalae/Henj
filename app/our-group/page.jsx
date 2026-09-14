@@ -7,7 +7,7 @@ import CtaBand from '@/components/CtaBand';
 export const metadata = {
   title: 'Our Group',
   description:
-    'HENJ Trading LLC trades alongside Aidan Arab General Trading in Ajman, Nihal Traders in India and Nihal Investments in Oman — buying at origin and delivering across three markets under one relationship.',
+    'HENJ Trading LLC trades alongside Aidan Arab General Trading in Ajman, Nihal Traders in India and Nihal Investments in Oman, buying at origin and delivering across three markets under one relationship.',
 };
 
 /* The supermarket at Aidan Arab, photographed in Ajman. Captions describe what
