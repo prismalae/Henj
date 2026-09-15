@@ -50,12 +50,16 @@ export const metadata = {
      new URL, and /favicon.ico never gets Next's content hash the way icon.png
      does. Bump the number whenever the artwork changes. */
   icons: {
+    /* SVG first: browsers that support it get the vector and stay sharp at any
+       size and pixel ratio. The .ico and .png are the fallback, and Apple has
+       no SVG support at all. */
     icon: [
-      { url: '/favicon.ico?v=2', sizes: '16x16 32x32 48x48', type: 'image/x-icon' },
-      { url: '/icon.png?v=2', sizes: '512x512', type: 'image/png' },
+      { url: '/icon.svg?v=3', type: 'image/svg+xml' },
+      { url: '/favicon.ico?v=3', sizes: '16x16 32x32 48x48', type: 'image/x-icon' },
+      { url: '/icon.png?v=3', sizes: '512x512', type: 'image/png' },
     ],
-    shortcut: '/favicon.ico?v=2',
-    apple: '/apple-icon.png?v=2',
+    shortcut: '/favicon.ico?v=3',
+    apple: '/apple-icon.png?v=3',
   },
 };
 
