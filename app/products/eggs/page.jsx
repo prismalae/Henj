@@ -34,6 +34,7 @@ export default function EggsPage() {
     <>
       <Hero
         tall
+        veil="soft"
         image={category.hero}
         title="Fresh Eggs"
         strapline={category.strapline}

@@ -412,6 +412,23 @@ ul { margin: 0; padding: 0; list-style: none; }
   );
 }
 
+/* Lighter veils, for heroes whose picture is the point. Same two wipes as the
+   default, with every stop scaled down: --veil-soft to 75%, --veil-light to 60%.
+   Both floors were measured against their own photograph rather than picked —
+   the eggs nest is bright right under the copy and 75% is as far as that one
+   goes before the lede drops under 4.5:1, while the FAQ artwork has a dark left
+   half and holds 4.7:1 at 60%. */
+.hero--veil-soft .hero-bg::after {
+  background:
+    linear-gradient(90deg, rgba(var(--green-900-rgb), 0.555) 0%, rgba(var(--green-900-rgb), 0.51) 38%, rgba(var(--green-900-rgb), 0.405) 62%, rgba(var(--green-900-rgb), 0.15) 78%, rgba(var(--green-900-rgb), 0) 88%),
+    linear-gradient(100deg, rgba(var(--green-900-rgb), 0.75) 6%, rgba(var(--green-900-rgb), 0.675) 32%, rgba(var(--green-900-rgb), 0.26) 60%, rgba(var(--green-900-rgb), 0.075) 100%);
+}
+.hero--veil-light .hero-bg::after {
+  background:
+    linear-gradient(90deg, rgba(var(--green-900-rgb), 0.444) 0%, rgba(var(--green-900-rgb), 0.408) 38%, rgba(var(--green-900-rgb), 0.324) 62%, rgba(var(--green-900-rgb), 0.12) 78%, rgba(var(--green-900-rgb), 0) 88%),
+    linear-gradient(100deg, rgba(var(--green-900-rgb), 0.6) 6%, rgba(var(--green-900-rgb), 0.54) 32%, rgba(var(--green-900-rgb), 0.21) 60%, rgba(var(--green-900-rgb), 0.06) 100%);
+}
+
 /* Most hero photographs are composed with a dark, quiet left third for the copy
    to sit on. One is not — the group triptych is lit edge to edge — and on it the
    gold strapline measured 3.68:1 against the 4.5:1 it needs. This carries the
@@ -1103,6 +1120,19 @@ ul { margin: 0; padding: 0; list-style: none; }
       rgba(var(--green-900-rgb), 0.18) 100%
     );
   }
+  /* The lighter desktop veils do not come to the phone. They are two classes
+     deep, so they would otherwise outrank the rule above and put the horizontal
+     wipe back at a width where it hides the photograph entirely. */
+  .hero--veil-soft .hero-bg::after,
+  .hero--veil-light .hero-bg::after {
+    background: linear-gradient(
+      180deg,
+      rgba(var(--green-900-rgb), 0.9) 0%,
+      rgba(var(--green-900-rgb), 0.87) 66%,
+      rgba(var(--green-900-rgb), 0.62) 84%,
+      rgba(var(--green-900-rgb), 0.18) 100%
+    );
+  }
   .hero-bg img { object-position: center; }
   /* No overlap on small screens — the card stacks inside the footer instead. */
   .newsletter { margin-top: clamp(1.5rem, 4vw, 2.5rem); margin-bottom: clamp(1rem, 3vw, 1.5rem); }
@@ -1119,7 +1149,11 @@ ul { margin: 0; padding: 0; list-style: none; }
    sits a hair above that through the copy, then lets go almost entirely below
    it, where nothing has to stay readable. */
 @media (max-width: 700px) {
-  .hero-bg::after {
+  /* 0.68 through the copy is the measured floor here, so the lighter desktop
+     veils take this scrim too rather than going lighter still. */
+  .hero-bg::after,
+  .hero--veil-soft .hero-bg::after,
+  .hero--veil-light .hero-bg::after {
     background: linear-gradient(
       180deg,
       rgba(var(--green-900-rgb), 0.73) 0%,

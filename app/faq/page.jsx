@@ -29,11 +29,10 @@ export default function FaqPage() {
 
       <Hero
         image="/img/hero-faq.jpg"
-        scrim="center"
+        veil="light"
         title="Frequently Asked Questions"
         strapline="The things buyers ask before the first order."
         lede="Straight answers on quantities, timing, terms and paperwork. If yours is not here, ask us directly. We would rather answer than have you guess."
-        center
       />
 
       <section className="section section--paper">
