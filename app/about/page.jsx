@@ -24,11 +24,10 @@ export default function AboutPage() {
   return (
     <>
       <Hero
-        image="/img/hero-vegetables.jpg"
+        image="/img/hero-about.jpg"
         title="About Us"
         strapline="Import & Export – Distribution"
         lede="Bridging global farms to Gulf markets, with freshness, consistency and value in every shipment."
-        center
       />
 
       <section className="section section--paper">
