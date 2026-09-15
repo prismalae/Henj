@@ -6,8 +6,9 @@
  * highlight travels along the mark. `gradientId` must be unique per instance:
  * duplicate ids in one document all resolve to the first definition.
  *
- * public/img/logo-gold.svg is kept as the standalone asset for the favicon and
- * social cards, which cannot use an inline component.
+ * public/img/logo-gold.svg is kept as the standalone asset for social cards,
+ * which cannot use an inline component. The favicon is its own artwork —
+ * app/icon.png and friends — because the wide lockup is unreadable at 16px.
  */
 export default function Logo({ gradientId, className = '', title }) {
   return (

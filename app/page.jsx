@@ -75,7 +75,7 @@ export default function HomePage() {
         <div className="wrap">
           <div className="panel split">
             <div className="grid grid--2">
-              {['hero-vegetables', 'about-grains', 'about-nuts', 'hero-services'].map((img) => (
+              {['hero-vegetables', 'about-grains', 'about-nuts', 'hero-eggs'].map((img) => (
                 <div key={img} className="slot slot--square" style={{ borderRadius: 'var(--r-md)', border: '1px solid var(--line)' }}>
                   <img src={`/img/${img}.jpg`} alt="" loading="lazy" />
                 </div>
