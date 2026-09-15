@@ -33,16 +33,17 @@ const FLOWN = {
   ],
 };
 
-/* The lines that make up the Kerala consignments, pulled from the catalogue by
-   name so a spec edited on the produce page is edited here too. Order is the
-   catalogue's, which already groups vegetables, then fruit, then the leaves. */
-const KERALA_LINES = [
+/* The lines this page is about: fruit and vegetables whose value is decided by
+   how fast they land. Pulled from the catalogue by name so a spec edited on the
+   produce page is edited here too, and left in the catalogue's own order, which
+   already groups vegetables, then fruit, then the leaves. */
+const FAST_LINES = [
   'Tomatoes', 'Okra / Lady Finger', 'Brinjal / Eggplant', 'Green Beans',
   'Bitter Gourd', 'Ridge Gourd', 'Snake Gourd', 'Ash Gourd', 'Ivy Gourd / Kovakka',
   'Onions', 'Bananas', 'Pineapple', 'Jackfruit', 'Guava', 'Sapota / Chikoo',
   'Chilli', 'Drumsticks', 'Curry Leaves', 'Banana Leaves',
 ];
-const keralaRange = fruitsVegetables.filter((p) => KERALA_LINES.includes(p.name));
+const fastMoving = fruitsVegetables.filter((p) => FAST_LINES.includes(p.name));
 
 /* One shipment, end to end. The clock is the point of the page, so each step
    carries the hour it happens rather than a vague adjective. */
@@ -142,11 +143,11 @@ export default function AirShipmentPage() {
       <section className="section section--paper">
         <div className="wrap">
           <SectionHeading
-            eyebrow="On the aircraft"
-            title="The Kerala Range"
-            lede="What the daily consignments are actually made of. Most of it flies; the heavier lines go by sea when the volume justifies it, and the card for each says which."
+            eyebrow="Moved fast"
+            title="Fruit &amp; Vegetables That Travel Well"
+            lede="The lines that reward speed. Picked, packed and shipped so they reach the market while they are still worth selling — by air where a few days decide the sale, by sea where the volume justifies it. Each card says which."
           />
-          <ProductGrid items={keralaRange} columns={4} />
+          <ProductGrid items={fastMoving} columns={4} />
         </div>
       </section>
 

@@ -137,7 +137,7 @@ export const fruitsVegetables = [
     description: 'Tender, snap-fresh okra picked young and moved by air.',
     image: '/img/products/okra.png',
     specs: {
-      Origin: 'India (Kerala, Tamil Nadu), local UAE farms',
+      Origin: 'India (Tamil Nadu, Andhra Pradesh), local UAE farms',
       Grades: '7–9 cm and 9–12 cm, sorted for straightness',
       Packing: '5 / 10 kg perforated cartons, pre-cooled',
       Shipment: 'Air freight, daily',
@@ -148,7 +148,7 @@ export const fruitsVegetables = [
     description: 'Glossy purple brinjal with fresh green calyx, graded by size.',
     image: '/img/products/brinjal.png',
     specs: {
-      Origin: 'India (Kerala, Karnataka), local UAE farms',
+      Origin: 'India (Karnataka, Maharashtra), local UAE farms',
       Varieties: 'Small round, long purple, striped',
       Packing: '5 / 10 kg cartons and crates, single layer',
       Shipment: 'Air freight, daily',
@@ -159,7 +159,7 @@ export const fruitsVegetables = [
     description: 'Crisp green beans that snap rather than bend on arrival.',
     image: '/img/products/green-beans.png',
     specs: {
-      Origin: 'India (Kerala, Karnataka), Egypt, Kenya',
+      Origin: 'India (Karnataka), Egypt, Kenya',
       Grades: 'Fine and extra-fine, sorted by length',
       Packing: '5 / 10 kg perforated cartons, pre-cooled',
       Shipment: 'Air freight, daily',
@@ -170,7 +170,7 @@ export const fruitsVegetables = [
     description: 'Firm, deeply ridged karela in the sizes South Indian kitchens buy.',
     image: '/img/products/bitter-gourd.png',
     specs: {
-      Origin: 'India (Kerala, Tamil Nadu)',
+      Origin: 'India (Tamil Nadu, Andhra Pradesh)',
       Varieties: 'Long green and short thick, graded by size',
       Packing: '5 / 10 kg perforated cartons',
       Shipment: 'Air freight, daily',
@@ -181,7 +181,7 @@ export const fruitsVegetables = [
     description: 'Young ridge gourd cut before the ribs turn woody.',
     image: '/img/products/ridge-gourd.png',
     specs: {
-      Origin: 'India (Kerala, Tamil Nadu)',
+      Origin: 'India (Tamil Nadu, Andhra Pradesh)',
       Grades: '20–35 cm, straight and even',
       Packing: '5 / 10 kg cartons, layered',
       Shipment: 'Air freight, daily',
@@ -192,7 +192,7 @@ export const fruitsVegetables = [
     description: 'Long, pale snake gourd handled so it arrives unbruised.',
     image: '/img/products/snake-gourd.png',
     specs: {
-      Origin: 'India (Kerala, Tamil Nadu)',
+      Origin: 'India (Tamil Nadu, Andhra Pradesh)',
       Grades: '40–90 cm, sorted by length',
       Packing: '5 / 10 kg cartons, wrapped and layered',
       Shipment: 'Air freight, daily',
@@ -203,7 +203,7 @@ export const fruitsVegetables = [
     description: 'Mature ash gourd with its wax bloom intact, whole or cut.',
     image: '/img/products/ash-gourd.png',
     specs: {
-      Origin: 'India (Kerala, Tamil Nadu)',
+      Origin: 'India (Tamil Nadu, Andhra Pradesh)',
       Grades: 'Whole 3–8 kg, or cut portions on request',
       Packing: 'Loose in crates, or cartoned by piece',
       Shipment: 'Air freight; sea for whole-fruit volume',
@@ -214,7 +214,7 @@ export const fruitsVegetables = [
     description: 'Small, even kovakka picked tender for daily South Indian trade.',
     image: '/img/products/ivy-gourd.png',
     specs: {
-      Origin: 'India (Kerala, Tamil Nadu)',
+      Origin: 'India (Tamil Nadu, Andhra Pradesh)',
       Grades: '4–7 cm, sorted for uniformity',
       Packing: '3 / 5 kg perforated cartons',
       Shipment: 'Air freight only: short shelf life',
@@ -269,7 +269,7 @@ export const fruitsVegetables = [
     description: 'Sweet, low-acid pineapple cut close to full colour.',
     image: '/img/products/pineapple.png',
     specs: {
-      Origin: 'India (Kerala, Vazhakulam), Philippines',
+      Origin: 'India, Philippines',
       Grades: 'Count 6 to 12 per carton, crown on',
       Packing: '10 / 12 kg cartons, single layer',
       Shipment: 'Air freight; sea reefer for volume',
@@ -280,7 +280,7 @@ export const fruitsVegetables = [
     description: 'Whole jackfruit, or cleaned bulbs for kitchens that will not cut it themselves.',
     image: '/img/products/jackfruit.png',
     specs: {
-      Origin: 'India (Kerala, Tamil Nadu)',
+      Origin: 'India (Tamil Nadu, Karnataka)',
       Grades: 'Whole 5–15 kg; cleaned bulbs by weight',
       Packing: 'Whole loose or cartoned; bulbs in lined trays',
       Shipment: 'Air freight only for cut fruit',
@@ -291,7 +291,7 @@ export const fruitsVegetables = [
     description: 'Crisp white and pink guava, picked firm so it travels.',
     image: '/img/products/guava.png',
     specs: {
-      Origin: 'India (Kerala, Maharashtra), Egypt',
+      Origin: 'India (Maharashtra), Egypt',
       Varieties: 'White flesh and pink flesh, 150–350 g',
       Packing: '3 / 5 kg cartons, tray or pad packed',
       Shipment: 'Air freight, daily',
@@ -302,7 +302,7 @@ export const fruitsVegetables = [
     description: 'Sapota picked at the stage that ripens sweet rather than grainy.',
     image: '/img/products/sapota.png',
     specs: {
-      Origin: 'India (Kerala, Gujarat, Maharashtra)',
+      Origin: 'India (Gujarat, Maharashtra)',
       Grades: 'Sorted by count, 60–120 g typical',
       Packing: '3 / 5 kg cartons, pad packed',
       Shipment: 'Air freight only: short shelf life',
