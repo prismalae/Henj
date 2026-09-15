@@ -44,6 +44,19 @@ export const metadata = {
     images: [{ url: '/img/hero-home.jpg', width: 1800, height: 1013 }],
   },
   twitter: { card: 'summary_large_image', images: ['/img/hero-home.jpg'] },
+  /* Declared rather than left to the file convention, purely to carry ?v=2.
+     A favicon is the most aggressively cached asset a site has — anyone who
+     loaded the old placeholder keeps it until the bytes are requested under a
+     new URL, and /favicon.ico never gets Next's content hash the way icon.png
+     does. Bump the number whenever the artwork changes. */
+  icons: {
+    icon: [
+      { url: '/favicon.ico?v=2', sizes: '16x16 32x32 48x48', type: 'image/x-icon' },
+      { url: '/icon.png?v=2', sizes: '512x512', type: 'image/png' },
+    ],
+    shortcut: '/favicon.ico?v=2',
+    apple: '/apple-icon.png?v=2',
+  },
 };
 
 export const viewport = { themeColor: '#142a10' };
