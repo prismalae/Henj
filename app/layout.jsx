@@ -52,14 +52,21 @@ export const metadata = {
   icons: {
     /* SVG first: browsers that support it get the vector and stay sharp at any
        size and pixel ratio. The .ico and .png are the fallback, and Apple has
-       no SVG support at all. */
+       no SVG support at all.
+
+       The filenames are henj-* rather than the conventional icon.*: a browser
+       that has already rendered an icon for a URL keeps it in a store that a
+       normal reload does not touch, and a query string alone did not shift it.
+       These paths have never been served before, so there is nothing to hold.
+       public/favicon.ico stays at its canonical name because browsers request
+       that path blindly, tags or no tags. */
     icon: [
-      { url: '/icon.svg?v=3', type: 'image/svg+xml' },
-      { url: '/favicon.ico?v=3', sizes: '16x16 32x32 48x48', type: 'image/x-icon' },
-      { url: '/icon.png?v=3', sizes: '512x512', type: 'image/png' },
+      { url: '/henj-icon.svg?v=4', type: 'image/svg+xml' },
+      { url: '/henj-favicon.ico?v=4', sizes: '16x16 32x32 48x48', type: 'image/x-icon' },
+      { url: '/henj-icon.png?v=4', sizes: '512x512', type: 'image/png' },
     ],
-    shortcut: '/favicon.ico?v=3',
-    apple: '/apple-icon.png?v=3',
+    shortcut: '/henj-favicon.ico?v=4',
+    apple: '/henj-apple-icon.png?v=4',
   },
 };
 
