@@ -43,9 +43,8 @@ export const site = {
   credit: { label: 'Prismal', href: 'https://prismal.ae' },
 
   socials: [
-    { name: 'Facebook', href: '#', icon: 'facebook' },
-    { name: 'Instagram', href: '#', icon: 'instagram' },
-    { name: 'LinkedIn', href: '#', icon: 'linkedin' },
+    { name: 'Facebook', href: 'https://www.facebook.com/profile.php?id=61590103603359', icon: 'facebook' },
+    { name: 'Instagram', href: 'https://www.instagram.com/henj_trading_llc/', icon: 'instagram' },
   ],
 };
 

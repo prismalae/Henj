@@ -32,7 +32,13 @@ export default function Footer() {
             <p>{site.strapline}</p>
             <div className="socials">
               {site.socials.map((s) => (
-                <a key={s.name} href={s.href} aria-label={s.name}>
+                <a
+                  key={s.name}
+                  href={s.href}
+                  aria-label={s.name}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <Icon name={s.icon} size={18} />
                 </a>
               ))}
